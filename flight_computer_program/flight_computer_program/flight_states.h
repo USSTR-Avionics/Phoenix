@@ -1,3 +1,4 @@
+#pragma once
 enum class FlightStates {
     UNARMED,
     GROUND_IDLE,
