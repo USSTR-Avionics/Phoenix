@@ -1,0 +1,11 @@
+add_executable(${PROJECT_NAME}
+    "main.cpp"
+    "flight_states.h"
+    "FlightComputer.h"
+    "FlightComputer.cpp"
+    "SensorData.h"
+    "SensorData.cpp"
+    "StateMachine.h"
+    "StateMachine.cpp"
+    "StaticVariables.h"
+)
