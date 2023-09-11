@@ -1,8 +1,0 @@
-# ninja log v5
-0	32	1694290987990376616	flight_computer_program/CMakeFiles/flight_computer_program.dir/SensorData.cpp.o	cfb3f461d0d868bb
-1	55	1694454582037703664	flight_computer_program/CMakeFiles/flight_computer_program.dir/SensorData.cpp.o	18586c13db40747f
-0	219	1694454582201026692	flight_computer_program/CMakeFiles/flight_computer_program.dir/main.cpp.o	e6cd4ffba97ade61
-1	21	1694454741897148925	flight_computer_program/CMakeFiles/flight_computer_program.dir/SensorData.cpp.o	18586c13db40747f
-2	21	1694454741897586338	flight_computer_program/CMakeFiles/flight_computer_program.dir/StateMachine.cpp.o	3c99d025af947e7b
-2	22	1694454787558523611	flight_computer_program/CMakeFiles/flight_computer_program.dir/FlightComputer.cpp.o	b60f648f64ede769
-22	54	1694454787590530513	flight_computer_program/flight_computer_program	805dc7577d3a5609

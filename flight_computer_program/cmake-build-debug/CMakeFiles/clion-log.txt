@@ -1,4 +1,0 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /Users/kuang/Developer/Club/USST/Phoenix/flight_computer_program -B /Users/kuang/Developer/Club/USST/Phoenix/flight_computer_program/cmake-build-debug
--- Configuring done
--- Generating done
--- Build files have been written to: /Users/kuang/Developer/Club/USST/Phoenix/flight_computer_program/cmake-build-debug
