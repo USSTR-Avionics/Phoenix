@@ -2,6 +2,7 @@
 #include "StateMachine.h"
 #include "SensorData.h"
 #include "FlightComputer.h"
+#include "DataQueue.h"
 
 bool FlightComputer::start_health_check(){
     return true;
@@ -38,5 +39,5 @@ void FlightComputer::init(){
 FlightComputer::FlightComputer(){
         able_to_fly = true;
         flight_function = StateMachine();
-        sensor_data = SensorData();
+        sensor_data = DataQueue();
 }

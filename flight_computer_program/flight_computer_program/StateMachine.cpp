@@ -12,6 +12,7 @@ void StateMachine::unarmed(){
 
 void StateMachine::ground_idle(){
     //swich state on acceleration
+    
 }
 
 void StateMachine::powered_flight(){
