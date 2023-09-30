@@ -1,6 +1,7 @@
 #include "SensorData.h"
 #include "StateMachine.h"
 #include "flight_states.h"
+#include "DataQueue.h"
 
 void StateMachine::set_variables(){
     
@@ -35,7 +36,7 @@ void StateMachine::land_safe(){
     
 }
 
-void StateMachine::call_function(){
+void StateMachine::call_function(DataQueue *Data){
     switch (flight_state)
     {
     case FlightStates::UNARMED:

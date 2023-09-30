@@ -25,7 +25,7 @@ void FlightComputer::main_loop(){
         retrieve_data();
         mid_flight_health_check();
         flight_function.set_variables();
-        flight_function.call_function();
+        flight_function.call_function(&sensor_data);
     }
 }
 

@@ -1,6 +1,7 @@
 #pragma once
 #include "flight_states.h"
 #include "SensorData.h"
+#include "DataQueue.h"
 
 class StateMachine{
 private:
@@ -23,7 +24,7 @@ public:
     FlightStates flight_state;
     void set_variables();
 
-    void call_function();
+    void call_function(DataQueue *data);
 
     StateMachine();
 };
