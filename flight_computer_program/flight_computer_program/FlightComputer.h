@@ -1,8 +1,8 @@
+#pragma once
 #include "StaticVariables.h"
 #include "StateMachine.h"
 #include "SensorData.h"
 #include "DataQueue.h"
-#pragma once
 
 class FlightComputer{
 private:
