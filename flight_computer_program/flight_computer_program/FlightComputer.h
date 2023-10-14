@@ -2,7 +2,7 @@
 #include "StaticVariables.h"
 #include "StateMachine.h"
 #include "SensorData.h"
-
+#include "DataQueue.h"
 
 class FlightComputer{
 private:
@@ -10,7 +10,7 @@ private:
 
     StateMachine flight_function;
 
-    SensorData sensor_data;
+    DataQueue sensor_data, *Flight_Data;
 
 
     //HealthCheck
