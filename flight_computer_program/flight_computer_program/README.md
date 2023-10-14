@@ -1,2 +1,0 @@
-# Main Flight Computer Board
-***
