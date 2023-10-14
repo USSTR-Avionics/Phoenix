@@ -40,4 +40,5 @@ FlightComputer::FlightComputer(){
         able_to_fly = true;
         flight_function = StateMachine();
         sensor_data = DataQueue();
+        Flight_Data = &sensor_data;
 }

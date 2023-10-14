@@ -10,7 +10,7 @@ private:
 
     StateMachine flight_function;
 
-    DataQueue sensor_data;
+    DataQueue sensor_data, *Flight_Data;
 
 
     //HealthCheck
