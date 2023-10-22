@@ -36,9 +36,9 @@ void FlightComputer::init(){
     }
 }
 
-FlightComputer::FlightComputer(){
+FlightComputer::FlightComputer() : flight_function(<#initializer#>) {
         able_to_fly = true;
-        flight_function = StateMachine();
+        flight_function = StateMachine(<#initializer#>);
         sensor_data = DataQueue();
         Flight_Data = &sensor_data;
 }

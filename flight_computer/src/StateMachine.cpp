@@ -1,71 +1,14 @@
-#include "SensorData.h"
 #include "StateMachine.h"
-#include "flight_states.h"
-#include "DataQueue.h"
 
-void StateMachine::set_variables(){
-    
-}
+StateMachine::StateMachine(State* State) : m_CurrentState(State){};
 
-void StateMachine::unarmed(){
-    //check arming signal from canbus
-}
-
-void StateMachine::ground_idle(){
-    //swich state on acceleration
-    
-}
-
-void StateMachine::powered_flight(){
-    //swich state on deceleration
-}
-
-void StateMachine::unopowered_flight(){
-    //swich state on apoge
-}
-
-void StateMachine::balistic_decent(){
-    //switch state on proper altitude
-}
-
-void StateMachine::main_chute(){
-    //switch state if on ground
-}
-
-void StateMachine::land_safe(){
-    
-}
-
-void StateMachine::call_function(DataQueue *Data){
-    switch (flight_state)
+void StateMachine::Run(SensorData& SD)
+{
+	// break if you point to random obj
+    if(m_CurrentState->Run(SD))
     {
-    case FlightStates::UNARMED:
-        unarmed();
-        break;
-    case FlightStates::GROUND_IDLE:
-        ground_idle();
-        break;
-    case FlightStates::POWERED_FLIGHT:
-        powered_flight();
-        break;
-    case FlightStates::UNPOWERED_FLIGHT:
-        unopowered_flight();
-        break;
-    case FlightStates::BALISTIC_DECENT:
-        balistic_decent();
-        break;
-    case FlightStates::MAIN_CHUTE:
-        main_chute();
-        break;
-    case FlightStates::LAND_SAFE:
-        land_safe();
-        break;
-    default:
-        //add Emergency Function
-        break;
+        State* Temp = m_CurrentState->Transition();
+        delete m_CurrentState;
+        m_CurrentState = Temp;
     }
-}
-
-StateMachine::StateMachine(){
-    flight_state = FlightStates::UNARMED;
 }

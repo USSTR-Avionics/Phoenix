@@ -8,7 +8,7 @@ private:
     /* data */
     int currentStartIndex = 0;
     static const int dataLength = 5;
-    struct SensorData data[dataLength];
+    SensorData data[dataLength];
 public:
     DataQueue();
 
@@ -16,7 +16,7 @@ public:
 
     void addData(struct SensorData _data);
 
-    struct SensorData GetData(int index);
+    SensorData GetData(int index);
 
     int GetDataLength();
 };
