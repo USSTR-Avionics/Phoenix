@@ -5,7 +5,6 @@
 #ifndef FLIGHT_COMPUTER_OPTIONAL_H
 #define FLIGHT_COMPUTER_OPTIONAL_H
 
-#include <iostream>
 #include <string>
 
 constexpr int32_t NULL_VAL{-128};
