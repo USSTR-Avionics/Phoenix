@@ -139,9 +139,9 @@ private:
 ```
 
 ### Functions
-- Preferred style : camel cased function name with C style brackets
+- Preferred style : pascal cased function name with C style brackets
 ```
-void function()
+void Function()
 {
     // stuff
 }
@@ -149,13 +149,13 @@ void function()
 - Pass by reference when it makes sense
 ```
 // copy of a is being made (copy elision exists, but...)
-void function1(int a){}
+void Function1(int a){}
 
 // gets the reference of a, but if you modify a, it will modify it everywhere
-void function2(int& a){}
+void Function2(int& a){}
 
 // const makes it unmodifiable, but no copy
-void function3(const int& a){}
+void Function3(const int& a){}
 ```
 ### Classes
 - Classes are private by default
@@ -165,14 +165,14 @@ class A
 {
 public:
     A();
-    void setTemperature(int Temperature);
+    void SetTemperature(int Temperature);
     
 private:
     float m_Temperature;
     int m_Size;
 };
 ```
-- Keep class functions camel case
+- Keep class functions pascal case
 - Try not to implement any of the class functions inside header file
 ### Header files
 
