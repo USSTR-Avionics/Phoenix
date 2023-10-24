@@ -7,8 +7,6 @@
 
 #include <string>
 
-constexpr int32_t NULL_VAL{-128};
-
 template<typename T>
 class Optional
 {
@@ -16,10 +14,10 @@ public:
 	constexpr Optional() = default;
 	constexpr Optional(const T& V) : Value(V), Flag(true){};
 
-	bool HasValue() const { return Flag; }
-	[[nodiscard]] T Get() const { return Flag ? Value : static_cast<T>(NULL_VAL); }
+	[[nodiscard]] bool HasValue() const { return Flag; }
+	[[nodiscard]] T Get() const { return Value; }
 
-	void operator = (const T& V)
+	void operator=(const T& V)
 	{
 		Value = V;
 		Flag = true;
@@ -43,12 +41,13 @@ public:
 	constexpr Optional() = default;
 	constexpr Optional(T* V) : Value(V){};
 
-	bool HasValue() const { return Value != nullptr; }
+	[[nodiscard]] bool HasValue() const { return Value != nullptr; }
 	[[nodiscard]] const T* Get() const { return Value; }
 
 	void operator = (const T& V) { Value = &V; }
 
-	const T operator*() const{ return *Value; }
+	T& operator*() { return *Value; }
+	T* operator->() { return Value; }
 
 private:
 	T* Value{nullptr};

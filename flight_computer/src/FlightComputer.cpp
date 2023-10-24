@@ -24,8 +24,8 @@ void FlightComputer::main_loop(){
     {
         retrieve_data();
         mid_flight_health_check();
-        flight_function.set_variables();
-        flight_function.call_function(&sensor_data);
+        // flight_function.set_variables();
+        // flight_function.call_function(&sensor_data);
     }
 }
 
@@ -36,9 +36,10 @@ void FlightComputer::init(){
     }
 }
 
-FlightComputer::FlightComputer() : flight_function(<#initializer#>) {
+FlightComputer::FlightComputer()
+{
         able_to_fly = true;
-        flight_function = StateMachine(<#initializer#>);
+        // flight_function = StateMachine(<#initializer#>);
         sensor_data = DataQueue();
         Flight_Data = &sensor_data;
 }

@@ -7,8 +7,6 @@ void StateMachine::Run(SensorData& SD)
 	// break if you point to random obj
     if(m_CurrentState->Run(SD))
     {
-        State* Temp = m_CurrentState->Transition();
-        delete m_CurrentState;
-        m_CurrentState = Temp;
+        m_CurrentState = m_CurrentState->Transition();
     }
 }

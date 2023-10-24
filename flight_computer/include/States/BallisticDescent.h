@@ -15,6 +15,7 @@ public:
     // return next state
     virtual State* Transition() override;
 
+	BallisticDescent() = default;
     ~BallisticDescent() override = default;
 };
 #endif //FLIGHT_COMPUTER_BALLISTICDECENT_H

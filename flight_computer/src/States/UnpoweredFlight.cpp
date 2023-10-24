@@ -1,7 +1,7 @@
 //
 // Created by TDKua on 2023/10/22.
 //
-#include "States/UnpoweredFlight.h"
+#include "Utils/MemoryPool.h"
 
 bool UnpoweredFlight::Run(SensorData &)
 {
@@ -10,6 +10,8 @@ bool UnpoweredFlight::Run(SensorData &)
 
 State* UnpoweredFlight::Transition()
 {
-	// will break SM you create random obj
-    return new BallisticDescent;
+	MemoryPool& Pool = MemoryPool::Instance();
+	Pool.Deallocate<State>();
+	// will break SM you create random obj, see diagram for which state to transition to
+    return Pool.Allocate<BallisticDescent>();
 }
