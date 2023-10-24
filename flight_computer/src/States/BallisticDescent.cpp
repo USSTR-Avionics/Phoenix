@@ -3,13 +3,12 @@
 //
 #include "Utils/MemoryPool.h"
 
-bool BallisticDescent::Run(SensorData &)
+State* BallisticDescent::Run(SensorData &)
 {
-    return false;
-}
-
-State* BallisticDescent::Transition()
-{
-	// will break SM you create random obj
-    return new MainChute;
+    if(false)
+    {
+        // transition to new state, will break SM if you create random obj
+        return StateMemory.ReplaceAllocate<MainChute, decltype(this)>();
+    }
+    return this;
 }

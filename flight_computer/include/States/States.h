@@ -10,8 +10,7 @@
 struct State
 {
     // true if transition condition met
-    virtual bool Run(SensorData&) = 0;
-    virtual State* Transition() = 0;
+    virtual State* Run(SensorData&) = 0;
     virtual ~State() = default;
 };
 

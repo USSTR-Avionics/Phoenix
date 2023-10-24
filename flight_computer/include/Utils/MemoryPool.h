@@ -19,50 +19,61 @@
 
 // calculate everything on creation with varadic templates
 // currently only allocates for 1 state at a time, only for the statemachine
+template<typename ...T>
 class MemoryPool
 {
 public:
-	template<typename T>
-	T* Allocate()
+	template<typename New_T, typename Old>
+	New_T* ReplaceAllocate()
 	{
-		if(!bCanAllocate) { return nullptr; }
+		if(!bCanAllocate)
+        {
+            // deallocate
+            Deallocate<Old>();
+        }
 
 		// placement new
-		new((T*)m_pCurrent) T;
+		new((void*)m_pCurrent) New_T;
 		bCanAllocate = false;
 
 		// return allocated mem
-		return reinterpret_cast<T*>(m_pCurrent);
-	};
+		return (New_T*)m_pCurrent;
+	}
 
-	template<typename T>
+    template<typename U>
+    U* Allocate()
+    {
+        if(!bCanAllocate) { return nullptr; }
+
+        // placement new
+        new((void*)m_pCurrent) U;
+        bCanAllocate = false;
+
+        // return allocated mem
+        return (U*)m_pCurrent;
+    }
+
+	template<typename U>
 	void Deallocate()
 	{
 		// call destructor
-		((T*)m_pCurrent)->~T();
+		((U*)m_pCurrent)->~U();
 		bCanAllocate = true;
-	};
+	}
 
-	static MemoryPool& Instance()
-	{
-		static MemoryPool MemPool;
-		return MemPool;
-	};
-
+    MemoryPool() = default;
 	MemoryPool(MemoryPool&) = delete;
 	MemoryPool& operator=(MemoryPool&) = delete;
 
 private:
-	MemoryPool() = default;
 	bool bCanAllocate{true};
 
-	static constexpr int Alignment{ Max(alignof(Unarmed), alignof(GroundIdle), alignof(PoweredFlight), alignof(UnpoweredFlight), alignof(BallisticDescent), alignof(MainChute), alignof(Land)) };
-	static constexpr int PoolSize{ Max(sizeof(Unarmed), sizeof(GroundIdle), sizeof(PoweredFlight), sizeof(UnpoweredFlight), sizeof(BallisticDescent), sizeof(MainChute), sizeof(Land)) };
-
 	// don't care what is in it, will only waste resources setting them to 0
-	alignas(Alignment) unsigned char Pool[PoolSize];
+	alignas(MaxAlignof<T...>()) unsigned char Pool[MaxSizeof<T...>()];
 	unsigned char* m_pCurrent = Pool;
 };
+
+static MemoryPool<Unarmed, GroundIdle, PoweredFlight, UnpoweredFlight, BallisticDescent, MainChute, Land> StateMemory;
 
 
 #endif //FLIGHT_COMPUTER_MEMORYPOOL_H

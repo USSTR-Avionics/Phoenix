@@ -3,13 +3,12 @@
 //
 #include "Utils/MemoryPool.h"
 
-bool GroundIdle::Run(SensorData& Data)
+State* GroundIdle::Run(SensorData& Data)
 {
-    return false;
-}
-
-State* GroundIdle::Transition()
-{
-	// will break SM you create random obj
-    return new PoweredFlight;
+    if(false)
+    {
+        // transition to new state, will break SM if you create random obj
+        return StateMemory.ReplaceAllocate<MainChute, decltype(this)>();
+    }
+    return this;
 }

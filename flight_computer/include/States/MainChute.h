@@ -11,9 +11,7 @@ class MainChute : public State
 {
 public:
     // main
-    virtual bool Run(SensorData&) override;
-    // return next state
-    virtual State* Transition() override;
+    virtual State* Run(SensorData&) override;
 
     ~MainChute() override = default;
 };

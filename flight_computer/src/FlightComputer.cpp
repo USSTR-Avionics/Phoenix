@@ -4,11 +4,13 @@
 #include "FlightComputer.h"
 #include "DataQueue.h"
 
-bool FlightComputer::start_health_check(){
+bool FlightComputer::start_health_check()
+{
     return true;
 }
 
-bool FlightComputer::mid_flight_health_check(){
+bool FlightComputer::mid_flight_health_check()
+{
 
 }
 

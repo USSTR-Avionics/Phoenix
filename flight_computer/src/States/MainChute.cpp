@@ -3,13 +3,12 @@
 //
 #include "Utils/MemoryPool.h"
 
-bool MainChute::Run(SensorData &)
+State* MainChute::Run(SensorData &)
 {
-    return false;
-}
-
-State* MainChute::Transition()
-{
-	// will break SM you create random obj
-    return new Land;
+    if(false)
+    {
+        // transition to new state, will break SM if you create random obj
+        return StateMemory.ReplaceAllocate<MainChute, decltype(this)>();
+    }
+    return this;
 }

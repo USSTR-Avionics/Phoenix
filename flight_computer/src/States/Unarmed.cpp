@@ -3,13 +3,12 @@
 //
 #include "Utils/MemoryPool.h"
 
-bool Unarmed::Run(SensorData &)
+State* Unarmed::Run(SensorData &)
 {
-    return false;
-}
-
-State* Unarmed::Transition()
-{
-	// will break SM you create random obj
-    return new GroundIdle;
+    if(false)
+    {
+        // transition to new state, will break SM if you create random obj
+        return StateMemory.ReplaceAllocate<MainChute, decltype(this)>();
+    }
+    return this;
 }

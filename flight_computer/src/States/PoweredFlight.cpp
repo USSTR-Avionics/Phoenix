@@ -4,13 +4,12 @@
 
 #include "Utils/MemoryPool.h"
 
-bool PoweredFlight::Run(SensorData &)
+State* PoweredFlight::Run(SensorData &)
 {
-    return false;
-}
-
-State* PoweredFlight::Transition()
-{
-	// will break SM you create random obj
-    return new UnpoweredFlight;
+    if(false)
+    {
+        // transition to new state, will break SM if you create random obj
+        return StateMemory.ReplaceAllocate<MainChute, decltype(this)>();
+    }
+    return this;
 }

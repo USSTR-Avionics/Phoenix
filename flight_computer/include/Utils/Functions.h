@@ -10,11 +10,16 @@
 /* =============================================================
  * 						FIND MAX CONSTEXPR
  * ============================================================= */
-template <typename T>
-T constexpr Max(T a) { return a; }
 
-template <typename T, typename ... Args>
-T constexpr Max(T a, Args ... args) { return a > Max(args...)? a : Max(args...); }
+template<typename... T, typename U>
+size_t constexpr Max(T ...Args) { return std::max({U(Args)...}); }
+
+template<typename... T>
+size_t constexpr MaxAlignof() { return std::max({alignof(T)...}); }
+
+template<typename... T>
+size_t constexpr MaxSizeof() { return std::max({sizeof(T)...}); }
+
 // =============================================================
 
 #endif //FLIGHT_COMPUTER_FUNCTIONS_H
