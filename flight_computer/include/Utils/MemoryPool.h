@@ -17,63 +17,70 @@
 
 #include "Utils/Functions.h"
 
-// calculate everything on creation with varadic templates
-// currently only allocates for 1 state at a time, only for the statemachine
+namespace UA
+{
+// currently only allocates for 1 thing at a time
+// ...T are the list of the TYPES of objects that this memory pool needs to allocate for.
 template<typename ...T>
 class MemoryPool
 {
 public:
+	// Replace the current allocation with a new one
 	template<typename New_T, typename Old>
 	New_T* ReplaceAllocate()
 	{
-		if(!bCanAllocate)
-        {
-            // deallocate
-            Deallocate<Old>();
-        }
+		if (!bCanAllocate)
+		{ Deallocate<Old>(); }
 
 		// placement new
-		new((void*)m_pCurrent) New_T;
+		new((void*) m_pCurrent) New_T;
 		bCanAllocate = false;
 
 		// return allocated mem
-		return (New_T*)m_pCurrent;
+		return (New_T*) m_pCurrent;
 	}
 
-    template<typename U>
-    U* Allocate()
-    {
-        if(!bCanAllocate) { return nullptr; }
+	// allocate a given type
+	template<typename U>
+	U* Allocate()
+	{
+		if (!bCanAllocate)
+		{ return nullptr; }
 
-        // placement new
-        new((void*)m_pCurrent) U;
-        bCanAllocate = false;
+		// placement new
+		new((void*) m_pCurrent) U;
+		bCanAllocate = false;
 
-        // return allocated mem
-        return (U*)m_pCurrent;
-    }
+		// return allocated mem
+		return (U*) m_pCurrent;
+	}
 
+	// deallocate type
 	template<typename U>
 	void Deallocate()
 	{
 		// call destructor
-		((U*)m_pCurrent)->~U();
+		((U*) m_pCurrent)->~U();
 		bCanAllocate = true;
 	}
 
-    MemoryPool() = default;
+	MemoryPool() = default;
+
 	MemoryPool(MemoryPool&) = delete;
-	MemoryPool& operator=(MemoryPool&) = delete;
+
+	MemoryPool& operator =(MemoryPool&) = delete;
 
 private:
 	bool bCanAllocate{true};
 
+	// consider std::byte
 	// don't care what is in it, will only waste resources setting them to 0
 	alignas(MaxAlignof<T...>()) unsigned char Pool[MaxSizeof<T...>()];
+	// redundant ptr technically
 	unsigned char* m_pCurrent = Pool;
 };
+}
 
-static MemoryPool<Unarmed, GroundIdle, PoweredFlight, UnpoweredFlight, BallisticDescent, MainChute, Land> StateMemory;
-
+extern UA::MemoryPool<Unarmed, GroundIdle, PoweredFlight, UnpoweredFlight, BallisticDescent, MainChute, Land> StateMemory;
 
 #endif //FLIGHT_COMPUTER_MEMORYPOOL_H
