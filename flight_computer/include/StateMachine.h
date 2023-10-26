@@ -1,12 +1,12 @@
 #pragma once
 
-#include "Utils/MemoryPool.h"
+#include "GlobalVariables.h"
 #include "DataQueue.h"
 
 class StateMachine
 {
 public:
-    explicit StateMachine(State* State = StateMemory.Allocate<Unarmed>());
+    explicit StateMachine(State* State = StatePool.Allocate<Unarmed>());
     void Run(SensorData&);
 
     StateMachine(StateMachine&) = delete;

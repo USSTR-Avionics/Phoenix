@@ -1,5 +1,5 @@
 #pragma once
-#include "StaticVariables.h"
+#include "GlobalVariables.h"
 #include "StateMachine.h"
 #include "SensorData.h"
 #include "DataQueue.h"

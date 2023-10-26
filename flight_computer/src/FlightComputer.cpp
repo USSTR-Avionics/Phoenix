@@ -1,4 +1,4 @@
-#include "StaticVariables.h"
+#include "GlobalVariables.h"
 #include "StateMachine.h"
 #include "SensorData.h"
 #include "FlightComputer.h"
@@ -11,11 +11,12 @@ bool FlightComputer::start_health_check()
 
 bool FlightComputer::mid_flight_health_check()
 {
-
+	return true;
 }
 
 
-void FlightComputer::retrieve_data(){
+void FlightComputer::retrieve_data()
+{
     //get data through canbus and set it to sensor_data
 }
 

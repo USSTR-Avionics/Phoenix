@@ -7,14 +7,6 @@
 
 #include <new>
 
-#include "States/Unarmed.h"
-#include "States/GroundIdle.h"
-#include "States/PoweredFlight.h"
-#include "States/UnpoweredFlight.h"
-#include "States/BallisticDescent.h"
-#include "States/MainChute.h"
-#include "States/Land.h"
-
 #include "Utils/Functions.h"
 
 namespace UA
@@ -80,7 +72,5 @@ private:
 	unsigned char* m_pCurrent = Pool;
 };
 }
-
-extern UA::MemoryPool<Unarmed, GroundIdle, PoweredFlight, UnpoweredFlight, BallisticDescent, MainChute, Land> StateMemory;
 
 #endif //FLIGHT_COMPUTER_MEMORYPOOL_H
