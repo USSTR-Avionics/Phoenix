@@ -11,7 +11,7 @@ class MainChute : public State
 {
 public:
     // main
-    virtual State* Run(SensorData&) override;
+    virtual State* Run(SensorData&, StateMemPool&) override;
 
     ~MainChute() override = default;
 };

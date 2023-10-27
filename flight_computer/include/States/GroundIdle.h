@@ -11,7 +11,7 @@ class GroundIdle : public State
 {
 public:
     // main
-    virtual State* Run(SensorData&) override;
+    virtual State* Run(SensorData&, StateMemPool&) override;
 
     ~GroundIdle() override = default;
 };

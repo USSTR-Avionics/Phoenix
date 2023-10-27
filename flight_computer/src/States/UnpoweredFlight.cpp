@@ -1,14 +1,15 @@
 //
 // Created by TDKua on 2023/10/22.
 //
-#include "GlobalVariables.h"
+#include "StateMachine.h"
 
-State* UnpoweredFlight::Run(SensorData&)
+State* UnpoweredFlight::Run(SensorData& SD, StateMemPool& MemPool)
 {
     if(false)
     {
         // transition to new state, will break SM if you create random obj
-        return StatePool.ReplaceAllocate<MainChute, decltype(this)>();
+		// same as &MemPool.emplace<MainChute>(), doesn't seem to affect binary size
+        return dynamic_cast<State*>(&MemPool.emplace<MainChute>());
     }
-    return this;
+    return dynamic_cast<State*>(&std::get<UnpoweredFlight>(MemPool));
 }

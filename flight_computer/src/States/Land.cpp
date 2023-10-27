@@ -1,14 +1,10 @@
 //
 // Created by TDKua on 2023/10/22.
 //
-#include "GlobalVariables.h"
+#include "StateMachine.h"
 
-State* Land::Run(SensorData&)
+State* Land::Run(SensorData& SD, StateMemPool& MemPool)
 {
-    if(false)
-    {
-        // transition to new state, will break SM if you create random obj
-        return StatePool.ReplaceAllocate<MainChute, decltype(this)>();
-    }
-    return this;
+	// always return self, no transition
+	return dynamic_cast<State*>(&std::get<Land>(MemPool)); // equivalent : return this;
 }

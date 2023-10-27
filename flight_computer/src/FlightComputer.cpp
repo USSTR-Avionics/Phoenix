@@ -39,6 +39,7 @@ void FlightComputer::init(){
     }
 }
 
+/*
 FlightComputer::FlightComputer()
 {
         able_to_fly = true;
@@ -46,3 +47,4 @@ FlightComputer::FlightComputer()
         sensor_data = DataQueue();
         Flight_Data = &sensor_data;
 }
+*/

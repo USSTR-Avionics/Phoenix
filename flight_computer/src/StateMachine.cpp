@@ -1,10 +1,8 @@
 #include "StateMachine.h"
 
-StateMachine::StateMachine(State* State) : m_CurrentState(State){}
+StateMachine::StateMachine() : m_CurrentState(dynamic_cast<State*>(&MemPool.emplace<Unarmed>())){}
 
 void StateMachine::Run(SensorData& SD)
 {
-	m_CurrentState = m_CurrentState->Run(SD);
-	// Land return nullptr
-    if(m_CurrentState == nullptr){ exit(1); }
+	m_CurrentState = m_CurrentState->Run(SD, MemPool);
 }

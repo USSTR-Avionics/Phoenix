@@ -11,7 +11,7 @@ class Unarmed : public State
 {
 public:
     // main
-    virtual State* Run(SensorData&) override;
+    virtual State* Run(SensorData&, StateMemPool&) override;
 
     ~Unarmed() override= default;
 };

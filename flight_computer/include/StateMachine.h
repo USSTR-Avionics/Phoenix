@@ -1,17 +1,26 @@
 #pragma once
 
-#include "GlobalVariables.h"
+#include "States/Unarmed.h"
+#include "States/GroundIdle.h"
+#include "States/PoweredFlight.h"
+#include "States/UnpoweredFlight.h"
+#include "States/BallisticDescent.h"
+#include "States/MainChute.h"
+#include "States/Land.h"
+
 #include "DataQueue.h"
+#include "SensorData.h"
 
 class StateMachine
 {
 public:
-    explicit StateMachine(State* State = StatePool.Allocate<Unarmed>());
+    explicit StateMachine();
     void Run(SensorData&);
 
     StateMachine(StateMachine&) = delete;
     StateMachine& operator=(StateMachine&) = delete;
 private:
     SensorData sensor_data;
-    State* m_CurrentState{nullptr};
+	StateMemPool MemPool;
+    State* m_CurrentState { nullptr };
 };
