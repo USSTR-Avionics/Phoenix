@@ -21,6 +21,7 @@
 
 #include "SensorData.h"
 #include "StateMachine.h"
+#include "Watchdog_t4.h"
 
 Adafruit_BMP280 bmp; // use I2C interface
 Adafruit_Sensor *bmp_temp = bmp.getTemperatureSensor();
@@ -28,15 +29,25 @@ Adafruit_Sensor *bmp_pressure = bmp.getPressureSensor();
 
 static SensorData SensorData;
 
-static StateMachine StateMachine(
+static StateMachine StateMachine;
+static WDT_T4<WDT2> WatchDog;
+
+void WatchDogInterrupt()
 {
-	.trigger = 3.0,
-	.timeout = 5.0,
-	.pin = 13,
-});
+
+}
 
 void setup()
 {
+	// watch dog
+	WatchDog.begin({
+	.trigger = 3.0,
+	.timeout = 5.0,
+	.pin = 13,
+	.callback = WatchDogInterrupt
+	});
+
+	// ==============
 	Serial.begin(9600);
 	while ( !Serial ) delay(100);   // wait for native usb
 	Serial.println(F("BMP280 Sensor event test"));
@@ -65,10 +76,8 @@ void setup()
 
 	bmp_temp->printSensorDetails();
 
-	if(StateMachine.Ready())
-	{
-		exit(1);
-	}
+	// check StateMachine
+	if(!StateMachine.Ready()) { exit(1); }
 
 }
 
@@ -89,5 +98,6 @@ void loop()
 	Serial.println();
 	delay(2000);
 
+	WatchDog.feed();
 	StateMachine.Run(SensorData);
 }

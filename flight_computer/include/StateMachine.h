@@ -8,13 +8,12 @@
 #include "States/MainChute.h"
 
 #include "EEPROM.h"
-#include "Watchdog_t4.h"
 #include "DataQueue.h"
 
 class StateMachine
 {
 public:
-    explicit StateMachine(WDT_timings_t);
+    explicit StateMachine();
     void Run(SensorData&);
 
     StateMachine(StateMachine&) = delete;
@@ -22,8 +21,7 @@ public:
 
 	bool Ready();
 private:
-	static void WD_CallBack();
 	StateMemPool m_MemPool;
     State* m_CurrentState { nullptr };
-	WDT_T4<WDT2> m_WatchDog;
+
 };
