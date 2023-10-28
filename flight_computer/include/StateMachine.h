@@ -10,6 +10,8 @@
 #include "EEPROM.h"
 #include "DataQueue.h"
 
+#include <Arduino.h>
+
 class StateMachine
 {
 public:

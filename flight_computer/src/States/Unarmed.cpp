@@ -5,7 +5,11 @@
 
 State* Unarmed::Run(SensorData& SD, StateMemPool& MemPool)
 {
-    if(false)
+    digitalWrite(20, HIGH);
+    delay(2000);
+    digitalWrite(20, LOW);
+
+    if(true)
     {
         // transition to new state, will break SM if you create random obj
 	    return dynamic_cast<State*>(&MemPool.emplace<GroundIdle>());
