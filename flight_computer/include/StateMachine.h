@@ -6,21 +6,24 @@
 #include "States/UnpoweredFlight.h"
 #include "States/BallisticDescent.h"
 #include "States/MainChute.h"
-#include "States/Land.h"
 
+#include "EEPROM.h"
+#include "Watchdog_t4.h"
 #include "DataQueue.h"
-#include "SensorData.h"
 
 class StateMachine
 {
 public:
-    explicit StateMachine();
+    explicit StateMachine(WDT_timings_t);
     void Run(SensorData&);
 
     StateMachine(StateMachine&) = delete;
     StateMachine& operator=(StateMachine&) = delete;
+
+	bool Ready();
 private:
-    SensorData sensor_data;
-	StateMemPool MemPool;
+	static void WD_CallBack();
+	StateMemPool m_MemPool;
     State* m_CurrentState { nullptr };
+	WDT_T4<WDT2> m_WatchDog;
 };
