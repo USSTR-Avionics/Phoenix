@@ -5,7 +5,10 @@
 
 State* GroundIdle::Run(SensorData& SD, StateMemPool& MemPool)
 {
-    if(false)
+    digitalWrite(19, HIGH);
+    delay(2000);
+    digitalWrite(19, LOW);
+    if(true)
     {
         // transition to new state, will break SM if you create random obj
 	    return dynamic_cast<State*>(&MemPool.emplace<PoweredFlight>());

@@ -16,7 +16,7 @@ struct SensorData
 
     FlightStates m_State;
 
-	template<typename T> requires std::is_arithmetic_v<T>
+	template<typename T> // requires std::is_arithmetic_v<T>
 	static T Average(T New, T Old, float NewPercentage)
 	{
 		NewPercentage = std::clamp(NewPercentage, 0.f, 1.f);
