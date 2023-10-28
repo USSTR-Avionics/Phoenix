@@ -1,15 +1,14 @@
 //
 // Created by TDKua on 2023/10/22.
 //
-#include "States/BallisticDescent.h"
+#include "StateMachine.h"
 
-bool BallisticDescent::Run(SensorData &)
+State* BallisticDescent::Run(SensorData& SD, StateMemPool& MemPool)
 {
-    return false;
-}
-
-State* BallisticDescent::Transition()
-{
-	// will break SM you create random obj
-    return new MainChute;
+    if(false)
+    {
+        // transition to new state, will break SM if you create random obj
+	    return dynamic_cast<State*>(&MemPool.emplace<MainChute>());
+    }
+	return dynamic_cast<State*>(&std::get<BallisticDescent>(MemPool));
 }

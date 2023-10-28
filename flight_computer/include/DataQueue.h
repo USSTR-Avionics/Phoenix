@@ -7,7 +7,7 @@ class DataQueue
 private:
     /* data */
     int currentStartIndex = 0;
-    static const int dataLength = 5;
+    static constexpr int dataLength = 5;
     SensorData data[dataLength];
 public:
     DataQueue();

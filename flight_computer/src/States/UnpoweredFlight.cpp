@@ -1,15 +1,15 @@
 //
 // Created by TDKua on 2023/10/22.
 //
-#include "States/UnpoweredFlight.h"
+#include "StateMachine.h"
 
-bool UnpoweredFlight::Run(SensorData &)
+State* UnpoweredFlight::Run(SensorData& SD, StateMemPool& MemPool)
 {
-    return false;
-}
-
-State* UnpoweredFlight::Transition()
-{
-	// will break SM you create random obj
-    return new BallisticDescent;
+    if(false)
+    {
+        // transition to new state, will break SM if you create random obj
+		// same as &MemPool.emplace<MainChute>(), doesn't seem to affect binary size
+        return dynamic_cast<State*>(&MemPool.emplace<MainChute>());
+    }
+    return dynamic_cast<State*>(&std::get<UnpoweredFlight>(MemPool));
 }

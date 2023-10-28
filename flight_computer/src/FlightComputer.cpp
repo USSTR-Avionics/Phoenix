@@ -1,19 +1,22 @@
-#include "StaticVariables.h"
+#include "GlobalVariables.h"
 #include "StateMachine.h"
 #include "SensorData.h"
 #include "FlightComputer.h"
 #include "DataQueue.h"
 
-bool FlightComputer::start_health_check(){
+bool FlightComputer::start_health_check()
+{
     return true;
 }
 
-bool FlightComputer::mid_flight_health_check(){
-
+bool FlightComputer::mid_flight_health_check()
+{
+	return true;
 }
 
 
-void FlightComputer::retrieve_data(){
+void FlightComputer::retrieve_data()
+{
     //get data through canbus and set it to sensor_data
 }
 
@@ -24,8 +27,8 @@ void FlightComputer::main_loop(){
     {
         retrieve_data();
         mid_flight_health_check();
-        flight_function.set_variables();
-        flight_function.call_function(&sensor_data);
+        // flight_function.set_variables();
+        // flight_function.call_function(&sensor_data);
     }
 }
 
@@ -36,9 +39,12 @@ void FlightComputer::init(){
     }
 }
 
-FlightComputer::FlightComputer() : flight_function(<#initializer#>) {
+/*
+FlightComputer::FlightComputer()
+{
         able_to_fly = true;
-        flight_function = StateMachine(<#initializer#>);
+        // flight_function = StateMachine(<#initializer#>);
         sensor_data = DataQueue();
         Flight_Data = &sensor_data;
 }
+*/

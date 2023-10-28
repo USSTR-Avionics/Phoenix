@@ -1,15 +1,14 @@
 //
 // Created by TDKua on 2023/10/22.
 //
-#include "States/MainChute.h"
+#include "StateMachine.h"
 
-bool MainChute::Run(SensorData &)
+State* MainChute::Run(SensorData& SD, StateMemPool& MemPool)
 {
-    return false;
-}
-
-State* MainChute::Transition()
-{
-	// will break SM you create random obj
-    return new Land;
+    if(false)
+    {
+        // transition to new state, will break SM if you create random obj
+	    return dynamic_cast<State*>(&MemPool.emplace<MainChute>());
+    }
+	return dynamic_cast<State*>(&std::get<MainChute>(MemPool));
 }

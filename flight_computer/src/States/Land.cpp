@@ -1,15 +1,10 @@
 //
 // Created by TDKua on 2023/10/22.
 //
-#include "States/Land.h"
+#include "StateMachine.h"
 
-bool Land::Run(SensorData &)
+State* Land::Run(SensorData& SD, StateMemPool& MemPool)
 {
-    return false;
-}
-
-State* Land::Transition()
-{
-	// will break SM you create random obj
-    return nullptr;
+	// always return self, no transition
+	return dynamic_cast<State*>(&std::get<Land>(MemPool)); // equivalent : return this;
 }

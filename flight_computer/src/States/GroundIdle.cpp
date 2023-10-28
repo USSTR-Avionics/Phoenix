@@ -1,15 +1,14 @@
 //
 // Created by TDKua on 2023/10/22.
 //
-#include "States/GroundIdle.h"
+#include "StateMachine.h"
 
-bool GroundIdle::Run(SensorData &)
+State* GroundIdle::Run(SensorData& SD, StateMemPool& MemPool)
 {
-    return false;
-}
-
-State* GroundIdle::Transition()
-{
-	// will break SM you create random obj
-    return new PoweredFlight;
+    if(false)
+    {
+        // transition to new state, will break SM if you create random obj
+	    return dynamic_cast<State*>(&MemPool.emplace<PoweredFlight>());
+    }
+	return dynamic_cast<State*>(&std::get<GroundIdle>(MemPool));
 }

@@ -1,15 +1,14 @@
 //
 // Created by TDKua on 2023/10/22.
 //
-#include "States/Unarmed.h"
+#include "StateMachine.h"
 
-bool Unarmed::Run(SensorData &)
+State* Unarmed::Run(SensorData& SD, StateMemPool& MemPool)
 {
-    return false;
-}
-
-State* Unarmed::Transition()
-{
-	// will break SM you create random obj
-    return new GroundIdle;
+    if(false)
+    {
+        // transition to new state, will break SM if you create random obj
+	    return dynamic_cast<State*>(&MemPool.emplace<GroundIdle>());
+    }
+	return dynamic_cast<State*>(&std::get<Unarmed>(MemPool));
 }

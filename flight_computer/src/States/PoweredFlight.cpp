@@ -1,16 +1,14 @@
 //
 // Created by TDKua on 2023/10/22.
 //
+#include "StateMachine.h"
 
-#include "States/PoweredFlight.h"
-
-bool PoweredFlight::Run(SensorData &)
+State* PoweredFlight::Run(SensorData& SD, StateMemPool& MemPool)
 {
-    return false;
-}
-
-State* PoweredFlight::Transition()
-{
-	// will break SM you create random obj
-    return new UnpoweredFlight;
+    if(false)
+    {
+        // transition to new state, will break SM if you create random obj
+	    return dynamic_cast<State*>(&MemPool.emplace<UnpoweredFlight>());
+    }
+	return dynamic_cast<State*>(&std::get<PoweredFlight>(MemPool));
 }
