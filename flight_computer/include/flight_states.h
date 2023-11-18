@@ -1,6 +1,7 @@
 #pragma once
-enum class FlightStates {
-    UNARMED,
+enum class FlightStates : unint8_t 
+{
+    eUnarmed,
     GROUND_IDLE,
     POWERED_FLIGHT,
     UNPOWERED_FLIGHT,

@@ -62,10 +62,12 @@ void setup()
 
         Serial.println("Statemachine not ready");
     }
+    SensorData.setup();
 }
 
 void loop()
 {
 	// WatchDog.feed();
-	StateMachine.Run(SensorData);
+    SensorData.ReadSensorData();
+	//StateMachine.Run(SensorData);
 }
