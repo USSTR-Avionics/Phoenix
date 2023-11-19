@@ -16,12 +16,22 @@ struct SensorData
 
     FlightStates m_State;
 
-	template<typename T> // requires std::is_arithmetic_v<T>
+	template<typename T> requires std::is_arithmetic_v<T>
 	static T Average(T New, T Old, float NewPercentage)
 	{
 		NewPercentage = std::clamp(NewPercentage, 0.f, 1.f);
 		return NewPercentage * New + (1.f - NewPercentage) * Old;
 	}
+
+    void setup();
+
+    void ReadAcceleration();
+
+    void ReadBarometer();
+
+    void ReadThermocouple();
+
+    void ReadSensorData();
 
     /* SensorData - needs to store data from the following sensors:
      - accelerometer -kx134 - 8bit, 16bit https://www.mouser.ca/ProductDetail/Kionix/KX134-1211?qs=BJlw7L4Cy79%2FET%2FI6G7icQ%3D%3D
