@@ -1,7 +1,10 @@
 #pragma once
-enum class FlightStates : unint8_t 
+
+#include <cstdint>
+
+enum class FlightStates : uint8_t
 {
-    eUnarmed,
+    UNARMED,
     GROUND_IDLE,
     POWERED_FLIGHT,
     UNPOWERED_FLIGHT,

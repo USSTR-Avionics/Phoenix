@@ -7,9 +7,7 @@
 #include "States/BallisticDescent.h"
 #include "States/MainChute.h"
 
-#include "EEPROM.h"
-#include "DataQueue.h"
-
+#include "SensorData.h"
 #include <Arduino.h>
 
 class StateMachine

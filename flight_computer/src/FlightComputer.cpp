@@ -2,7 +2,6 @@
 #include "StateMachine.h"
 #include "SensorData.h"
 #include "FlightComputer.h"
-#include "DataQueue.h"
 
 bool FlightComputer::start_health_check()
 {
