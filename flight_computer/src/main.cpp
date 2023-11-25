@@ -23,13 +23,13 @@
 #include "StateMachine.h"
 #include "Watchdog_t4.h"
 
-Adafruit_BMP280 bmp; // use I2C interface
-Adafruit_Sensor *bmp_temp = bmp.getTemperatureSensor();
-Adafruit_Sensor *bmp_pressure = bmp.getPressureSensor();
+//Adafruit_BMP280 bmp; // use I2C interface
+//Adafruit_Sensor *bmp_temp = bmp.getTemperatureSensor();
+//Adafruit_Sensor *bmp_pressure = bmp.getPressureSensor();
 
-static SensorData SensorData;
+static SensorData Sensor_Data;
 
-static StateMachine StateMachine;
+static StateMachine State_Machine;
 // static WDT_T4<WDT2> WatchDog;
 
 void WatchDogInterrupt()
@@ -57,17 +57,17 @@ void setup()
     while (!Serial) delay(100);   // wait for native usb
 
     // check StateMachine
-    while (!StateMachine.Ready())
+    while (!State_Machine.Ready())
     {
 
         Serial.println("Statemachine not ready");
     }
-    SensorData.setup();
+    Sensor_Data.Setup();
 }
 
 void loop()
 {
 	// WatchDog.feed();
-    SensorData.ReadSensorData();
+    Sensor_Data.ReadSensorData();
 	//StateMachine.Run(SensorData);
 }

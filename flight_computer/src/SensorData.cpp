@@ -34,7 +34,7 @@ Adafruit_BMP280 bmp; // I2C
 
 outputData myData; // Struct for the accelerometer's data
 
-void Setup()
+void SensorData::Setup()
 {
     // // Wire.begin();
 
@@ -119,7 +119,7 @@ void Setup()
     //END OF MAX31855 SETUP
 }
 
-void ReadAcceleration(){
+void SensorData::ReadAcceleration(){
     // Check if data is ready.
     if (kxAccel.dataReady())
     {
@@ -135,7 +135,7 @@ void ReadAcceleration(){
     delay(20); // Delay should be 1/ODR (Output Data Rate), default is 1/50ODR
 }
 
-void ReadBarometer(){
+void SensorData::ReadBarometer(){
 
     //Adafruit_BMP280 bmp(BMP_CS); // hardware SPI
     //Adafruit_BMP280 bmp(BMP_CS, BMP_MOSI, BMP_MISO,  BMP_SCK);
@@ -156,7 +156,7 @@ void ReadBarometer(){
 
 }
 
-void ReadThermocouple(){
+void SensorData::ReadThermocouple(){
 
     // Example creating a thermocouple instance with hardware SPI
     // on a given CS pin.
@@ -190,10 +190,10 @@ void ReadThermocouple(){
 }
 
 
-void ReadSensorData(){
-    void ReadAcceleration();
+void SensorData::ReadSensorData(){
+    //void ReadAcceleration();
 
     //void ReadBarometer();
 
-    //void ReadThermocouple();
+    void ReadThermocouple();
 }

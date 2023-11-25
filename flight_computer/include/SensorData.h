@@ -2,11 +2,12 @@
 #include "flight_states.h"
 #include <algorithm>
 
-struct SensorData
+class SensorData
 {
     /*
     * lets assume everything is a float for now
     */
+    public:
     float m_AccelX;
     float m_AccelY;
     float m_AccelZ;
@@ -23,7 +24,7 @@ struct SensorData
 		return NewPercentage * New + (1.f - NewPercentage) * Old;
 	}
 
-    void setup();
+    void Setup();
 
     void ReadAcceleration();
 
