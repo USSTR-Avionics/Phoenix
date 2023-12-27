@@ -9,10 +9,7 @@
 
 #include <SparkFun_KX13X.h> // Click here to get the library: http://librarymanager/All#SparkFun_KX13X
 
-#define BMP_SCK  (13)
-#define BMP_MISO (12)
-#define BMP_MOSI (11)
-#define BMP_CS   (10)
+#define BMP_SCK  (16)
 
 #include "Adafruit_MAX31855.h"
 // Default connection is using software SPI, but comment and uncomment one of
@@ -36,49 +33,49 @@ outputData myData; // Struct for the accelerometer's data
 
 void SensorData::Setup()
 {
-    // // Wire.begin();
+    // Wire.begin();
 
-    // // //KX134 Setup
-    // // Serial.begin(115200);
-    // // Serial.println("Welcome.");
+    //KX134 Setup
+    Serial.begin(115200);
+    Serial.println("Welcome.");
 
-    // // Wait for the Serial monitor to be opened.
-    // // while (!Serial)
-    // // delay(50);
-    // if (!kxAccel.begin())
-    // {
-    // Serial.println("Could not communicate with the the KX13X. Freezing.");
-    // while (1)
-    //     ;
-    // }
+    //Wait for the Serial monitor to be opened.
+    while (!Serial)
+    delay(50);
+    if (!kxAccel.begin())
+    {
+    Serial.println("Could not communicate with the the KX13X. Freezing.");
+    while (1)
+        ;
+    }
 
-    // Serial.println("Ready.");
+    Serial.println("Ready.");
 
-    // if (kxAccel.softwareReset())
-    // {
-    //     Serial.println("Reset.");
+    if (kxAccel.softwareReset())
+    {
+        Serial.println("Reset.");
 
-    //     // Give some time for the accelerometer to reset.
-    //     // It needs two, but give it five for good measure.
-    //     delay(5);
+        // Give some time for the accelerometer to reset.
+        // It needs two, but give it five for good measure.
+        delay(5);
 
-    //     // Many settings for KX13X can only be
-    //     // applied when the accelerometer is powered down.
-    //     // However there are many that can be changed "on-the-fly"
-    //     // check datasheet for more info, or the comments in the
-    //     // "...regs.h" file which specify which can be changed when.
-    //     kxAccel.enableAccel(false);
+        // Many settings for KX13X can only be
+        // applied when the accelerometer is powered down.
+        // However there are many that can be changed "on-the-fly"
+        // check datasheet for more info, or the comments in the
+        // "...regs.h" file which specify which can be changed when.
+        kxAccel.enableAccel(false);
 
-    //     kxAccel.setRange(SFE_KX132_RANGE16G); // 16g Range
-    //     // kxAccel.setRange(SFE_KX134_RANGE16G);         // 16g for the KX134
+        kxAccel.setRange(SFE_KX132_RANGE16G); // 16g Range
+        // kxAccel.setRange(SFE_KX134_RANGE16G);         // 16g for the KX134
 
-    //     kxAccel.enableDataEngine(); // Enables the bit that indicates data is ready.
-    //     // kxAccel.setOutputDataRate(); // Default is 50Hz
-    //     kxAccel.enableAccel();
-    // }
+        kxAccel.enableDataEngine(); // Enables the bit that indicates data is ready.
+        // kxAccel.setOutputDataRate(); // Default is 50Hz
+        kxAccel.enableAccel();
+    }
     //END KX134 SETUP
 
-    // //START OF BMP280 SETUP
+    //START OF BMP280 SETUP
     // Serial.println(F("BMP280 test"));
     // unsigned status;
     
@@ -98,24 +95,24 @@ void SensorData::Setup()
     //                 Adafruit_BMP280::SAMPLING_X16,    /* Pressure oversampling */
     //                 Adafruit_BMP280::FILTER_X16,      /* Filtering. */
     //                 Adafruit_BMP280::STANDBY_MS_500); /* Standby time. */
-    // //END OF BMP280 SETUP
+    //END OF BMP280 SETUP
 
     //START OF MAX31855 SETUP
 
-    Serial.println("MAX31855 test");
-    // wait for MAX chip to stabilize
-    delay(500);
-    Serial.print("Initializing sensor...");
-    if (!thermocouple.begin()) {
-    Serial.println("ERROR.");
-    while (1) delay(10);
-    }
+    // Serial.println("MAX31855 test");
+    // // wait for MAX chip to stabilize
+    // delay(500);
+    // Serial.print("Initializing sensor...");
+    // if (!thermocouple.begin()) {
+    // Serial.println("ERROR.");
+    // while (1) delay(10);
+    // }
 
-    // OPTIONAL: Can configure fault checks as desired (default is ALL)
-    // Multiple checks can be logically OR'd together.
-    //// thermocouple.setFaultChecks(MAX31855_FAULT_OPEN | MAX31855_FAULT_SHORT_VCC);  // short to GND fault is ignored
+    // // OPTIONAL: Can configure fault checks as desired (default is ALL)
+    // // Multiple checks can be logically OR'd together.
+    // //// thermocouple.setFaultChecks(MAX31855_FAULT_OPEN | MAX31855_FAULT_SHORT_VCC);  // short to GND fault is ignored
 
-    Serial.println("DONE.");
+    // Serial.println("DONE.");
     //END OF MAX31855 SETUP
 }
 
@@ -191,9 +188,9 @@ void SensorData::ReadThermocouple(){
 
 
 void SensorData::ReadSensorData(){
-    //void ReadAcceleration();
+    this->ReadAcceleration();
 
-    //void ReadBarometer();
+    //this->ReadBarometer();
 
-    void ReadThermocouple();
+    //this->ReadThermocouple();
 }
