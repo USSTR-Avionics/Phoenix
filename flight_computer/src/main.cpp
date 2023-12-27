@@ -30,7 +30,7 @@
 static SensorData Sensor_Data;
 
 static StateMachine State_Machine;
-// static WDT_T4<WDT2> WatchDog;
+static WDT_T4<WDT2> WatchDog;
 
 void WatchDogInterrupt()
 {
@@ -67,7 +67,8 @@ void setup()
 
 void loop()
 {
-	// WatchDog.feed();
+    Serial.println("Reading Data:");
+	WatchDog.feed();
     Sensor_Data.ReadSensorData();
 	//StateMachine.Run(SensorData);
 }
