@@ -1,55 +1,20 @@
-#include <Wire.h>
-#include <SPI.h>
-#include <Adafruit_BMP280.h>
-#include <Arduino.h>
-
 #include "SensorData.h"
-#include "StateMachine.h"
-#include "Watchdog_t4.h"
 
-#include <SparkFun_KX13X.h> // Click here to get the library: http://librarymanager/All#SparkFun_KX13X
 
-#define BMP_SCK  (16)
-
-#include "Adafruit_MAX31855.h"
-// Default connection is using software SPI, but comment and uncomment one of
-// the two examples below to switch between software SPI and hardware SPI:
-
-// Example creating a thermocouple instance with software SPI on any three
-// digital IO pins.
-#define MAXDO   3
-#define MAXCS   4
-#define MAXCLK  5
-
-// initialize the Thermocouple
-Adafruit_MAX31855 thermocouple(MAXCLK, MAXCS, MAXDO);
-
-SparkFun_KX132 kxAccel;
-// SparkFun_KX134 kxAccel; // For the KX134, uncomment this and comment line above
-
-Adafruit_BMP280 bmp; // I2C
-
-outputData myData; // Struct for the accelerometer's data
-
-void SensorData::Setup()
+void Sensor::Setup()
 {
     // Wire.begin();
 
     //KX134 Setup
     Serial.begin(115200);
-    Serial.println("Welcome.");
 
     //Wait for the Serial monitor to be opened.
-    while (!Serial)
-    delay(50);
+    while (!Serial) { delay(50); }
+
     if (!kxAccel.begin())
     {
-    Serial.println("Could not communicate with the the KX13X. Freezing.");
-    while (1)
-        ;
+        Serial.println("Could not communicate with the the KX13X. Freezing.");
     }
-
-    Serial.println("Ready.");
 
     if (kxAccel.softwareReset())
     {
@@ -114,38 +79,42 @@ void SensorData::Setup()
 
     // Serial.println("DONE.");
     //END OF MAX31855 SETUP
+
+
+	if (Bmi.begin() < 0) { Serial.println("Bmi failed to intialized"); }
+
 }
 
-void SensorData::ReadAcceleration(){
+void Sensor::ReadAcceleration(){
     // Check if data is ready.
     if (kxAccel.dataReady())
     {
-        kxAccel.getAccelData(&myData);
+        kxAccel.getAccelData(&SD.AccelerometerData);
         Serial.print("X: ");
-        Serial.print(myData.xData, 4);
+        Serial.print(SD.AccelerometerData.xData, 4);
         Serial.print(" Y: ");
-        Serial.print(myData.yData, 4);
+        Serial.print(SD.AccelerometerData.yData, 4);
         Serial.print(" Z: ");
-        Serial.print(myData.zData, 4);
+        Serial.print(SD.AccelerometerData.zData, 4);
         Serial.println();
     }
     delay(20); // Delay should be 1/ODR (Output Data Rate), default is 1/50ODR
 }
 
-void SensorData::ReadBarometer(){
+void Sensor::ReadBarometer(){
 
     //Adafruit_BMP280 bmp(BMP_CS); // hardware SPI
     //Adafruit_BMP280 bmp(BMP_CS, BMP_MOSI, BMP_MISO,  BMP_SCK);
     Serial.print(F("Temperature = "));
-    Serial.print(bmp.readTemperature());
+    Serial.print(Bmp.readTemperature());
     Serial.println(" *C");
 
     Serial.print(F("Pressure = "));
-    Serial.print(bmp.readPressure());
+    Serial.print(Bmp.readPressure());
     Serial.println(" Pa");
 
     Serial.print(F("Approx altitude = "));
-    Serial.print(bmp.readAltitude(1013.25)); /* Adjusted to local forecast! */
+    Serial.print(Bmp.readAltitude(1013.25)); /* Adjusted to local forecast! */
     Serial.println(" m");
 
     Serial.println();
@@ -153,7 +122,7 @@ void SensorData::ReadBarometer(){
 
 }
 
-void SensorData::ReadThermocouple(){
+void Sensor::ReadThermocouple(){
 
     // Example creating a thermocouple instance with hardware SPI
     // on a given CS pin.
@@ -167,16 +136,19 @@ void SensorData::ReadThermocouple(){
 
     // basic readout test, just print the current temp
     Serial.print("Internal Temp = ");
-    Serial.println(thermocouple.readInternal());
+    Serial.println(Thermocouple.readInternal());
 
-    double c = thermocouple.readCelsius();
-    if (isnan(c)) {
+    double c = Thermocouple.readCelsius();
+    if (isnan(c))
+	{
         Serial.println("Thermocouple fault(s) detected!");
-        uint8_t e = thermocouple.readError();
+        uint8_t e = Thermocouple.readError();
         if (e & MAX31855_FAULT_OPEN) Serial.println("FAULT: Thermocouple is open - no connections.");
         if (e & MAX31855_FAULT_SHORT_GND) Serial.println("FAULT: Thermocouple is short-circuited to GND.");
         if (e & MAX31855_FAULT_SHORT_VCC) Serial.println("FAULT: Thermocouple is short-circuited to VCC.");
-    } else {
+    }
+	else
+	{
         Serial.print("C = ");
         Serial.println(c);
     }
@@ -187,10 +159,18 @@ void SensorData::ReadThermocouple(){
 }
 
 
-void SensorData::ReadSensorData(){
-    this->ReadAcceleration();
+void Sensor::ReadSensorData(){
+    ReadAcceleration();
 
-    //this->ReadBarometer();
+    // ReadBarometer();
 
-    //this->ReadThermocouple();
+    // ReadThermocouple();
 }
+
+SensorData Sensor::GetData() { return SD; }
+
+void Sensor::CreatThermocouple(int8_t MaxClk, int8_t MaxCS, int8_t MaxDO)
+{ Thermocouple = Adafruit_MAX31855(MaxClk, MaxCS, MaxDO); }
+
+void Sensor::CreateBMI(uint8_t AccelAddr, uint8_t GyroAddr)
+{ Bmi = Bmi088(Wire, AccelAddr, GyroAddr); }

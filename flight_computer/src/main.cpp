@@ -29,12 +29,12 @@
 
 static SensorData SensorData;
 
-static StateMachine State_Machine;
+static StateMachine StateMachine;
 static WDT_T4<WDT2> WatchDog;
 
 void WatchDogInterrupt()
 {
-
+	WatchDog.feed();
 }
 
 void setup()
@@ -56,13 +56,13 @@ void setup()
     Serial.begin(9600);
     while (!Serial) delay(100);   // wait for native usb
 
-	while (BMI.begin() < 0)
+	while (Bmi.begin() < 0)
 	{
 		Serial.println("IMU Initialization Error");
 	}
 
     // check StateMachine
-    if (!State_Machine.Ready())
+    if (!StateMachine.Ready())
     {
         Serial.println("State machine could not allocate memory pool");
     }
