@@ -8,6 +8,7 @@
 #include "States/MainChute.h"
 
 #include "SensorData.h"
+#include "GlobalVariables.h"
 #include <Arduino.h>
 
 class StateMachine
