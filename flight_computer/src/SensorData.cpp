@@ -158,7 +158,6 @@ void Sensor::ReadThermocouple(){
     delay(1000);
 }
 
-
 void Sensor::ReadSensorData(){
     ReadAcceleration();
 
@@ -168,9 +167,3 @@ void Sensor::ReadSensorData(){
 }
 
 SensorData Sensor::GetData() { return SD; }
-
-void Sensor::CreatThermocouple(int8_t MaxClk, int8_t MaxCS, int8_t MaxDO)
-{ Thermocouple = Adafruit_MAX31855(MaxClk, MaxCS, MaxDO); }
-
-void Sensor::CreateBMI(uint8_t AccelAddr, uint8_t GyroAddr)
-{ Bmi = Bmi088(Wire, AccelAddr, GyroAddr); }

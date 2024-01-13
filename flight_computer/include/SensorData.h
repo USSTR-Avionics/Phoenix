@@ -62,13 +62,17 @@ struct SensorData
 
 };
 
-constexpr int8_t MAXDO = 3;
-constexpr int8_t MAXCS = 4;
-constexpr int8_t MAXCLK = 5;
-
 class Sensor
 {
 public:
+	/*
+	 * Thermocouple : int8_t MaxClk, int8_t MaxCS, int8_t MaxDO
+	 * Bmi : uint8_t AccelAddr, uint8_t GyroAddr
+	 */
+	Sensor(int8_t ThermocouplePin[3], uint8_t BmiPin[2]) :
+		Thermocouple(Adafruit_MAX31855(ThermocouplePin[0], ThermocouplePin[1], ThermocouplePin[2])),
+		Bmi(Bmi088(Wire, BmiPin[0], BmiPin[1])){}
+
 	template<typename T> requires std::is_arithmetic_v<T>
 	static T Average(T New, T Old, float NewPercentage)
 	{
@@ -88,15 +92,12 @@ public:
 
 	SensorData GetData();
 
-	void CreatThermocouple(int8_t MaxClk, int8_t MaxCS, int8_t MaxDO);
-
-	void CreateBMI(uint8_t AccelAddr, uint8_t GyroAddr);
-
 private:
 
 	SensorData SD;
 
 	Adafruit_MAX31855 Thermocouple;
+	Bmi088 Bmi;
 
 	SparkFun_KX132 kxAccel;
 	// SparkFun_KX134 kxAccel; // For the KX134, uncomment this and comment line above
@@ -104,7 +105,6 @@ private:
 	// I2C
 	Adafruit_BMP280 Bmp;
 
-	Bmi088 Bmi;
 };
 
 

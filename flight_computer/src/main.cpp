@@ -27,7 +27,7 @@
 //Adafruit_Sensor *bmp_temp = bmp.getTemperatureSensor();
 //Adafruit_Sensor *bmp_pressure = bmp.getPressureSensor();
 
-static SensorData SensorData;
+static Sensor Sensor;
 
 static StateMachine StateMachine;
 static WDT_T4<WDT2> WatchDog;
@@ -56,23 +56,18 @@ void setup()
     Serial.begin(9600);
     while (!Serial) delay(100);   // wait for native usb
 
-	while (Bmi.begin() < 0)
-	{
-		Serial.println("IMU Initialization Error");
-	}
-
     // check StateMachine
     if (!StateMachine.Ready())
     {
         Serial.println("State machine could not allocate memory pool");
     }
-    SensorData.Setup();
+    Sensor.Setup();
 }
 
 void loop()
 {
     Serial.println("Reading Data:");
 	WatchDog.feed();
-    SensorData.ReadSensorData();
+    Sensor.ReadSensorData();
 	//StateMachine.Run(SensorData);
 }
