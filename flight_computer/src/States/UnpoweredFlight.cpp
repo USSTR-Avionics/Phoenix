@@ -2,6 +2,8 @@
 // Created by TDKua on 2023/10/22.
 //
 #include "StateMachine.h"
+#include "States/UnpoweredFlight.h"
+
 
 State* UnpoweredFlight::Run(SensorData& SD, StateMemPool& MemPool)
 {
@@ -18,4 +20,9 @@ State* UnpoweredFlight::Run(SensorData& SD, StateMemPool& MemPool)
     //     return dynamic_cast<State*>(&MemPool.emplace<BallisticDescent>());
     // }
     return dynamic_cast<State*>(&std::get<UnpoweredFlight>(MemPool));
+}
+
+FlightState UnpoweredFlight::GetState()
+{
+	return FlightState::eUnpoweredFlight;
 }

@@ -10,4 +10,5 @@ bool StateMachine::Ready()
 void StateMachine::Run(SensorData& SD)
 {
 	m_CurrentState = m_CurrentState->Run(SD, m_MemPool);
+	m_eCurrentState = m_CurrentState->GetState();
 }

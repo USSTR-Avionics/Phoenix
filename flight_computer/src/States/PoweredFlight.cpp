@@ -2,6 +2,8 @@
 // Created by TDKua on 2023/10/22.
 //
 #include "StateMachine.h"
+#include "States/PoweredFlight.h"
+
 
 State* PoweredFlight::Run(SensorData& SD, StateMemPool& MemPool)
 {
@@ -18,4 +20,9 @@ State* PoweredFlight::Run(SensorData& SD, StateMemPool& MemPool)
 	//     return dynamic_cast<State*>(&MemPool.emplace<UnpoweredFlight>());
     // }
 	return dynamic_cast<State*>(&std::get<PoweredFlight>(MemPool));
+}
+
+FlightState PoweredFlight::GetState()
+{
+	return FlightState::ePoweredFlight;
 }

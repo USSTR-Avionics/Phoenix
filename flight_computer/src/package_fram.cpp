@@ -1,7 +1,7 @@
 #include "package_fram.h"
 #include "debug_macros.h"
 #include "half.h"
-#include "sensor_fram.h"
+#include "FRAM.h"
 #include <Arduino.h>
 #include <cstdint>
 #include <stdint.h>
@@ -11,6 +11,7 @@
 #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #pragma GCC diagnostic ignored "-Wdouble-promotion"
 
+#define FRAM_INIT_ADDRESS 3
 
 static uint32_t fram_cursor      = FRAM_INIT_ADDRESS;
 

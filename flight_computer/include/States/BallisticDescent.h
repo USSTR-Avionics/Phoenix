@@ -12,8 +12,8 @@ class BallisticDescent : public State
 public:
     // main
     virtual State* Run(SensorData&, StateMemPool&) override;
+	virtual FlightState GetState() override;
 
-	BallisticDescent() = default;
     ~BallisticDescent() override = default;
 };
 #endif //FLIGHT_COMPUTER_BALLISTICDECENT_H

@@ -1,7 +1,7 @@
 #pragma once
 #include "GlobalVariables.h"
 #include "StateMachine.h"
-#include "SensorData.h"
+#include "Sensor.h"
 
 class FlightComputer{
 private:

@@ -7,8 +7,7 @@
 #include "States/BallisticDescent.h"
 #include "States/MainChute.h"
 
-#include "SensorData.h"
-
+#include "Sensor.h"
 
 #include <Arduino.h>
 
@@ -25,4 +24,6 @@ public:
 private:
 	StateMemPool m_MemPool;
     State* m_CurrentState { nullptr };
+
+	FlightState m_eCurrentState;
 };

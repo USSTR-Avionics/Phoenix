@@ -12,6 +12,7 @@ class PoweredFlight : public State
 public:
     // main
     virtual State* Run(SensorData&, StateMemPool&) override;
+	virtual FlightState GetState() override;
 
     ~PoweredFlight() override = default;
 };

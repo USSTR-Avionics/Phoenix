@@ -16,21 +16,25 @@
 // }
 #include <Wire.h>
 #include <SPI.h>
-#include <Adafruit_BMP280.h>
 #include <Arduino.h>
 
-#include "SensorData.h"
+#include "Sensor.h"
 #include "StateMachine.h"
 #include "Watchdog_t4.h"
+#include "FRAM.h"
 
 //Adafruit_BMP280 bmp; // use I2C interface
 //Adafruit_Sensor *bmp_temp = bmp.getTemperatureSensor();
 //Adafruit_Sensor *bmp_pressure = bmp.getPressureSensor();
 
-static Sensor Sensor;
+// CHANGE THESE VALUES
+Sensor Sensor({1, 2, 3}, {4, 5}, 7);
+FRAM FRam(1, 2, 3);
 
-static StateMachine StateMachine;
-static WDT_T4<WDT2> WatchDog;
+StateMachine StateMachine;
+WDT_T4<WDT2> WatchDog;
+
+uint64_t PrevTime = 0, CurrentTime;
 
 void WatchDogInterrupt()
 {
@@ -62,6 +66,12 @@ void setup()
         Serial.println("State machine could not allocate memory pool");
     }
     Sensor.Setup();
+
+	// CHANGE THIS NUMBER
+	if(!FRam.Init(5))
+	{
+		Serial.println("Failed to init FRam at addr");
+	}
 }
 
 void loop()
@@ -69,5 +79,16 @@ void loop()
     Serial.println("Reading Data:");
 	WatchDog.feed();
     Sensor.ReadSensorData();
-	//StateMachine.Run(SensorData);
+
+	/*
+	CurrentTime = millis();
+	// must add, since Current Time it can overflow
+	if(PrevTime + 5000 <= CurrentTime)
+	{
+		FRam.StoreData(Sensor.GetData(), CurrentTime);
+		PrevTime = CurrentTime;
+	}
+	*/
+
+	//StateMachine.Run(Sensor);
 }

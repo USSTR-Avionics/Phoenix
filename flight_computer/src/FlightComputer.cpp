@@ -1,6 +1,6 @@
 #include "GlobalVariables.h"
 #include "StateMachine.h"
-#include "SensorData.h"
+#include "Sensor.h"
 #include "FlightComputer.h"
 
 bool FlightComputer::start_health_check()

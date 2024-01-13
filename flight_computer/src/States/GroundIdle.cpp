@@ -2,6 +2,8 @@
 // Created by TDKua on 2023/10/22.
 //
 #include "StateMachine.h"
+#include "States/GroundIdle.h"
+
 
 State* GroundIdle::Run(SensorData& SD, StateMemPool& MemPool)
 {
@@ -14,4 +16,9 @@ State* GroundIdle::Run(SensorData& SD, StateMemPool& MemPool)
 	    return dynamic_cast<State*>(&MemPool.emplace<PoweredFlight>());
     }
 	return dynamic_cast<State*>(&std::get<GroundIdle>(MemPool));
+}
+
+FlightState GroundIdle::GetState()
+{
+	return FlightState::eGroundIdle;
 }
