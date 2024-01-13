@@ -96,7 +96,7 @@ void Sensor::Setup()
     if (!status) {
     Serial.println(F("Could not find a valid BMP280 sensor, check wiring or "
                         "try a different address!"));
-    Serial.print("SensorID was: 0x"); Serial.println(Bmp.sensorID(),16);
+    Serial.print("SensorID was: 0x"); Serial.println(m_Bmp.sensorID(),16);
     Serial.print("        ID of 0xFF probably means a bad address, a BMP 180 or BMP 085\n");
     Serial.print("   ID of 0x56-0x58 represents a BMP 280,\n");
     Serial.print("        ID of 0x60 represents a BME 280.\n");
@@ -137,13 +137,13 @@ void Sensor::ReadAcceleration(){
     // Check if data is ready.
     if (m_KxAccel.dataReady())
     {
-        m_KxAccel.getAccelData(&m_SD.AccelerometerData);
+        m_KxAccel.getAccelData(&m_SD.m_AccelerometerData);
         Serial.print("X: ");
-        Serial.print(m_SD.AccelerometerData.xData, 4);
+        Serial.print(m_SD.m_AccelerometerData.xData, 4);
         Serial.print(" Y: ");
-        Serial.print(m_SD.AccelerometerData.yData, 4);
+        Serial.print(m_SD.m_AccelerometerData.yData, 4);
         Serial.print(" Z: ");
-        Serial.print(m_SD.AccelerometerData.zData, 4);
+        Serial.print(m_SD.m_AccelerometerData.zData, 4);
         Serial.println();
     }
     delay(20); // Delay should be 1/ODR (Output Data Rate), default is 1/50ODR

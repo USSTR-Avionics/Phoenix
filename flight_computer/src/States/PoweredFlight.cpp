@@ -7,7 +7,7 @@
 
 State* PoweredFlight::Run(SensorData& SD, StateMemPool& MemPool)
 {
-    if(SD.m_AccelZ > -9.8){
+    if(SD.m_AccelerometerData.zData > -9.8){
         // transition to new state, will break SM if you create random obj
 	    return dynamic_cast<State*>(&MemPool.emplace<UnpoweredFlight>());
     }

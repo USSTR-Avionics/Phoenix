@@ -2,7 +2,7 @@
 #define SENSOR_FRAM_H
 
 #include <Adafruit_FRAM_I2C.h>
-#include <half.hpp>
+#include <FP16.h>
 
 #include "FlightComputer.h"
 #include "Sensor.h"

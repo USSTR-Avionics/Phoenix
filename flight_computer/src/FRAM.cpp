@@ -47,14 +47,14 @@ bool FRAM::StoreData(SensorData SD, uint32_t TimeStamp)
 
 	// Accel
 	{
-		float AccelXYZ[]
+		uint16_t AccelXYZ[]
 		{
-			half_float::half {SD.m_AccelerometerData.xData},
-			half_float::half {SD.m_AccelerometerData.yData},
-			half_float::half {SD.m_AccelerometerData.zData}
+			fp16_ieee_from_fp32_value(SD.m_AccelerometerData.xData),
+			fp16_ieee_from_fp32_value(SD.m_AccelerometerData.yData),
+			fp16_ieee_from_fp32_value(SD.m_AccelerometerData.zData)
 		};
 
-		for(float& i : AccelXYZ)
+		for(auto& i : AccelXYZ)
 		{
 			BytePtr = (uint8_t*)&i;
 			for(int j = 0; j < 2; j++)
@@ -68,14 +68,14 @@ bool FRAM::StoreData(SensorData SD, uint32_t TimeStamp)
 
 	// Gyro
 	{
-		float GyroXYZ[]
+		uint16_t GyroXYZ[]
 		{
-				half_float::half { SD.m_Gyro.x },
-				half_float::half { SD.m_Gyro.y },
-				half_float::half { SD.m_Gyro.z },
+		fp16_ieee_from_fp32_value(SD.m_Gyro.x),
+		fp16_ieee_from_fp32_value( SD.m_Gyro.y),
+		fp16_ieee_from_fp32_value( SD.m_Gyro.z),
 		};
 
-		for(float& i : GyroXYZ)
+		for(auto& i : GyroXYZ)
 		{
 			BytePtr = (uint8_t*)&i;
 			for(int j = 0; j < 2; j++)
@@ -88,7 +88,7 @@ bool FRAM::StoreData(SensorData SD, uint32_t TimeStamp)
 	}
 
 	// relative altitude
-	half_float::half RelativeAltitude{SD.m_RelativeAltitude};
+	auto RelativeAltitude = fp16_ieee_from_fp32_value(SD.m_RelativeAltitude);
 	BytePtr = (uint8_t*)&RelativeAltitude;
 	for(int i = 0; i < 2; i++)
 	{
@@ -106,7 +106,7 @@ bool FRAM::StoreData(SensorData SD, uint32_t TimeStamp)
 	}
 
 	// Thermocouple
-	half_float::half Thermocouple{SD.m_Temperature};
+	auto Thermocouple = fp16_ieee_from_fp32_value(SD.m_Temperature);
 	BytePtr = (uint8_t*)&Thermocouple;
 	for(int i = 0; i < 2; i++)
 	{
@@ -126,11 +126,7 @@ float FRAM::ReadF16(uint32_t Location)
 		Buff[i] = Read(Location + 1);
 	}
 
-	// cast to float
-	return static_cast<float>(
-			// half as ptr
-			*reinterpret_cast<half_float::half*>(Buff)
-	);
+	return fp16_ieee_to_fp32_value(*reinterpret_cast<uint16_t*>(Buff));
 }
 
 float FRAM::ReadF32(uint32_t Location)

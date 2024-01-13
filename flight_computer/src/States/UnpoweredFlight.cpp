@@ -7,7 +7,7 @@
 
 State* UnpoweredFlight::Run(SensorData& SD, StateMemPool& MemPool)
 {
-    if(SD.m_AccelZ < -9.81){
+    if(SD.m_AccelerometerData.zData < -9.81){
         return dynamic_cast<State*>(&MemPool.emplace<BallisticDescent>());
     }
     // digitalWrite(19, HIGH);

@@ -1,3 +1,4 @@
+/*
 #ifndef PACKAGE_FRAM_H
 #define PACKAGE_FRAM_H
 
@@ -38,3 +39,4 @@ typedef struct _sensor_chunk_layout
 extern sensor_chunk_layout sensor_chunk;
 
 #endif // PACKAGE_FRAM_H
+*/
