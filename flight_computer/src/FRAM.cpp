@@ -123,7 +123,7 @@ float FRAM::ReadF16(uint32_t Location)
 	uint8_t Buff[2];
 	for(int i = 0; i < 2; i++)
 	{
-		Buff[i] = Read(Location + 1);
+		Buff[i] = Read(Location + i);
 	}
 
 	return fp16_ieee_to_fp32_value(*reinterpret_cast<uint16_t*>(Buff));
@@ -177,7 +177,7 @@ SensorChunk FRAM::ReadData(uint32_t Location)
 		Buff[i] = Read(Location);
 		Location++;
 	}
-	SC.m_TimeStamp = reinterpret_cast<uint32_t>(Buff);
+	SC.m_TimeStamp = *reinterpret_cast<uint32_t*>(Buff);
 
 	// Rocket state
 	SC.m_State = (FlightState)Read(Location);

@@ -28,17 +28,17 @@
 //Adafruit_Sensor *bmp_pressure = bmp.getPressureSensor();
 
 // CHANGE THESE VALUES
-Sensor Sensor({1, 2, 3}, {4, 5}, 7);
-FRAM FRam(1, 2, 3);
+// Sensor Sensor({1, 2, 3}, {4, 5}, 7);
+FRAM FRam(0, 100, 0);
 
-StateMachine StateMachine;
-WDT_T4<WDT2> WatchDog;
+// StateMachine StateMachine;
+// WDT_T4<WDT2> WatchDog;
 
 uint64_t PrevTime = 0, CurrentTime;
 
 void WatchDogInterrupt()
 {
-	WatchDog.feed();
+	// WatchDog.feed();
 }
 
 void setup()
@@ -61,24 +61,44 @@ void setup()
     while (!Serial) delay(100);   // wait for native usb
 
     // check StateMachine
-    if (!StateMachine.Ready())
-    {
-        Serial.println("State machine could not allocate memory pool");
-    }
-    Sensor.Setup();
+    // if (!StateMachine.Ready())
+    // {
+    //     Serial.println("State machine could not allocate memory pool");
+    // }
+    // Sensor.Setup();
 
 	// CHANGE THIS NUMBER
-	if(!FRam.Init(5))
+	if(!FRam.Init(0x50))
 	{
 		Serial.println("Failed to init FRam at addr");
 	}
+
+
+    SensorData SD{};
+
+    SD.m_Gyro.x = 1.2f;
+
+    auto tim = millis();
+    for(int i = 0; i < 4; i++)
+
+{
+    if(!FRam.StoreData(SD, i)){
+        Serial.println("Failed to store");
+    }
+}
+for(int i = 0; i < 4; i++)
+{
+    Serial.println(FRam.ReadData(i*25).m_TimeStamp);
+    Serial.println(FRam.ReadData(i*25).m_Gyro.x);
+}
+
 }
 
 void loop()
 {
-    Serial.println("Reading Data:");
-	WatchDog.feed();
-    Sensor.ReadSensorData();
+    //Serial.println("Reading Data:");
+	// WatchDog.feed();
+    // Sensor.ReadSensorData();
 
 	/*
 	CurrentTime = millis();
@@ -89,6 +109,9 @@ void loop()
 		PrevTime = CurrentTime;
 	}
 	*/
+
+
+
 
 	//StateMachine.Run(Sensor);
 }
