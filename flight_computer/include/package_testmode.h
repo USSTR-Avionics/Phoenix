@@ -1,3 +1,4 @@
+/*
 #ifndef PACKAGE_TESTMODE_H
 #define PACKAGE_TESTMODE_H
 
@@ -15,3 +16,4 @@
 #endif // ROCKET_DEBUGMODE
 
 #endif // PACKAGE_TESTMODE_H
+*/

@@ -1,45 +1,7 @@
-#include <Wire.h>
-#include <SPI.h>
-#include <Adafruit_BMP280.h>
-#include <Arduino.h>
-
-#include "SensorData.h"
-#include "StateMachine.h"
-#include "Watchdog_t4.h"
-
-#include <SparkFun_KX13X.h> // Click here to get the library: http://librarymanager/All#SparkFun_KX13X
-
-#define BMP_SCK  (16)
-
-#include "Adafruit_MAX31855.h"
-// Default connection is using software SPI, but comment and uncomment one of
-// the two examples below to switch between software SPI and hardware SPI:
-
-// Example creating a thermocouple instance with software SPI on any three
-// digital IO pins.
-#define MAXDO   3
-#define MAXCS   4
-#define MAXCLK  5
-
-// initialize the Thermocouple
-Adafruit_MAX31855 thermocouple(MAXCLK, MAXCS, MAXDO);
-
-//I2C
-//SparkFun_KX134 kxAccel;
-// SparkFun_KX134 kxAccel; // For the KX134, uncomment this and comment line above
-//SPI
-SparkFun_KX132_SPI kxAccel;
-// SparkFun_KX134_SPI kxAccel; // For the KX134, uncomment this and comment line above
-
-outputData myData;   // Struct for the accelerometer's data
-byte chipSelect = 10; // Change to fit your project.
-//END SPI
+#include "Sensor.h"
 
 
-Adafruit_BMP280 bmp; // I2C
-
-
-void SensorData::Setup()
+void Sensor::Setup()
 {
     // Wire.begin();
 
@@ -83,8 +45,8 @@ void SensorData::Setup()
     //KX134 SPI SETUP
 
     // Get the chip select pin ready.
-    pinMode(chipSelect, OUTPUT);
-    digitalWrite(chipSelect, HIGH);
+    pinMode(m_KxAccelPin, OUTPUT);
+    digitalWrite(m_KxAccelPin, HIGH);
 
     SPI.begin();
 
@@ -92,21 +54,20 @@ void SensorData::Setup()
     Serial.println("Welcome.");
 
     // Wait for the Serial monitor to be opened.
-    while (!Serial)
-        delay(50);
+    while (!Serial) { delay(50); }
 
-    if (!kxAccel.begin(chipSelect))
+    if (!m_KxAccel.begin(m_KxAccelPin))
     {
         Serial.println("Could not communicate with the the KX13X. Freezing.");
-        while (1)
-        ;
     }
 
     Serial.println("Ready.");
 
     // Reset the chip so that old settings don't apply to new setups.
-    if (kxAccel.softwareReset())
-        Serial.println("Reset.");
+    if (m_KxAccel.softwareReset())
+    {
+	    Serial.println("Reset.");
+	}
 
     // Give some time for the accelerometer to reset.
     // It needs two, but give it five for good measure.
@@ -117,32 +78,32 @@ void SensorData::Setup()
     // However there are many that can be changed "on-the-fly"
     // check datasheet for more info, or the comments in the
     // "...regs.h" file which specify which can be changed when.
-    kxAccel.enableAccel(false);
+	m_KxAccel.enableAccel(false);
 
-    kxAccel.setRange(SFE_KX132_RANGE16G); // 16g Range
+	m_KxAccel.setRange(SFE_KX132_RANGE16G); // 16g Range
     // kxAccel.setRange(SFE_KX134_RANGE16G);         // 16g for the KX134
 
-    kxAccel.enableDataEngine(); // Enables the bit that indicates data is ready.
+	m_KxAccel.enableDataEngine(); // Enables the bit that indicates data is ready.
     // kxAccel.setOutputDataRate(); // Default is 50Hz
-    kxAccel.enableAccel();
+    m_KxAccel.enableAccel();
     //END KX134 SETUP
 
     //START OF BMP280 SETUP
     Serial.println(F("BMP280 test"));
     unsigned status;
     
-    status = bmp.begin();
+    status = m_Bmp.begin();
     if (!status) {
     Serial.println(F("Could not find a valid BMP280 sensor, check wiring or "
                         "try a different address!"));
-    Serial.print("SensorID was: 0x"); Serial.println(bmp.sensorID(),16);
+    Serial.print("SensorID was: 0x"); Serial.println(m_Bmp.sensorID(),16);
     Serial.print("        ID of 0xFF probably means a bad address, a BMP 180 or BMP 085\n");
     Serial.print("   ID of 0x56-0x58 represents a BMP 280,\n");
     Serial.print("        ID of 0x60 represents a BME 280.\n");
     Serial.print("        ID of 0x61 represents a BME 680.\n");
     }
     /* Default settings from datasheet. */
-    bmp.setSampling(Adafruit_BMP280::MODE_NORMAL,     /* Operating Mode. */
+    m_Bmp.setSampling(Adafruit_BMP280::MODE_NORMAL,     /* Operating Mode. */
                     Adafruit_BMP280::SAMPLING_X2,     /* Temp. oversampling */
                     Adafruit_BMP280::SAMPLING_X16,    /* Pressure oversampling */
                     Adafruit_BMP280::FILTER_X16,      /* Filtering. */
@@ -155,7 +116,7 @@ void SensorData::Setup()
     // wait for MAX chip to stabilize
     delay(500);
     Serial.print("Initializing sensor...");
-    if (!thermocouple.begin()) {
+    if (!m_Thermocouple.begin()) {
     Serial.println("ERROR.");
     while (1) delay(10);
     }
@@ -166,46 +127,54 @@ void SensorData::Setup()
 
     Serial.println("DONE.");
     //END OF MAX31855 SETUP
+
+
+	if (m_Bmi.begin() < 0) { Serial.println("Bmi failed to intialized"); }
+
 }
 
-void SensorData::ReadAcceleration(){
+void Sensor::ReadAcceleration(){
     // Check if data is ready.
-    if (kxAccel.dataReady())
+    if (m_KxAccel.dataReady())
     {
-        kxAccel.getAccelData(&myData);
+        m_KxAccel.getAccelData(&m_SD.m_AccelerometerData);
         Serial.print("X: ");
-        Serial.print(myData.xData, 4);
+        Serial.print(m_SD.m_AccelerometerData.xData, 4);
         Serial.print(" Y: ");
-        Serial.print(myData.yData, 4);
+        Serial.print(m_SD.m_AccelerometerData.yData, 4);
         Serial.print(" Z: ");
-        Serial.print(myData.zData, 4);
+        Serial.print(m_SD.m_AccelerometerData.zData, 4);
         Serial.println();
     }
-    delay(20); // Delay should be 1/ODR (Output Data Rate), default is 1/50ODR
+    //delay(20); // Delay should be 1/ODR (Output Data Rate), default is 1/50ODR
 }
 
-void SensorData::ReadBarometer(){
+void Sensor::ReadBarometer(){
+
+    //m_SD.m_Temperature = m_Bmp.readTemperature();
+    m_SD.m_BarometerVal = m_Bmp.readPressure();
+    m_SD.m_RelativeAltitude = m_Bmp.readAltitude(1013.25); /* Adjusted to local forecast! */
 
     //Adafruit_BMP280 bmp(BMP_CS); // hardware SPI
     //Adafruit_BMP280 bmp(BMP_CS, BMP_MOSI, BMP_MISO,  BMP_SCK);
-    Serial.print(F("Temperature = "));
-    Serial.print(bmp.readTemperature());
-    Serial.println(" *C");
+    //Serial.print(F("Temperature = "));
+    //Serial.print(m_SD.m_Temperature);
+    //Serial.println(" *C");
 
     Serial.print(F("Pressure = "));
-    Serial.print(bmp.readPressure());
+    Serial.print( m_SD.m_BarometerVal);
     Serial.println(" Pa");
 
     Serial.print(F("Approx altitude = "));
-    Serial.print(bmp.readAltitude(1013.25)); /* Adjusted to local forecast! */
+    Serial.print( m_SD.m_RelativeAltitude); /* Adjusted to local forecast! */
     Serial.println(" m");
 
     Serial.println();
-    delay(2000);
+    //delay(2000);
 
 }
 
-void SensorData::ReadThermocouple(){
+void Sensor::ReadThermocouple(){
 
     // Example creating a thermocouple instance with hardware SPI
     // on a given CS pin.
@@ -219,30 +188,37 @@ void SensorData::ReadThermocouple(){
 
     // basic readout test, just print the current temp
     Serial.print("Internal Temp = ");
-    Serial.println(thermocouple.readInternal());
+    Serial.println(m_Thermocouple.readInternal());
 
-    double c = thermocouple.readCelsius();
-    if (isnan(c)) {
+    double c = m_Thermocouple.readCelsius();
+    if (isnan(c))
+	{
         Serial.println("Thermocouple fault(s) detected!");
-        uint8_t e = thermocouple.readError();
+        uint8_t e = m_Thermocouple.readError();
         if (e & MAX31855_FAULT_OPEN) Serial.println("FAULT: Thermocouple is open - no connections.");
         if (e & MAX31855_FAULT_SHORT_GND) Serial.println("FAULT: Thermocouple is short-circuited to GND.");
         if (e & MAX31855_FAULT_SHORT_VCC) Serial.println("FAULT: Thermocouple is short-circuited to VCC.");
-    } else {
+    }
+	else
+	{
         Serial.print("C = ");
         Serial.println(c);
     }
     //Serial.print("F = ");
     //Serial.println(thermocouple.readFahrenheit());
 
-    delay(1000);
+    //delay(1000);
 }
 
+void Sensor::ReadSensorData()
+{
+    ReadAcceleration();
 
-void SensorData::ReadSensorData(){
-    this->ReadAcceleration();
+    ReadBarometer();
 
-    this->ReadBarometer();
+    ReadThermocouple();
 
-    this->ReadThermocouple();
+    delay(2000);
 }
+
+SensorData Sensor::GetData() { return m_SD; }

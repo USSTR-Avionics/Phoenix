@@ -2,6 +2,8 @@
 // Created by TDKua on 2023/10/22.
 //
 #include "StateMachine.h"
+#include "States/Unarmed.h"
+
 
 State* Unarmed::Run(SensorData& SD, StateMemPool& MemPool)
 {
@@ -15,4 +17,9 @@ State* Unarmed::Run(SensorData& SD, StateMemPool& MemPool)
 	    return dynamic_cast<State*>(&MemPool.emplace<GroundIdle>());
     }
 	return dynamic_cast<State*>(&std::get<Unarmed>(MemPool));
+}
+
+FlightState Unarmed::GetState()
+{
+	return FlightState::eUnarmed;
 }

@@ -2,6 +2,8 @@
 // Created by TDKua on 2023/10/22.
 //
 #include "StateMachine.h"
+#include "States/BallisticDescent.h"
+
 
 State* BallisticDescent::Run(SensorData& SD, StateMemPool& MemPool)
 {
@@ -19,4 +21,9 @@ State* BallisticDescent::Run(SensorData& SD, StateMemPool& MemPool)
 	//     return dynamic_cast<State*>(&MemPool.emplace<MainChute>());
     // }
 	return dynamic_cast<State*>(&std::get<BallisticDescent>(MemPool));
+}
+
+FlightState BallisticDescent::GetState()
+{
+	return FlightState::eBallisticDescent;
 }

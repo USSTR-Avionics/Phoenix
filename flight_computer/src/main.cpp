@@ -16,25 +16,29 @@
 // }
 #include <Wire.h>
 #include <SPI.h>
-#include <Adafruit_BMP280.h>
 #include <Arduino.h>
 
-#include "SensorData.h"
+#include "Sensor.h"
 #include "StateMachine.h"
 #include "Watchdog_t4.h"
+#include "FRAM.h"
 
 //Adafruit_BMP280 bmp; // use I2C interface
 //Adafruit_Sensor *bmp_temp = bmp.getTemperatureSensor();
 //Adafruit_Sensor *bmp_pressure = bmp.getPressureSensor();
 
-static SensorData SensorData;
+// CHANGE THESE VALUES
+// Sensor Sensor({1, 2, 3}, {4, 5}, 7);
+FRAM FRam(0, 100, 0);
 
-static StateMachine State_Machine;
-static WDT_T4<WDT2> WatchDog;
+// StateMachine StateMachine;
+// WDT_T4<WDT2> WatchDog;
+
+uint64_t PrevTime = 0, CurrentTime;
 
 void WatchDogInterrupt()
 {
-
+	// WatchDog.feed();
 }
 
 void setup()
@@ -56,23 +60,58 @@ void setup()
     Serial.begin(9600);
     while (!Serial) delay(100);   // wait for native usb
 
-	while (BMI.begin() < 0)
+    // check StateMachine
+    // if (!StateMachine.Ready())
+    // {
+    //     Serial.println("State machine could not allocate memory pool");
+    // }
+    // Sensor.Setup();
+
+	// CHANGE THIS NUMBER
+	if(!FRam.Init(0x50))
 	{
-		Serial.println("IMU Initialization Error");
+		Serial.println("Failed to init FRam at addr");
 	}
 
-    // check StateMachine
-    if (!State_Machine.Ready())
-    {
-        Serial.println("State machine could not allocate memory pool");
+
+    SensorData SD{};
+
+    SD.m_Gyro.x = 1.2f;
+
+    auto tim = millis();
+    for(int i = 0; i < 4; i++)
+
+{
+    if(!FRam.StoreData(SD, i)){
+        Serial.println("Failed to store");
     }
-    SensorData.Setup();
+}
+for(int i = 0; i < 4; i++)
+{
+    Serial.println(FRam.ReadData(i*25).m_TimeStamp);
+    Serial.println(FRam.ReadData(i*25).m_Gyro.x);
+}
+
 }
 
 void loop()
 {
-    Serial.println("Reading Data:");
-	WatchDog.feed();
-    SensorData.ReadSensorData();
-	//StateMachine.Run(SensorData);
+    //Serial.println("Reading Data:");
+	// WatchDog.feed();
+    // Sensor.ReadSensorData();
+
+	/*
+	CurrentTime = millis();
+	// must add, since Current Time it can overflow
+	if(PrevTime + 5000 <= CurrentTime)
+	{
+		FRam.StoreData(Sensor.GetData(), CurrentTime);
+		PrevTime = CurrentTime;
+	}
+	*/
+
+
+
+
+	//StateMachine.Run(Sensor);
 }

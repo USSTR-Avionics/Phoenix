@@ -12,6 +12,7 @@ class MainChute : public State
 public:
     // main
     virtual State* Run(SensorData&, StateMemPool&) override;
+	virtual FlightState GetState() override;
 
     ~MainChute() override = default;
 };
