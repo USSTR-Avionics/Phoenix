@@ -1,91 +1,95 @@
 #include "Sensor.h"
 
-
+namespace AV{
 void Sensor::Setup()
 {
-    // Wire.begin();
+    Wire.begin();
 
     //KX134 I2C Setup
-    // Serial.begin(115200);
-    // Serial.println("Welcome.");
-
-    // //Wait for the Serial monitor to be opened.
-    // while (!Serial)
-    // delay(50);
-    // if (!kxAccel.begin())
-    // {
-    // Serial.println("Could not communicate with the the KX13X. Freezing.");
-    // // while (1)
-    // //     ;
-    // }
-    // Serial.println("Ready.");
-
-    // if (kxAccel.softwareReset())
-    // {
-    //     Serial.println("Reset.");
-
-    //     // Give some time for the accelerometer to reset.
-    //     // It needs two, but give it five for good measure.
-    //     delay(5);
-
-    //     // Many settings for KX13X can only be
-    //     // applied when the accelerometer is powered down.
-    //     // However there are many that can be changed "on-the-fly"
-    //     // check datasheet for more info, or the comments in the
-    //     // "...regs.h" file which specify which can be changed when.
-    //     kxAccel.enableAccel(false);
-
-    //     kxAccel.setRange(SFE_KX132_RANGE16G); // 16g Range
-    //     // kxAccel.setRange(SFE_KX134_RANGE16G);         // 16g for the KX134
-
-    //     kxAccel.enableDataEngine(); // Enables the bit that indicates data is ready.
-    //     // kxAccel.setOutputDataRate(); // Default is 50Hz
-    //     kxAccel.enableAccel();
-    // }
-    //KX134 SPI SETUP
-
-    // Get the chip select pin ready.
-    pinMode(m_KxAccelPin, OUTPUT);
-    digitalWrite(m_KxAccelPin, HIGH);
-
-    SPI.begin();
-
     Serial.begin(115200);
     Serial.println("Welcome.");
 
-    // Wait for the Serial monitor to be opened.
-    while (!Serial) { delay(50); }
+    //Wait for the Serial monitor to be opened.
+    while (!Serial)
+    delay(50);
 
-    if (!m_KxAccel.begin(m_KxAccelPin))
+    if (!m_KxAccel.begin())
     {
-        Serial.println("Could not communicate with the the KX13X. Freezing.");
+    Serial.println("Could not communicate with the the KX13X. Freezing.");
+    // while (1)
+    //     ;
     }
-
     Serial.println("Ready.");
 
-    // Reset the chip so that old settings don't apply to new setups.
+    //m_KxAccel.initialize(DEFAULT_SETTINGS);
+    //m_KxAccel.initialize(DEFAULT_SETTINGS);
+
     if (m_KxAccel.softwareReset())
     {
-	    Serial.println("Reset.");
-	}
+        Serial.println("Reset.");
 
-    // Give some time for the accelerometer to reset.
-    // It needs two, but give it five for good measure.
-    delay(5);
+        // Give some time for the accelerometer to reset.
+        // It needs two, but give it five for good measure.
+        delay(5);
 
-    // Many settings for KX13X can only be
-    // applied when the accelerometer is powered down.
-    // However there are many that can be changed "on-the-fly"
-    // check datasheet for more info, or the comments in the
-    // "...regs.h" file which specify which can be changed when.
-	m_KxAccel.enableAccel(false);
+        // Many settings for KX13X can only be
+        // applied when the accelerometer is powered down.
+        // However there are many that can be changed "on-the-fly"
+        // check datasheet for more info, or the comments in the
+        // "...regs.h" file which specify which can be changed when.
+        m_KxAccel.enableAccel(false);
 
-	m_KxAccel.setRange(SFE_KX132_RANGE16G); // 16g Range
-    // kxAccel.setRange(SFE_KX134_RANGE16G);         // 16g for the KX134
+        m_KxAccel.setRange(SFE_KX132_RANGE16G); // 16g Range
+        // kxAccel.setRange(SFE_KX134_RANGE16G);         // 16g for the KX134
 
-	m_KxAccel.enableDataEngine(); // Enables the bit that indicates data is ready.
-    // kxAccel.setOutputDataRate(); // Default is 50Hz
-    m_KxAccel.enableAccel();
+        m_KxAccel.enableDataEngine(); // Enables the bit that indicates data is ready.
+        // kxAccel.setOutputDataRate(); // Default is 50Hz
+        m_KxAccel.enableAccel();
+    }
+    //KX134 SPI SETUP
+
+    // Get the chip select pin ready.
+    // pinMode(m_KxAccelPin, OUTPUT);
+    // digitalWrite(m_KxAccelPin, HIGH);
+
+    // SPI.begin();
+
+    // Serial.begin(115200);
+    // Serial.println("Welcome.");
+
+    // // Wait for the Serial monitor to be opened.
+    // while (!Serial) { delay(50); }
+
+    // if (!m_KxAccel.begin(m_KxAccelPin))
+    // {
+    //     Serial.println("Could not communicate with the the KX13X. Freezing.");
+    // }
+
+    // Serial.println("Ready.");
+
+    // // Reset the chip so that old settings don't apply to new setups.
+    // if (m_KxAccel.softwareReset())
+    // {
+	//     Serial.println("Reset.");
+	// }
+
+    // // Give some time for the accelerometer to reset.
+    // // It needs two, but give it five for good measure.
+    // delay(5);
+
+    // // Many settings for KX13X can only be
+    // // applied when the accelerometer is powered down.
+    // // However there are many that can be changed "on-the-fly"
+    // // check datasheet for more info, or the comments in the
+    // // "...regs.h" file which specify which can be changed when.
+	// m_KxAccel.enableAccel(false);
+
+	// m_KxAccel.setRange(SFE_KX132_RANGE16G); // 16g Range
+    // // kxAccel.setRange(SFE_KX134_RANGE16G);         // 16g for the KX134
+
+	// m_KxAccel.enableDataEngine(); // Enables the bit that indicates data is ready.
+    // // kxAccel.setOutputDataRate(); // Default is 50Hz
+    // m_KxAccel.enableAccel();
     //END KX134 SETUP
 
     //START OF BMP280 SETUP
@@ -138,6 +142,7 @@ void Sensor::ReadAcceleration(){
     if (m_KxAccel.dataReady())
     {
         m_KxAccel.getAccelData(&m_SD.m_AccelerometerData);
+        #ifdef TEENSY_OPT_DEBUG
         Serial.print("X: ");
         Serial.print(m_SD.m_AccelerometerData.xData, 4);
         Serial.print(" Y: ");
@@ -145,6 +150,7 @@ void Sensor::ReadAcceleration(){
         Serial.print(" Z: ");
         Serial.print(m_SD.m_AccelerometerData.zData, 4);
         Serial.println();
+        #endif
     }
     //delay(20); // Delay should be 1/ODR (Output Data Rate), default is 1/50ODR
 }
@@ -160,7 +166,7 @@ void Sensor::ReadBarometer(){
     //Serial.print(F("Temperature = "));
     //Serial.print(m_SD.m_Temperature);
     //Serial.println(" *C");
-
+#ifdef TEENSY_OPT_DEBUG
     Serial.print(F("Pressure = "));
     Serial.print( m_SD.m_BarometerVal);
     Serial.println(" Pa");
@@ -170,6 +176,7 @@ void Sensor::ReadBarometer(){
     Serial.println(" m");
 
     Serial.println();
+#endif
     //delay(2000);
 
 }
@@ -204,6 +211,7 @@ void Sensor::ReadThermocouple(){
         Serial.print("C = ");
         Serial.println(c);
     }
+    m_SD.m_Temperature = c;
     //Serial.print("F = ");
     //Serial.println(thermocouple.readFahrenheit());
 
@@ -212,13 +220,15 @@ void Sensor::ReadThermocouple(){
 
 void Sensor::ReadSensorData()
 {
+    Serial.println("Test");
     ReadAcceleration();
 
     ReadBarometer();
 
     ReadThermocouple();
 
-    delay(2000);
+    delay(500);
 }
 
 SensorData Sensor::GetData() { return m_SD; }
+}
