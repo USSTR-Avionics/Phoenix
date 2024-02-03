@@ -146,27 +146,31 @@ void Sensor::ReadAcceleration(){
         Serial.print(m_SD.m_AccelerometerData.zData, 4);
         Serial.println();
     }
-    delay(20); // Delay should be 1/ODR (Output Data Rate), default is 1/50ODR
+    //delay(20); // Delay should be 1/ODR (Output Data Rate), default is 1/50ODR
 }
 
 void Sensor::ReadBarometer(){
 
+    //m_SD.m_Temperature = m_Bmp.readTemperature();
+    m_SD.m_BarometerVal = m_Bmp.readPressure();
+    m_SD.m_RelativeAltitude = m_Bmp.readAltitude(1013.25); /* Adjusted to local forecast! */
+
     //Adafruit_BMP280 bmp(BMP_CS); // hardware SPI
     //Adafruit_BMP280 bmp(BMP_CS, BMP_MOSI, BMP_MISO,  BMP_SCK);
-    Serial.print(F("Temperature = "));
-    Serial.print(m_Bmp.readTemperature());
-    Serial.println(" *C");
+    //Serial.print(F("Temperature = "));
+    //Serial.print(m_SD.m_Temperature);
+    //Serial.println(" *C");
 
     Serial.print(F("Pressure = "));
-    Serial.print(m_Bmp.readPressure());
+    Serial.print( m_SD.m_BarometerVal);
     Serial.println(" Pa");
 
     Serial.print(F("Approx altitude = "));
-    Serial.print(m_Bmp.readAltitude(1013.25)); /* Adjusted to local forecast! */
+    Serial.print( m_SD.m_RelativeAltitude); /* Adjusted to local forecast! */
     Serial.println(" m");
 
     Serial.println();
-    delay(2000);
+    //delay(2000);
 
 }
 
@@ -203,7 +207,7 @@ void Sensor::ReadThermocouple(){
     //Serial.print("F = ");
     //Serial.println(thermocouple.readFahrenheit());
 
-    delay(1000);
+    //delay(1000);
 }
 
 void Sensor::ReadSensorData()
@@ -213,6 +217,8 @@ void Sensor::ReadSensorData()
     ReadBarometer();
 
     ReadThermocouple();
+
+    delay(2000);
 }
 
 SensorData Sensor::GetData() { return m_SD; }
