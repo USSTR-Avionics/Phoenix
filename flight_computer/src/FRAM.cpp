@@ -1,5 +1,7 @@
 #include "FRAM.h"
 
+#include <bit>
+
 bool FRAM::Init(uint8_t I2C_Addr)
 {
 	return m_FRAM.begin(I2C_Addr);
@@ -125,8 +127,8 @@ float FRAM::ReadF16(uint32_t Location)
 	{
 		Buff[i] = Read(Location + i);
 	}
-
-	return fp16_ieee_to_fp32_value(*reinterpret_cast<uint16_t*>(Buff));
+    // reinterpret_cast is UB
+	return fp16_ieee_to_fp32_value(std::bit_cast<uint16_t>(Buff));
 }
 
 float FRAM::ReadF32(uint32_t Location)
@@ -136,8 +138,8 @@ float FRAM::ReadF32(uint32_t Location)
 	{
 		Buff[i] = Read(Location + i);
 	}
-
-	return *reinterpret_cast<float*>(Buff);
+    // reinterpret_cast is UB
+    return std::bit_cast<float>(Buff);
 }
 
 /**
@@ -177,10 +179,11 @@ SensorChunk FRAM::ReadData(uint32_t Location)
 		Buff[i] = Read(Location);
 		Location++;
 	}
-	SC.m_TimeStamp = *reinterpret_cast<uint32_t*>(Buff);
+    // reinterpret_cast is UB
+	SC.m_TimeStamp = std::bit_cast<uint32_t>(Buff);
 
 	// Rocket state
-	SC.m_State = (FlightState)Read(Location);
+	SC.m_State = static_cast<FlightState>(Read(Location));
 	Location++;
 
 	// Accel
