@@ -29,7 +29,7 @@ typedef std::variant<
 
 struct State
 {
-    // true if transition condition met
+    // return the new state
     virtual State* Run(class SensorData&, StateMemPool&) = 0;
 
 	// track state for logging purpose

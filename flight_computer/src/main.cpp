@@ -80,17 +80,17 @@ void setup()
 
     auto tim = millis();
     for(int i = 0; i < 4; i++)
-
-{
-    if(!FRam.StoreData(SD, i)){
-        Serial.println("Failed to store");
-    }
-}
-for(int i = 0; i < 4; i++)
-{
-    Serial.println(FRam.ReadData(i*25).m_TimeStamp);
-    Serial.println(FRam.ReadData(i*25).m_Gyro.x);
-}
+	{
+	    if(!FRam.StoreData(SD, i))
+		{
+	        Serial.println("Failed to store");
+	    }
+	}
+	for(int i = 0; i < 4; i++)
+	{
+	    Serial.println(FRam.ReadData(i*25).m_TimeStamp);
+	    Serial.println(FRam.ReadData(i*25).m_Gyro.x);
+	}
 
 }
 
@@ -102,7 +102,7 @@ void loop()
 
 	/*
 	CurrentTime = millis();
-	// must add, since Current Time it can overflow
+	// must add, millis() can overflow
 	if(PrevTime + 5000 <= CurrentTime)
 	{
 		FRam.StoreData(Sensor.GetData(), CurrentTime);
