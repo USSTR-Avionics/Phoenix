@@ -5,7 +5,10 @@
 #ifndef FLIGHT_COMPUTER_GROUNDIDLE_H
 #define FLIGHT_COMPUTER_GROUNDIDLE_H
 
-#include "PoweredFlight.h"
+#include "InFlight.h"
+
+#include "GlobalVariables.h"
+#include "States.h"
 
 class GroundIdle : public State
 {

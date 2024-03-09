@@ -1,6 +1,3 @@
-
-
-
 // // the setup function runs once when you press reset or power the board
 // void setup() {
 //   // initialize digital pin LED_BUILTIN as an output.
@@ -28,7 +25,7 @@
 //Adafruit_Sensor *bmp_pressure = bmp.getPressureSensor();
 
 // CHANGE THESE VALUES
-// Sensor Sensor({1, 2, 3}, {4, 5}, 7);
+AV::Sensor Sensor({18, 18, 18}, {18, 18}, 18);
 FRAM FRam(0, 100, 0);
 
 // StateMachine StateMachine;
@@ -65,32 +62,32 @@ void setup()
     // {
     //     Serial.println("State machine could not allocate memory pool");
     // }
-    // Sensor.Setup();
+    Sensor.Setup();
 
-	// CHANGE THIS NUMBER
-	if(!FRam.Init(0x50))
-	{
-		Serial.println("Failed to init FRam at addr");
-	}
+// 	// CHANGE THIS NUMBER
+// 	if(!FRam.Init(0x50))
+// 	{
+// 		Serial.println("Failed to init FRam at addr");
+// 	}
 
 
-    SensorData SD{};
+//     SensorData SD{};
 
-    SD.m_Gyro.x = 1.2f;
+//     SD.m_Gyro.x = 1.2f;
 
-    auto tim = millis();
-    for(int i = 0; i < 4; i++)
-	{
-	    if(!FRam.StoreData(SD, i))
-		{
-	        Serial.println("Failed to store");
-	    }
-	}
-	for(int i = 0; i < 4; i++)
-	{
-	    Serial.println(FRam.ReadData(i*25).m_TimeStamp);
-	    Serial.println(FRam.ReadData(i*25).m_Gyro.x);
-	}
+//     auto tim = millis();
+//     for(int i = 0; i < 4; i++)
+
+// {
+//     if(!FRam.StoreData(SD, i)){
+//         Serial.println("Failed to store");
+//     }
+// }
+// for(int i = 0; i < 4; i++)
+// {
+//     Serial.println(FRam.ReadData(i*25).m_TimeStamp);
+//     Serial.println(FRam.ReadData(i*25).m_Gyro.x);
+// }
 
 }
 
@@ -110,8 +107,8 @@ void loop()
 	}
 	*/
 
-
-
-
+//#ifdef TEENSY_OPT_DEBUG
+    //Serial.println("DebugMacroWorks");
+//#endif
 	//StateMachine.Run(Sensor);
 }

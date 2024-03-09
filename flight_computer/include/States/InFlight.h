@@ -1,23 +1,22 @@
+
 //
 // Created by TDKua on 2023/10/22.
 //
 
-#ifndef FLIGHT_COMPUTER_UNARMED_H
-#define FLIGHT_COMPUTER_UNARMED_H
-
-#include "GroundIdle.h"
+#ifndef FLIGHT_COMPUTER_INFLIGHT_H
+#define FLIGHT_COMPUTER_INFLIGHT_H
+#include "MainChute.h"
 
 #include "GlobalVariables.h"
 #include "States.h"
 
-class Unarmed : public State
+class InFlight : public State
 {
 public:
     // main
     virtual State* Run(SensorData&, StateMemPool&) override;
 	virtual FlightState GetState() override;
 
-    ~Unarmed() override= default;
+    ~InFlight() override = default;
 };
-
-#endif //FLIGHT_COMPUTER_UNARMED_H
+#endif //FLIGHT_COMPUTER_GROUNDIDLE_H

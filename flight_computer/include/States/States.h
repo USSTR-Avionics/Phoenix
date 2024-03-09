@@ -7,25 +7,8 @@
 #include <variant>
 #include <cstdint>
 
-enum FlightState : uint8_t
-{
-	eUnarmed,
-	eGroundIdle,
-	ePoweredFlight,
-	eUnpoweredFlight,
-	eBallisticDescent,
-	eMainChute,
-	eLand
-};
+#include "GlobalVariables.h"
 
-typedef std::variant<
-	class Unarmed,
-	class GroundIdle,
-	class PoweredFlight,
-	class UnpoweredFlight,
-	class BallisticDescent,
-	class MainChute,
-	class Land> StateMemPool;
 
 struct State
 {

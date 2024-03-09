@@ -2,14 +2,14 @@
 
 #include "States/Unarmed.h"
 #include "States/GroundIdle.h"
-#include "States/PoweredFlight.h"
-#include "States/UnpoweredFlight.h"
-#include "States/BallisticDescent.h"
+#include "States/InFlight.h"
 #include "States/MainChute.h"
 
 #include "Sensor.h"
 
 #include <Arduino.h>
+
+#include "GlobalVariables.h"
 
 class StateMachine
 {

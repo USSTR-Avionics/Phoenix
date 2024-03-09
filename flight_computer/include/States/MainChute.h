@@ -5,7 +5,10 @@
 #ifndef FLIGHT_COMPUTER_MAINCHUTE_H
 #define FLIGHT_COMPUTER_MAINCHUTE_H
 
-#include "Land.h"
+#include "Unarmed.h"
+
+#include "GlobalVariables.h"
+#include "States.h"
 
 class MainChute : public State
 {

@@ -5,7 +5,7 @@ PlatformIO (VSCode recommended)
 ## Things you need to get started
 - [ ] VSCode / editor of choice
 - [ ] platformIO extension  
-- [ ] install git bash for your platform  
+- [ ] git
 
 
 ## Next Steps
@@ -86,7 +86,7 @@ These are suggestions
 > NOTE: most of the linting is handled by clang-format-15
 
 ## Naming things
-- **DO NOT PREFIX VARIABLES WITH `_` OR `__`, THEY ARE RESERVED BY THE COMMITTEE. MIGHT BREAK CODE**
+- **DO NOT PREFIX VARIABLES WITH `_` OR `__`, THEY ARE USUALLY RESERVED. MIGHT BREAK CODE**
 - [Try to adopt Hungarian notation for complex types for easier readibility](https://en.wikipedia.org/wiki/Hungarian_notation)
 ```
 // b for bool
