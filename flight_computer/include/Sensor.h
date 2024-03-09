@@ -8,6 +8,7 @@
 
 #include <BMI088.h>
 #include <SparkFun_KX13X.h> // Click here to get the library: http://librarymanager/All#SparkFun_KX13X
+//#include <SparkFun_Qwiic_KX13X.h>
 #include <Adafruit_BMP280.h>
 #include <Adafruit_MAX31855.h>
 
@@ -78,6 +79,10 @@ struct SensorData
 
 };
 
+namespace AV
+{
+
+
 class Sensor
 {
 public:
@@ -85,6 +90,7 @@ public:
 	 * Thermocouple : int8_t MaxClk, int8_t MaxCS, int8_t MaxDO
 	 * Bmi : uint8_t AccelAddr, uint8_t GyroAddr
 	 */
+	
 	Sensor(std::array<int8_t, 3> ThermocouplePin, std::array<uint8_t, 2> BmiPin, uint8_t KxAccelPin) :
 		m_Thermocouple(Adafruit_MAX31855(ThermocouplePin[0], ThermocouplePin[1], ThermocouplePin[2])),
 		m_Bmi(Bmi088(Wire, BmiPin[0], BmiPin[1])),
@@ -115,7 +121,9 @@ private:
 
 	Adafruit_MAX31855 m_Thermocouple;
 	Bmi088 m_Bmi;
-	SparkFun_KX132 m_KxAccel;
+	//QwDevKX134 m_KxAccel;
+	//QwiicKX134 m_KxAccel;
+	SparkFun_KX134 m_KxAccel;
 	// SparkFun_KX134 kxAccel; // For the KX134, uncomment this and comment line above
 
 	// I2C
@@ -129,4 +137,4 @@ private:
 
 
 
-
+}
