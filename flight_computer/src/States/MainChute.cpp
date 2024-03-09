@@ -13,7 +13,7 @@ State* MainChute::Run(SensorData& SD, StateMemPool& MemPool)
     if(true)
     {
         // transition to new state, will break SM if you create random obj
-	    return dynamic_cast<State*>(&MemPool.emplace<Land>());
+	    return dynamic_cast<State*>(&MemPool.emplace<Unarmed>());
     }
 	return dynamic_cast<State*>(&std::get<MainChute>(MemPool));
 }
