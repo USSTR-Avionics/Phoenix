@@ -9,20 +9,7 @@
 
 #include <Arduino.h>
 
-typedef std::variant<
-	Unarmed,
-	GroundIdle,
-    InFlight,
-	MainChute
-    > StateMemPool;
-
-enum FlightState : uint8_t
-{
-    eUnarmed,
-    eGroundIdle,
-    eInFlight,
-    eMainChute
-};
+#include "GlobalVariables.h"
 
 class StateMachine
 {

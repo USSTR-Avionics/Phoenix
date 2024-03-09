@@ -7,6 +7,9 @@
 
 #include "Unarmed.h"
 
+#include "GlobalVariables.h"
+#include "States.h"
+
 class MainChute : public State
 {
 public:

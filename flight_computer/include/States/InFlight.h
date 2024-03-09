@@ -7,6 +7,9 @@
 #define FLIGHT_COMPUTER_INFLIGHT_H
 #include "MainChute.h"
 
+#include "GlobalVariables.h"
+#include "States.h"
+
 class InFlight : public State
 {
 public:

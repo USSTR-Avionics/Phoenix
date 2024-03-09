@@ -7,6 +7,9 @@
 
 #include "GroundIdle.h"
 
+#include "GlobalVariables.h"
+#include "States.h"
+
 class Unarmed : public State
 {
 public:
