@@ -1,4 +1,5 @@
-#include "GlobalVariables.h"
+/*
+
 #include "StateMachine.h"
 #include "Sensor.h"
 #include "FlightComputer.h"
@@ -38,6 +39,7 @@ void FlightComputer::init(){
     }
 }
 
+*/
 /*
 FlightComputer::FlightComputer()
 {

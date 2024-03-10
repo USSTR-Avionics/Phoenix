@@ -1,11 +1,6 @@
-//
-// Created by TDKua on 2023/10/22.
-//
-#include "StateMachine.h"
-#include "States/MainChute.h"
+#include "States.h"
 
-
-State* MainChute::Run(SensorData& SD, StateMemPool& MemPool)
+State* MainChute::Run(const SensorData& SD, StateMemPool& MemPool)
 {
     digitalWrite(18, HIGH);
     delay(2000);
@@ -13,9 +8,9 @@ State* MainChute::Run(SensorData& SD, StateMemPool& MemPool)
     if(true)
     {
         // transition to new state, will break SM if you create random obj
-	    return dynamic_cast<State*>(&MemPool.emplace<Land>());
+	    return static_cast<State*>(&MemPool.emplace<Unarmed>());
     }
-	return dynamic_cast<State*>(&std::get<MainChute>(MemPool));
+	return static_cast<State*>(this);
 }
 
 FlightState MainChute::GetState()

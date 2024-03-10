@@ -1,6 +1,3 @@
-
-
-
 // // the setup function runs once when you press reset or power the board
 // void setup() {
 //   // initialize digital pin LED_BUILTIN as an output.
@@ -18,7 +15,6 @@
 #include <SPI.h>
 #include <Arduino.h>
 
-#include "Sensor.h"
 #include "StateMachine.h"
 #include "Watchdog_t4.h"
 #include "FRAM.h"
@@ -29,7 +25,7 @@
 
 // CHANGE THESE VALUES
 AV::Sensor Sensor({18, 18, 18}, {18, 18}, 18);
-FRAM FRam(0, 100, 0);
+FRAM FRam(0, 100);
 
 // StateMachine StateMachine;
 // WDT_T4<WDT2> WatchDog;
@@ -98,11 +94,11 @@ void loop()
 {
     //Serial.println("Reading Data:");
 	// WatchDog.feed();
-    Sensor.ReadSensorData();
+    // Sensor.ReadSensorData();
 
 	/*
 	CurrentTime = millis();
-	// must add, since Current Time it can overflow
+	// must add, millis() can overflow
 	if(PrevTime + 5000 <= CurrentTime)
 	{
 		FRam.StoreData(Sensor.GetData(), CurrentTime);

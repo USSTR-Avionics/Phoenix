@@ -1,5 +1,6 @@
+/*
 #pragma once
-#include "GlobalVariables.h"
+
 #include "StateMachine.h"
 #include "Sensor.h"
 
@@ -25,3 +26,4 @@ private:
 public:
     void init();
 };
+*/

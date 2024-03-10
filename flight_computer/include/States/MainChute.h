@@ -5,14 +5,14 @@
 #ifndef FLIGHT_COMPUTER_MAINCHUTE_H
 #define FLIGHT_COMPUTER_MAINCHUTE_H
 
-#include "Land.h"
+#include "State.h"
 
 class MainChute : public State
 {
 public:
     // main
-    virtual State* Run(SensorData&, StateMemPool&) override;
-	virtual FlightState GetState() override;
+    State* Run(const SensorData&, StateMemPool&) override;
+	FlightState GetState() override;
 
     ~MainChute() override = default;
 };
