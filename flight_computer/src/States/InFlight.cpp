@@ -2,7 +2,7 @@
 
 State* InFlight::Run(const SensorData& SD, StateMemPool& MemPool)
 {
-    if(SD.m_AccelerometerData.zData < -9.81)
+    if(SD.m_AccelerometerData.zData < -9.81f)
 	{
         return static_cast<State*>(&MemPool.emplace<MainChute>());
     }

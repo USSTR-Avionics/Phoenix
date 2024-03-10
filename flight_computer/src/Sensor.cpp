@@ -1,6 +1,7 @@
 #include "Sensor.h"
 
-namespace AV{
+namespace RA
+{
 void Sensor::Setup()
 {
     Wire.begin();
@@ -15,9 +16,9 @@ void Sensor::Setup()
 
     if (!m_KxAccel.begin())
     {
-    Serial.println("Could not communicate with the the KX13X. Freezing.");
-    // while (1)
-    //     ;
+	    Serial.println("Could not communicate with the the KX13X. Freezing.");
+	    // while (1)
+	    //     ;
     }
     Serial.println("Ready.");
 
@@ -142,7 +143,7 @@ void Sensor::ReadAcceleration(){
     if (m_KxAccel.dataReady())
     {
         m_KxAccel.getAccelData(&m_SD.m_AccelerometerData);
-        #ifdef TEENSY_OPT_DEBUG
+#ifdef TEENSY_OPT_DEBUG
         Serial.print("X: ");
         Serial.print(m_SD.m_AccelerometerData.xData, 4);
         Serial.print(" Y: ");
@@ -150,7 +151,7 @@ void Sensor::ReadAcceleration(){
         Serial.print(" Z: ");
         Serial.print(m_SD.m_AccelerometerData.zData, 4);
         Serial.println();
-        #endif
+#endif
     }
     //delay(20); // Delay should be 1/ODR (Output Data Rate), default is 1/50ODR
 }

@@ -24,7 +24,7 @@
 //Adafruit_Sensor *bmp_pressure = bmp.getPressureSensor();
 
 // CHANGE THESE VALUES
-AV::Sensor Sensor({18, 18, 18}, {18, 18}, 18);
+RA::Sensor Sensor({18, 18, 18}, {18, 18}, 18);
 FRAM FRam(0, 100);
 
 // StateMachine StateMachine;
