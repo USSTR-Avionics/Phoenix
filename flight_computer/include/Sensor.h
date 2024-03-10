@@ -12,6 +12,7 @@
 #include <Adafruit_BMP280.h>
 #include <Adafruit_MAX31855.h>
 
+
 // data chunk format
 // |----------------------|-----------|-----------|
 // |      data            |   size    | data type |
@@ -34,7 +35,8 @@
 struct SensorData
 {
 	// State
-	uint8_t m_State {0};
+	enum FlightState : uint8_t;
+	FlightState m_State {};
 	// Struct for the accelerometer's data
 	outputData m_AccelerometerData{};
 
@@ -78,10 +80,8 @@ struct SensorData
 
 };
 
-namespace AV
+namespace RA
 {
-
-
 class Sensor
 {
 public:
@@ -140,9 +140,5 @@ private:
 	const uint8_t m_KxAccelPin;
 
 };
-
-
-
-
 
 }

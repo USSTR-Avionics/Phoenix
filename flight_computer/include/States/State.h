@@ -3,18 +3,19 @@
 #include "Sensor.h"
 
 #include <variant>
-#include <cstdint>
 
-typedef std::variant<
-		class Unarmed,
-		class GroundIdle,
-		class InFlight,
-		class MainChute
-> StateMemPool;
+typedef std::variant
+<
+	class Unarmed,
+	class GroundIdle,
+	class InFlight,
+	class MainChute
+>
+StateMemPool;
 
 enum FlightState : uint8_t
 {
-	eUndefined,
+	eInvalid,
 	eUnarmed,
 	eGroundIdle,
 	eInFlight,
