@@ -1,21 +1,13 @@
-
-//
-// Created by TDKua on 2023/10/22.
-//
-
 #ifndef FLIGHT_COMPUTER_INFLIGHT_H
 #define FLIGHT_COMPUTER_INFLIGHT_H
-#include "MainChute.h"
-
-#include "GlobalVariables.h"
-#include "States.h"
+#include "State.h"
 
 class InFlight : public State
 {
 public:
     // main
-    virtual State* Run(SensorData&, StateMemPool&) override;
-	virtual FlightState GetState() override;
+    State* Run(const SensorData&, StateMemPool&) override;
+	FlightState GetState() override;
 
     ~InFlight() override = default;
 };

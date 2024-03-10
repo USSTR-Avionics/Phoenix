@@ -15,7 +15,6 @@
 #include <SPI.h>
 #include <Arduino.h>
 
-#include "Sensor.h"
 #include "StateMachine.h"
 #include "Watchdog_t4.h"
 #include "FRAM.h"
@@ -26,7 +25,7 @@
 
 // CHANGE THESE VALUES
 AV::Sensor Sensor({18, 18, 18}, {18, 18}, 18);
-FRAM FRam(0, 100, 0);
+FRAM FRam(0, 100);
 
 // StateMachine StateMachine;
 // WDT_T4<WDT2> WatchDog;

@@ -12,8 +12,6 @@
 #include <Adafruit_BMP280.h>
 #include <Adafruit_MAX31855.h>
 
-#include "States/States.h"
-
 // data chunk format
 // |----------------------|-----------|-----------|
 // |      data            |   size    | data type |
@@ -35,16 +33,17 @@
 
 struct SensorData
 {
-	FlightState m_State;
+	// State
+	uint8_t m_State {0};
 	// Struct for the accelerometer's data
-	outputData m_AccelerometerData;
+	outputData m_AccelerometerData{};
 
 	struct Gyro
 	{
 		float x;
 		float y;
 		float z;
-	} m_Gyro;
+	} m_Gyro{};
 
 	float m_RelativeAltitude{0};
 	// pressure
@@ -86,16 +85,25 @@ namespace AV
 class Sensor
 {
 public:
-	/*
-	 * Thermocouple : int8_t MaxClk, int8_t MaxCS, int8_t MaxDO
-	 * Bmi : uint8_t AccelAddr, uint8_t GyroAddr
+	/**
+	 * Construct sensors
+	 * @param ThermocouplePin SCLK, CS, MISO
+	 * @param BmiPin Accel addr, Gyo addr
+	 * @param KxAccelPin KxAccelPin
 	 */
-	
 	Sensor(std::array<int8_t, 3> ThermocouplePin, std::array<uint8_t, 2> BmiPin, uint8_t KxAccelPin) :
 		m_Thermocouple(Adafruit_MAX31855(ThermocouplePin[0], ThermocouplePin[1], ThermocouplePin[2])),
 		m_Bmi(Bmi088(Wire, BmiPin[0], BmiPin[1])),
-		m_KxAccelPin(KxAccelPin){}
+		m_KxAccelPin(KxAccelPin){};
 
+	/**
+	 * Computes weighted average of 2 values
+	 * @tparam T the type of data
+	 * @param New New value
+	 * @param Old Previous value
+	 * @param NewPercentage The weight of new value, 0.0 - 1.0
+	 * @return The weighted average
+	 */
 	template<typename T> requires std::is_arithmetic_v<T>
 	static T Average(T New, T Old, float NewPercentage)
 	{

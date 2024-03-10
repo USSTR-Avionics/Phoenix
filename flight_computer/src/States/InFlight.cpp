@@ -1,14 +1,10 @@
-//
-// Created by TDKua on 2023/10/22.
-//
-#include "StateMachine.h"
-#include "States/InFlight.h"
+#include "States.h"
 
-
-State* InFlight::Run(SensorData& SD, StateMemPool& MemPool)
+State* InFlight::Run(const SensorData& SD, StateMemPool& MemPool)
 {
-    if(SD.m_AccelerometerData.zData < -9.81){
-        return dynamic_cast<State*>(&MemPool.emplace<MainChute>());
+    if(SD.m_AccelerometerData.zData < -9.81)
+	{
+        return static_cast<State*>(&MemPool.emplace<MainChute>());
     }
     // digitalWrite(19, HIGH);
     // delay(2000);
@@ -19,7 +15,7 @@ State* InFlight::Run(SensorData& SD, StateMemPool& MemPool)
 	// 	// same as &MemPool.emplace<MainChute>(), doesn't seem to affect binary size
     //     return dynamic_cast<State*>(&MemPool.emplace<BallisticDescent>());
     // }
-    return dynamic_cast<State*>(&std::get<InFlight>(MemPool));
+    return static_cast<State*>(this);
 }
 
 FlightState InFlight::GetState()
