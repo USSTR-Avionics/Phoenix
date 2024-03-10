@@ -12,6 +12,8 @@
 #include <Adafruit_BMP280.h>
 #include <Adafruit_MAX31855.h>
 
+// State
+enum FlightState : uint8_t;
 
 // data chunk format
 // |----------------------|-----------|-----------|
@@ -34,8 +36,7 @@
 
 struct SensorData
 {
-	// State
-	enum FlightState : uint8_t;
+
 	FlightState m_State {};
 	// Struct for the accelerometer's data
 	outputData m_AccelerometerData{};

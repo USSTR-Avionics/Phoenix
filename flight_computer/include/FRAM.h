@@ -1,11 +1,10 @@
 #ifndef SENSOR_FRAM_H
 #define SENSOR_FRAM_H
 
-#include <Adafruit_FRAM_I2C.h>
 #include "fp16.h"
-
-#include "FlightComputer.h"
 #include "Sensor.h"
+
+#include <Adafruit_FRAM_I2C.h>
 
 // Sensor data chunk format
 // |----------------------|-----------|-----------|

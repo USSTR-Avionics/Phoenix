@@ -149,7 +149,7 @@ SensorChunk FRAM::ReadData(uint32_t Location)
 	SC.m_TimeStamp = std::bit_cast<uint32_t>(Buff);
 
 	// Rocket state
-	SC.m_State = static_cast<uint8_t>(Read(Location));
+	SC.m_State = static_cast<FlightState>(Read(Location));
 	Location++;
 
 	// Accel
