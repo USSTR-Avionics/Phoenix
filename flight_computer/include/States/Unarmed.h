@@ -5,17 +5,14 @@
 #ifndef FLIGHT_COMPUTER_UNARMED_H
 #define FLIGHT_COMPUTER_UNARMED_H
 
-#include "GroundIdle.h"
-
-#include "GlobalVariables.h"
-#include "States.h"
+#include "State.h"
 
 class Unarmed : public State
 {
 public:
     // main
-    virtual State* Run(SensorData&, StateMemPool&) override;
-	virtual FlightState GetState() override;
+	State* Run(const SensorData&, StateMemPool&) override;
+	FlightState GetState() override;
 
     ~Unarmed() override= default;
 };

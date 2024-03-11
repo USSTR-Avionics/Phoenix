@@ -1,11 +1,8 @@
-//
-// Created by TDKua on 2023/10/22.
-//
-#include "StateMachine.h"
-#include "States/GroundIdle.h"
+#include "States.h"
 
+#include <Arduino.h>
 
-State* GroundIdle::Run(SensorData& SD, StateMemPool& MemPool)
+State* GroundIdle::Run(const SensorData& SD, StateMemPool& MemPool)
 {
     digitalWrite(19, HIGH);
     delay(2000);
@@ -13,9 +10,9 @@ State* GroundIdle::Run(SensorData& SD, StateMemPool& MemPool)
     if(true)
     {
         // transition to new state, will break SM if you create random obj
-	    return dynamic_cast<State*>(&MemPool.emplace<InFlight>());
+	    return static_cast<State*>(&MemPool.emplace<InFlight>());
     }
-	return dynamic_cast<State*>(&std::get<GroundIdle>(MemPool));
+	return static_cast<State*>(this);
 }
 
 FlightState GroundIdle::GetState()

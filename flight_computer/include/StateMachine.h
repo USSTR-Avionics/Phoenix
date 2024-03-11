@@ -1,29 +1,31 @@
 #pragma once
-
-#include "States/Unarmed.h"
-#include "States/GroundIdle.h"
-#include "States/InFlight.h"
-#include "States/MainChute.h"
-
-#include "Sensor.h"
-
 #include <Arduino.h>
 
-#include "GlobalVariables.h"
+#include "States.h"
 
+/**
+ * Manages States
+ */
 class StateMachine
 {
 public:
+	/**
+	 * Initialize and enter into Unarmed state
+	 */
     explicit StateMachine();
-    void Run(SensorData&);
+
+    void Run(const SensorData&);
+
+	/**
+	 * Checks if memory pool is initialized
+	 * @return true if ready
+	 */
+	bool Ready();
 
     StateMachine(StateMachine&) = delete;
     StateMachine& operator=(StateMachine&) = delete;
 
-	bool Ready();
 private:
 	StateMemPool m_MemPool;
     State* m_CurrentState { nullptr };
-
-	FlightState m_eCurrentState;
 };

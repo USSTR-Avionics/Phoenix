@@ -1,5 +1,12 @@
 #include "FRAM.h"
 
+#include <bit>
+
+/**
+ * Is the fram ready
+ * @param I2C_Addr the I^2C address to use
+ * @return true if ready
+ */
 bool FRAM::Init(uint8_t I2C_Addr)
 {
 	return m_FRAM.begin(I2C_Addr);
@@ -118,54 +125,15 @@ bool FRAM::StoreData(SensorData SD, uint32_t TimeStamp)
 	return true;
 }
 
-float FRAM::ReadF16(uint32_t Location)
-{
-	uint8_t Buff[2];
-	for(int i = 0; i < 2; i++)
-	{
-		Buff[i] = Read(Location + i);
-	}
 
-	return fp16_ieee_to_fp32_value(*reinterpret_cast<uint16_t*>(Buff));
-}
-
-float FRAM::ReadF32(uint32_t Location)
-{
-	uint8_t Buff[4];
-	for(int i = 0; i < 4; i++)
-	{
-		Buff[i] = Read(Location + i);
-	}
-
-	return *reinterpret_cast<float*>(Buff);
-}
 
 /**
  * @brief    Reads SensorData chunck from FRAM
- * @param    Location   the address to read from
+ * @param    Location the address to read from
  * @return   the data chunk read from FRAM
  */
 SensorChunk FRAM::ReadData(uint32_t Location)
 {
-	//              data chunk format
-	// |----------------------|-----------|-----------|
-	// |      data            |   size    | data type |
-	// |----------------------|-----------|-----------|
-	// | timestamp            | 04 bytes  | u32       |
-	// | rocket state         | 01 byte   | u8        |
-	// | acceleration x axis  | 02 bytes  | float16   |
-	// | acceleration y axis  | 02 bytes  | float16   |
-	// | acceleration z axis  | 02 bytes  | float16   |
-	// | gyroscope x axis     | 02 bytes  | float16   |
-	// | gyroscope y axis     | 02 bytes  | float16   |
-	// | gyroscope z axis     | 02 bytes  | float16   |
-	// | relative altitude    | 02 bytes  | float16   |
-	// | pressure             | 04 bytes  | float32   |
-	// | thermocouple temp    | 02 bytes  | float16   |
-	// |----------------------|-----------|-----------|
-	// | total                | 25 bytes  |           |
-	// |----------------------|-----------|-----------|
-
 	SensorChunk SC;
 	// check
 	if(Location + 25 > m_MaxAddr) { SC.m_SuccessfulRead = false; return SC; }
@@ -177,10 +145,11 @@ SensorChunk FRAM::ReadData(uint32_t Location)
 		Buff[i] = Read(Location);
 		Location++;
 	}
-	SC.m_TimeStamp = *reinterpret_cast<uint32_t*>(Buff);
+    // reinterpret_cast is UB
+	SC.m_TimeStamp = std::bit_cast<uint32_t>(Buff);
 
 	// Rocket state
-	SC.m_State = (FlightState)Read(Location);
+	SC.m_State = static_cast<FlightState>(Read(Location));
 	Location++;
 
 	// Accel
@@ -228,10 +197,42 @@ bool FRAM::Write(uint8_t Data, uint32_t Location)
 
 /**
  * @brief    direct lib API wrapper for reading from FRAM
- * @param    Location   the address to read from
+ * @param    Location the address to read from
  * @return   the data read from FRAM
  */
 uint8_t FRAM::Read(uint16_t Location)
 {
 	return m_FRAM.read(Location);
+}
+
+/**
+ * @brief    Read f16 from FRAM
+ * @param    Location the address to read from
+ * @return   the data read from FRAM
+ */
+float FRAM::ReadF16(uint32_t Location)
+{
+	uint8_t Buff[2];
+	for(int i = 0; i < 2; i++)
+	{
+		Buff[i] = Read(Location + i);
+	}
+	// *reinterpret_cast<T*>(Var) is UB
+	return fp16_ieee_to_fp32_value(std::bit_cast<uint16_t>(Buff));
+}
+
+/**
+ * @brief    Read f32 from FRAM
+ * @param    Location the address to read from
+ * @return   the data read from FRAM
+ */
+float FRAM::ReadF32(uint32_t Location)
+{
+	uint8_t Buff[4];
+	for(int i = 0; i < 4; i++)
+	{
+		Buff[i] = Read(Location + i);
+	}
+	// *reinterpret_cast<T*>(Var) is UB
+	return std::bit_cast<float>(Buff);
 }
