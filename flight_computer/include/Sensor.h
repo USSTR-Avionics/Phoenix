@@ -12,7 +12,7 @@
 #include <Adafruit_BMP280.h>
 #include <Adafruit_MAX31855.h>
 
-// State
+// BaseState
 enum FlightState : uint8_t;
 
 // data chunk format

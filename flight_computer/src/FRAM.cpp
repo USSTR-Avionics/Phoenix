@@ -48,7 +48,7 @@ bool FRAM::StoreData(SensorData SD, uint32_t TimeStamp)
 		m_FramCursor++;
 	}
 
-	// Rocket State
+	// Rocket BaseState
 	Write((uint8_t)SD.m_State, m_FramCursor);
 	m_FramCursor++;
 

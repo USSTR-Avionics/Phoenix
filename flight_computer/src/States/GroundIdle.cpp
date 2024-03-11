@@ -2,7 +2,7 @@
 
 #include <Arduino.h>
 
-State* GroundIdle::Run(const SensorData& SD, StateMemPool& MemPool)
+FlightState GroundIdle::Run(const SensorData& SD, FlightStateMemPool& MemPool)
 {
     digitalWrite(19, HIGH);
     delay(2000);
@@ -10,12 +10,12 @@ State* GroundIdle::Run(const SensorData& SD, StateMemPool& MemPool)
     if(true)
     {
         // transition to new state, will break SM if you create random obj
-	    return static_cast<State*>(&MemPool.emplace<InFlight>());
+	    return MemPool.emplace<InFlight>().GetState();
     }
-	return static_cast<State*>(this);
+	return GetState();
 }
 
-FlightState GroundIdle::GetState()
+FlightState inline GroundIdle::GetState() const
 {
-	return FlightState::eGroundIdle;
+	return eGroundIdle;
 }

@@ -1,10 +1,10 @@
 #include "States.h"
 
-State* InFlight::Run(const SensorData& SD, StateMemPool& MemPool)
+FlightState InFlight::Run(const SensorData& SD, FlightStateMemPool& MemPool)
 {
     if(SD.m_AccelerometerData.zData < -9.81f)
 	{
-        return static_cast<State*>(&MemPool.emplace<MainChute>());
+		return MemPool.emplace<MainChute>().GetState();
     }
     // digitalWrite(19, HIGH);
     // delay(2000);
@@ -15,10 +15,10 @@ State* InFlight::Run(const SensorData& SD, StateMemPool& MemPool)
 	// 	// same as &MemPool.emplace<MainChute>(), doesn't seem to affect binary size
     //     return dynamic_cast<State*>(&MemPool.emplace<BallisticDescent>());
     // }
-    return static_cast<State*>(this);
+	return GetState();
 }
 
-FlightState InFlight::GetState()
+FlightState inline InFlight::GetState() const
 {
-	return FlightState::eInFlight;
+	return eInFlight;
 }
