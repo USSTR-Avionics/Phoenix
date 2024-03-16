@@ -3,8 +3,6 @@
 
 #include "States.h"
 
-namespace RA
-{
 /**
  * Manages States
  */
@@ -31,4 +29,3 @@ public:
 private:
 	FlightStateMemPool m_MemPool{};
 };
-}

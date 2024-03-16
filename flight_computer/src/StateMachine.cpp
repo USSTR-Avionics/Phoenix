@@ -1,7 +1,5 @@
 #include "StateMachine.h"
 
-namespace RA
-{
 StateMachine::StateMachine()
 {
 	m_MemPool.emplace<Unarmed>();
@@ -11,7 +9,7 @@ FlightState StateMachine::Run(const SensorData& SD)
 {
 	return std::visit
 			(
-					[&](auto& CurrentState)
+					[&](auto&& CurrentState)
 					{
 						return CurrentState.Run(SD, m_MemPool);
 					},
@@ -29,5 +27,4 @@ FlightState StateMachine::GetState() const
 					},
 					m_MemPool
 			);
-}
 }
