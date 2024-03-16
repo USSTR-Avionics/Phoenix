@@ -9,7 +9,7 @@ FlightState StateMachine::Run(const SensorData& SD)
 {
 	return std::visit
 			(
-					[&](auto& CurrentState)
+					[&](auto&& CurrentState)
 					{
 						return CurrentState.Run(SD, m_MemPool);
 					},
