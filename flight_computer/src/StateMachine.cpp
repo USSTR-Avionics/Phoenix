@@ -1,7 +1,5 @@
 #include "StateMachine.h"
 
-namespace RA
-{
 StateMachine::StateMachine()
 {
 	m_MemPool.emplace<Unarmed>();
@@ -29,5 +27,4 @@ FlightState StateMachine::GetState() const
 					},
 					m_MemPool
 			);
-}
 }

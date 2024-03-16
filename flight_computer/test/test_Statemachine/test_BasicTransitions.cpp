@@ -13,7 +13,7 @@ void tearDown(void)
 
 void CycleStates()
 {
-	RA::StateMachine SM{};
+	StateMachine SM{};
 	SensorData SD{};
 	SD.m_BarometerVal = 3.5;
 
