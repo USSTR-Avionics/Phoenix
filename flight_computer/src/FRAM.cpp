@@ -38,10 +38,10 @@ bool FRAM::Init(uint8_t I2C_Addr)
  */
 bool FRAM::StoreData(SensorData SD, uint32_t TimeStamp)
 {
-	uint8_t* BytePtr;
+	std::byte* BytePtr;
 
 	// Time Stamp
-	BytePtr = (uint8_t*)&TimeStamp;
+	BytePtr = reinterpret_cast<std::byte*>(&TimeStamp);
 	for(int i = 0; i < 4; i++)
 	{
 		if(!Write(BytePtr[i], m_FramCursor)) { return false; }
@@ -49,7 +49,7 @@ bool FRAM::StoreData(SensorData SD, uint32_t TimeStamp)
 	}
 
 	// Rocket BaseState
-	Write((uint8_t)SD.m_State, m_FramCursor);
+	Write(static_cast<std::byte>(SD.m_State), m_FramCursor);
 	m_FramCursor++;
 
 	// Accel
@@ -63,7 +63,7 @@ bool FRAM::StoreData(SensorData SD, uint32_t TimeStamp)
 
 		for(auto& i : AccelXYZ)
 		{
-			BytePtr = (uint8_t*)&i;
+			BytePtr = reinterpret_cast<std::byte*>(&i);
 			for(int j = 0; j < 2; j++)
 			{
 				if(!Write(BytePtr[j], m_FramCursor)) { return false; }
@@ -84,7 +84,7 @@ bool FRAM::StoreData(SensorData SD, uint32_t TimeStamp)
 
 		for(auto& i : GyroXYZ)
 		{
-			BytePtr = (uint8_t*)&i;
+			BytePtr = reinterpret_cast<std::byte*>(&i);
 			for(int j = 0; j < 2; j++)
 			{
 				if(!Write(BytePtr[j], m_FramCursor)) { return false; }
@@ -96,7 +96,7 @@ bool FRAM::StoreData(SensorData SD, uint32_t TimeStamp)
 
 	// relative altitude
 	auto RelativeAltitude = fp16_ieee_from_fp32_value(SD.m_RelativeAltitude);
-	BytePtr = (uint8_t*)&RelativeAltitude;
+	BytePtr = reinterpret_cast<std::byte*>(&RelativeAltitude);
 	for(int i = 0; i < 2; i++)
 	{
 		if(!Write(BytePtr[i], m_FramCursor)) { return false; }
@@ -105,7 +105,7 @@ bool FRAM::StoreData(SensorData SD, uint32_t TimeStamp)
 	}
 
 	// pressure
-	BytePtr = (uint8_t*)&SD.m_BarometerVal;
+	BytePtr = reinterpret_cast<std::byte*>(&SD.m_BarometerVal);
 	for(int i = 0; i < 4; i++)
 	{
 		if(!Write(BytePtr[i], m_FramCursor)) { return false; }
@@ -114,7 +114,7 @@ bool FRAM::StoreData(SensorData SD, uint32_t TimeStamp)
 
 	// Thermocouple
 	auto Thermocouple = fp16_ieee_from_fp32_value(SD.m_Temperature);
-	BytePtr = (uint8_t*)&Thermocouple;
+	BytePtr = reinterpret_cast<std::byte*>(&Thermocouple);
 	for(int i = 0; i < 2; i++)
 	{
 		if(!Write(BytePtr[i], m_FramCursor)) { return false; }
@@ -139,10 +139,10 @@ SensorChunk FRAM::ReadData(uint32_t Location)
 	if(Location + 25 > m_MaxAddr) { SC.m_SuccessfulRead = false; return SC; }
 
 	// time stamp
-	uint8_t Buff[4];
-	for(int i = 0; i < 4; i++)
+	std::byte Buff[4];
+	for(auto& i : Buff)
 	{
-		Buff[i] = Read(Location);
+		i = Read(Location);
 		Location++;
 	}
     // reinterpret_cast is UB
@@ -188,11 +188,11 @@ SensorChunk FRAM::ReadData(uint32_t Location)
  * @param    Data    the data to write
  * @param    Location   the address to write to
  */
-bool FRAM::Write(uint8_t Data, uint32_t Location)
+bool FRAM::Write(std::byte Data, uint32_t Location)
 {
 	if(Location > std::numeric_limits<uint16_t>::max()) { return false; }
 
-	return m_FRAM.write(Location, Data);
+	return m_FRAM.write(Location, static_cast<uint8_t>(Data));
 }
 
 /**
@@ -200,9 +200,9 @@ bool FRAM::Write(uint8_t Data, uint32_t Location)
  * @param    Location the address to read from
  * @return   the data read from FRAM
  */
-uint8_t FRAM::Read(uint16_t Location)
+std::byte FRAM::Read(uint16_t Location)
 {
-	return m_FRAM.read(Location);
+	return static_cast<std::byte>(m_FRAM.read(Location));
 }
 
 /**
@@ -212,7 +212,7 @@ uint8_t FRAM::Read(uint16_t Location)
  */
 float FRAM::ReadF16(uint32_t Location)
 {
-	uint8_t Buff[2];
+	std::byte Buff[2];
 	for(int i = 0; i < 2; i++)
 	{
 		Buff[i] = Read(Location + i);
@@ -228,7 +228,7 @@ float FRAM::ReadF16(uint32_t Location)
  */
 float FRAM::ReadF32(uint32_t Location)
 {
-	uint8_t Buff[4];
+	std::byte Buff[4];
 	for(int i = 0; i < 4; i++)
 	{
 		Buff[i] = Read(Location + i);

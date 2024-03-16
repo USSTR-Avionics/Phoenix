@@ -3,6 +3,8 @@
 
 #include "States.h"
 
+namespace RA
+{
 /**
  * Manages States
  */
@@ -12,7 +14,7 @@ public:
 	/**
 	 * Initialize and enter into Unarmed state
 	 */
-    explicit StateMachine();
+	explicit StateMachine();
 
 	/**
 	 * Performs state action
@@ -20,9 +22,13 @@ public:
 	 */
 	FlightState Run(const SensorData&);
 
-    StateMachine(StateMachine&) = delete;
-    StateMachine& operator=(StateMachine&) = delete;
+	FlightState GetState() const;
+
+	StateMachine(StateMachine&) = delete;
+
+	StateMachine& operator =(StateMachine&) = delete;
 
 private:
 	FlightStateMemPool m_MemPool{};
 };
+}
