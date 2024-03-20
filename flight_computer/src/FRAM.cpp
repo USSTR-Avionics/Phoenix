@@ -38,19 +38,20 @@ bool FRAM::Init(uint8_t I2C_Addr)
  */
 bool FRAM::StoreData(SensorData SD, uint32_t TimeStamp)
 {
+	uint32_t Cursor{m_FramCursor};
 	std::byte* BytePtr;
 
 	// Time Stamp
 	BytePtr = reinterpret_cast<std::byte*>(&TimeStamp);
 	for(int i = 0; i < 4; i++)
 	{
-		if(!Write(BytePtr[i], m_FramCursor)) { return false; }
-		m_FramCursor++;
+		if(!Write(BytePtr[i], Cursor)) { return false; }
+		Cursor++;
 	}
 
 	// Rocket BaseState
-	Write(static_cast<std::byte>(SD.m_State), m_FramCursor);
-	m_FramCursor++;
+	Write(static_cast<std::byte>(SD.m_State), Cursor);
+	Cursor++;
 
 	// Accel
 	{
@@ -66,9 +67,9 @@ bool FRAM::StoreData(SensorData SD, uint32_t TimeStamp)
 			BytePtr = reinterpret_cast<std::byte*>(&i);
 			for(int j = 0; j < 2; j++)
 			{
-				if(!Write(BytePtr[j], m_FramCursor)) { return false; }
+				if(!Write(BytePtr[j], Cursor)) { return false; }
 
-				m_FramCursor++;
+				Cursor++;
 			}
 		}
 	}
@@ -87,9 +88,9 @@ bool FRAM::StoreData(SensorData SD, uint32_t TimeStamp)
 			BytePtr = reinterpret_cast<std::byte*>(&i);
 			for(int j = 0; j < 2; j++)
 			{
-				if(!Write(BytePtr[j], m_FramCursor)) { return false; }
+				if(!Write(BytePtr[j], Cursor)) { return false; }
 
-				m_FramCursor++;
+				Cursor++;
 			}
 		}
 	}
@@ -99,17 +100,17 @@ bool FRAM::StoreData(SensorData SD, uint32_t TimeStamp)
 	BytePtr = reinterpret_cast<std::byte*>(&RelativeAltitude);
 	for(int i = 0; i < 2; i++)
 	{
-		if(!Write(BytePtr[i], m_FramCursor)) { return false; }
+		if(!Write(BytePtr[i], Cursor)) { return false; }
 
-		m_FramCursor++;
+		Cursor++;
 	}
 
 	// pressure
 	BytePtr = reinterpret_cast<std::byte*>(&SD.m_BarometerVal);
 	for(int i = 0; i < 4; i++)
 	{
-		if(!Write(BytePtr[i], m_FramCursor)) { return false; }
-		m_FramCursor++;
+		if(!Write(BytePtr[i], Cursor)) { return false; }
+		Cursor++;
 	}
 
 	// Thermocouple
@@ -117,11 +118,12 @@ bool FRAM::StoreData(SensorData SD, uint32_t TimeStamp)
 	BytePtr = reinterpret_cast<std::byte*>(&Thermocouple);
 	for(int i = 0; i < 2; i++)
 	{
-		if(!Write(BytePtr[i], m_FramCursor)) { return false; }
+		if(!Write(BytePtr[i], Cursor)) { return false; }
 
-		m_FramCursor++;
+		Cursor++;
 	}
 
+	m_FramCursor = Cursor;
 	return true;
 }
 
