@@ -25,7 +25,7 @@
 
 // CHANGE THESE VALUES
 RA::Sensor Sensor({18, 18, 18}, {18, 18}, 18);
-FRAM FRam(0, 100);
+FRAM FRam(0, 32000);
 
 // StateMachine StateMachine;
 // WDT_T4<WDT2> WatchDog;
@@ -63,30 +63,30 @@ void setup()
     // }
     Sensor.Setup();
 
-// 	// CHANGE THIS NUMBER
-// 	if(!FRam.Init(0x50))
-// 	{
-// 		Serial.println("Failed to init FRam at addr");
-// 	}
+	// CHANGE THIS NUMBER
+	if(!FRam.Init(0x50))
+	{
+		Serial.println("Failed to init FRam at addr");
+	}
 
 
-//     SensorData SD{};
+    SensorData SD{};
 
-//     SD.m_Gyro.x = 1.2f;
+    SD.m_Gyro.x = 1.2f;
 
-//     auto tim = millis();
-//     for(int i = 0; i < 4; i++)
+    //auto tim = millis();
+    for(int i = 0; i < 1290; i++)
 
-// {
-//     if(!FRam.StoreData(SD, i)){
-//         Serial.println("Failed to store");
-//     }
-// }
-// for(int i = 0; i < 4; i++)
-// {
-//     Serial.println(FRam.ReadData(i*25).m_TimeStamp);
-//     Serial.println(FRam.ReadData(i*25).m_Gyro.x);
-// }
+{
+    if(!FRam.StoreData(SD, i)){
+        Serial.println("Failed to store");
+    }
+}
+for(int i = 1200; i < 1290; i++)
+{
+    Serial.println(FRam.ReadData(i*25).m_TimeStamp);
+    Serial.println(FRam.ReadData(i*25).m_SuccessfulRead);
+}
 
 }
 
@@ -94,7 +94,7 @@ void loop()
 {
     //Serial.println("Reading Data:");
 	// WatchDog.feed();
-    // Sensor.ReadSensorData();
+    //Sensor.ReadSensorData();
 
 	/*
 	CurrentTime = millis();
