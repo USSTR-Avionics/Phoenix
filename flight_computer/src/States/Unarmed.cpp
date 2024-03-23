@@ -4,10 +4,8 @@
 
 State* Unarmed::Run(const SensorData& SD, StateMemPool& MemPool)
 {
-    digitalWrite(20, HIGH);
-    delay(2000);
-    digitalWrite(20, LOW);
-
+    //swichs states if recieved arming signal
+    //TODO: be able to recieve arming signal
     if(true)
     {
         // transition to new state, will break SM if you create random obj

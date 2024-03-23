@@ -190,7 +190,7 @@ SensorChunk FRAM::ReadData(uint32_t Location)
  */
 bool FRAM::Write(uint8_t Data, uint32_t Location)
 {
-	if(Location > std::numeric_limits<uint16_t>::max()) { return false; }
+	if(Location > m_MaxAddr) { return false; }
 
 	return m_FRAM.write(Location, Data);
 }
