@@ -59,8 +59,8 @@ public:
 	SensorChunk ReadData(uint32_t Location);
 
 private:
-	bool Write(uint8_t Data, uint32_t Location);
-	uint8_t Read(uint16_t Location);
+	bool Write(std::byte Data, uint32_t Location);
+	std::byte Read(uint16_t Location);
 
 	float ReadF16(uint32_t Location);
 	float ReadF32(uint32_t Location);

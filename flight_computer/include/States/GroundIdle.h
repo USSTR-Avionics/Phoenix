@@ -1,14 +1,20 @@
 #ifndef FLIGHT_COMPUTER_GROUNDIDLE_H
 #define FLIGHT_COMPUTER_GROUNDIDLE_H
 
-#include "State.h"
+#include "BaseState.h"
 
-class GroundIdle : public State
+class GroundIdle : BaseState
 {
 public:
     // main
-    State* Run(const SensorData&, StateMemPool&) override;
-	FlightState GetState() override;
+    FlightState Run(const SensorData&, FlightStateMemPool&) override;
+
+	/**
+	 * Finds the State of the current State
+	 * @return The state currently at
+	 */
+	[[nodiscard]]
+	FlightState GetState() const override;
 
     ~GroundIdle() override = default;
 };

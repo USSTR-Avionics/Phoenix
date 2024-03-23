@@ -1,20 +1,22 @@
-//
-// Created by TDKua on 2023/10/22.
-//
-
 #ifndef FLIGHT_COMPUTER_UNARMED_H
 #define FLIGHT_COMPUTER_UNARMED_H
 
-#include "State.h"
+#include "BaseState.h"
 
-class Unarmed : public State
+class Unarmed : BaseState
 {
 public:
     // main
-	State* Run(const SensorData&, StateMemPool&) override;
-	FlightState GetState() override;
+    FlightState Run(const SensorData&, FlightStateMemPool&) override;
 
-    ~Unarmed() override= default;
+	/**
+	 * Finds the State of the current State
+	 * @return The state currently at
+	 */
+	[[nodiscard]]
+	FlightState GetState() const override;
+
+	~Unarmed() override = default;
 };
 
 #endif //FLIGHT_COMPUTER_UNARMED_H

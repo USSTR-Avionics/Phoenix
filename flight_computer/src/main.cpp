@@ -59,7 +59,7 @@ void setup()
     // check StateMachine
     // if (!StateMachine.Ready())
     // {
-    //     Serial.println("State machine could not allocate memory pool");
+    //     Serial.println("BaseState machine could not allocate memory pool");
     // }
     Sensor.Setup();
 
