@@ -1,18 +1,20 @@
-//
-// Created by TDKua on 2023/10/22.
-//
-
 #ifndef FLIGHT_COMPUTER_MAINCHUTE_H
 #define FLIGHT_COMPUTER_MAINCHUTE_H
 
-#include "State.h"
+#include "BaseState.h"
 
-class MainChute : public State
+class MainChute : BaseState
 {
 public:
     // main
-    State* Run(const SensorData&, StateMemPool&) override;
-	FlightState GetState() override;
+    FlightState Run(const SensorData&, FlightStateMemPool&) override;
+
+	/**
+	 * Finds the State of the current State
+	 * @return The state currently at
+	 */
+	[[nodiscard]]
+	FlightState GetState() const override;
 
     ~MainChute() override = default;
 };

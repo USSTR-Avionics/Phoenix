@@ -12,20 +12,20 @@ public:
 	/**
 	 * Initialize and enter into Unarmed state
 	 */
-    explicit StateMachine();
-
-    void Run(const SensorData&);
+	explicit StateMachine();
 
 	/**
-	 * Checks if memory pool is initialized
-	 * @return true if ready
+	 * Performs state action
+	 * @return The current state
 	 */
-	bool Ready();
+	FlightState Run(const SensorData&);
 
-    StateMachine(StateMachine&) = delete;
-    StateMachine& operator=(StateMachine&) = delete;
+	FlightState GetState() const;
+
+	StateMachine(StateMachine&) = delete;
+
+	StateMachine& operator =(StateMachine&) = delete;
 
 private:
-	StateMemPool m_MemPool;
-    State* m_CurrentState { nullptr };
+	FlightStateMemPool m_MemPool{};
 };

@@ -1,13 +1,19 @@
 #ifndef FLIGHT_COMPUTER_INFLIGHT_H
 #define FLIGHT_COMPUTER_INFLIGHT_H
-#include "State.h"
+#include "BaseState.h"
 
-class InFlight : public State
+class InFlight : BaseState
 {
 public:
     // main
-    State* Run(const SensorData&, StateMemPool&) override;
-	FlightState GetState() override;
+    FlightState Run(const SensorData&, FlightStateMemPool&) override;
+
+	/**
+	 * Finds the State of the current State
+	 * @return The state currently at
+	 */
+	[[nodiscard]]
+	FlightState GetState() const override;
 
     ~InFlight() override = default;
 };

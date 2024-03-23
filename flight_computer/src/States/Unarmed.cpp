@@ -2,19 +2,19 @@
 
 #include <Arduino.h>
 
-State* Unarmed::Run(const SensorData& SD, StateMemPool& MemPool)
+FlightState Unarmed::Run(const SensorData& SD, FlightStateMemPool& MemPool)
 {
     //swichs states if recieved arming signal
     //TODO: be able to recieve arming signal
     if(true)
     {
         // transition to new state, will break SM if you create random obj
-	    return static_cast<State*>(&MemPool.emplace<GroundIdle>());
+	   return MemPool.emplace<GroundIdle>().GetState();
     }
-	return static_cast<State*>(this);
+	return GetState();
 }
 
-FlightState Unarmed::GetState()
+FlightState inline Unarmed::GetState() const
 {
-	return FlightState::eUnarmed;
+	return eUnarmed;
 }

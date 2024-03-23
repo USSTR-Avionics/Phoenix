@@ -1,13 +1,30 @@
 #include "StateMachine.h"
 
-StateMachine::StateMachine() : m_CurrentState(static_cast<State*>(&m_MemPool.emplace<Unarmed>())){}
-
-bool StateMachine::Ready()
+StateMachine::StateMachine()
 {
-	return m_CurrentState != nullptr;
+	m_MemPool.emplace<Unarmed>();
 }
 
-void StateMachine::Run(const SensorData& SD)
+FlightState StateMachine::Run(const SensorData& SD)
 {
-	m_CurrentState = m_CurrentState->Run(SD, m_MemPool);
+	return std::visit
+			(
+					[&](auto&& CurrentState)
+					{
+						return CurrentState.Run(SD, m_MemPool);
+					},
+					m_MemPool
+			);
+}
+
+FlightState StateMachine::GetState() const
+{
+	return std::visit
+			(
+					[&](const auto& CurrentState)
+					{
+						return CurrentState.GetState();
+					},
+					m_MemPool
+			);
 }

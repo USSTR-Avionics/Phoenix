@@ -1,7 +1,7 @@
 #ifndef FLIGHT_COMPUTER_STATES_H
 #define FLIGHT_COMPUTER_STATES_H
 
-#include "States/State.h"
+#include "States/BaseState.h"
 #include "States/Unarmed.h"
 #include "States/GroundIdle.h"
 #include "States/InFlight.h"

@@ -1,6 +1,6 @@
 #include "States.h"
 
-State* MainChute::Run(const SensorData& SD, StateMemPool& MemPool)
+FlightState MainChute::Run(const SensorData& SD, FlightStateMemPool& MemPool)
 {
     digitalWrite(18, HIGH);
     delay(2000);
@@ -8,12 +8,12 @@ State* MainChute::Run(const SensorData& SD, StateMemPool& MemPool)
     if(true)
     {
         // transition to new state, will break SM if you create random obj
-	    return static_cast<State*>(&MemPool.emplace<Unarmed>());
+	    return MemPool.emplace<Unarmed>().GetState();
     }
-	return static_cast<State*>(this);
+	return GetState();
 }
 
-FlightState MainChute::GetState()
+FlightState inline MainChute::GetState() const
 {
-	return FlightState::eMainChute;
+	return eMainChute;
 }
