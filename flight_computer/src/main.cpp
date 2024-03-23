@@ -27,7 +27,7 @@
 RA::Sensor Sensor({18, 18, 18}, {18, 18}, 18);
 FRAM FRam(0, 32000);
 
-// StateMachine StateMachine;
+StateMachine StateMachine;
 // WDT_T4<WDT2> WatchDog;
 
 uint64_t PrevTime = 0, CurrentTime;
@@ -76,25 +76,34 @@ void setup()
 
     //auto tim = millis();
     for(int i = 0; i < 1290; i++)
-
-{
-    if(!FRam.StoreData(SD, i)){
-        Serial.println("Failed to store");
+    {
+        if(!FRam.StoreData(SD, i)){
+            Serial.println("Failed to store");
+        }
     }
-}
-for(int i = 1200; i < 1290; i++)
-{
-    Serial.println(FRam.ReadData(i*25).m_TimeStamp);
-    Serial.println(FRam.ReadData(i*25).m_SuccessfulRead);
-}
+    for(int i = 1200; i < 1290; i++)
+    {
+        Serial.println(FRam.ReadData(i*25).m_TimeStamp);
+        Serial.println(FRam.ReadData(i*25).m_SuccessfulRead);
+    }
 
 }
 
 void loop()
 {
-    //Serial.println("Reading Data:");
 	// WatchDog.feed();
-    //Sensor.ReadSensorData();
+    Sensor.ReadSensorData();
+
+    //used to ensure the data 
+    FlightState CurrentState{StateMachine.Run(Sensor.GetData())};
+
+    //determines whether to log data
+    if(CurrentState != FlightState::eInFlight && CurrentState != FlightState::eMainChute)
+    {
+        //dont log data
+        return;
+    }
+    //everything after this point should be to log data
 
 	/*
 	CurrentTime = millis();
@@ -109,5 +118,6 @@ void loop()
 //#ifdef TEENSY_OPT_DEBUG
     //Serial.println("DebugMacroWorks");
 //#endif
-	//StateMachine.Run(Sensor);
+	
+
 }

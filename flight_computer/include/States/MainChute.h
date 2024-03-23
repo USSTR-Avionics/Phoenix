@@ -6,6 +6,12 @@
 class MainChute : BaseState
 {
 public:
+	// height to deploy main chute
+	float AcceptedMainChuteHeight = 400;
+
+	// preveous barometer value used to determine on ground
+	float PrevBarVal;
+
     // main
     FlightState Run(const SensorData&, FlightStateMemPool&) override;
 
