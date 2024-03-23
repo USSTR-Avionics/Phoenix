@@ -23,6 +23,8 @@
 //Adafruit_Sensor *bmp_temp = bmp.getTemperatureSensor();
 //Adafruit_Sensor *bmp_pressure = bmp.getPressureSensor();
 
+#include "Radio.h"
+
 // CHANGE THESE VALUES
 RA::Sensor Sensor({18, 18, 18}, {18, 18}, 18);
 FRAM FRam(0, 100);

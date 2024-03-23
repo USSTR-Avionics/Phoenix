@@ -1,8 +1,9 @@
 #ifndef FLIGHT_COMPUTER_BASESTATE_H
 #define FLIGHT_COMPUTER_BASESTATE_H
-#include "Sensor.h"
 
 #include <variant>
+
+#include "DataStructures.h"
 
 using FlightStateMemPool = std::variant<
 								class Unarmed,
