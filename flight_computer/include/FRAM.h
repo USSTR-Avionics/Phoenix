@@ -6,12 +6,10 @@
 
 #include <Adafruit_FRAM_I2C.h>
 
-// Sensor data chunk format
+// compressed data chunk format
 // |----------------------|-----------|-----------|
 // |      data            |   size    | data type |
 // |----------------------|-----------|-----------|
-// | timestamp            | 04 bytes  | uint32    |
-// | rocket state         | 01 byte   | uint8     |
 // | acceleration x axis  | 02 bytes  | float16   |
 // | acceleration y axis  | 02 bytes  | float16   |
 // | acceleration z axis  | 02 bytes  | float16   |
@@ -19,23 +17,19 @@
 // | gyroscope y axis     | 02 bytes  | float16   |
 // | gyroscope z axis     | 02 bytes  | float16   |
 // | relative altitude    | 02 bytes  | float16   |
-// | pressure             | 04 bytes  | float32   |
+// | pressure (barometer) | 04 bytes  | float32   |
 // | thermocouple temp    | 02 bytes  | float16   |
+// | timestamp            | 04 bytes  | uint32_t  |
+// | rocket state         | 01 byte   | uint8_t   |
 // |----------------------|-----------|-----------|
 // | total                | 25 bytes  |           |
 // |----------------------|-----------|-----------|
-
-struct SensorChunk : SensorData
-{
-	uint32_t m_TimeStamp{};
-	bool m_SuccessfulRead{false};
-};
 
 class FRAM
 {
 public:
 	FRAM(uint32_t MinAddr, uint32_t MaxAddr)
-	: m_MaxAddr{MaxAddr}, m_MinAddr{MinAddr}, m_FramCursor{MinAddr}{};
+	: m_MaxAddr{MaxAddr}, m_MinAddr{MinAddr}, m_FramWriteCursor{MinAddr}{};
 
 	/**
 	 * Is the fram ready
@@ -49,21 +43,18 @@ public:
 	 * @param    SD struct of SensorData to store
 	 * @return   success or failure
 	 */
-	bool StoreData(SensorData SC, uint32_t TimeStamp);
+	bool StoreData(SensorData SC);
 
 	/**
 	 * @brief    Reads SensorData chunk from FRAM
-	 * @param    Location the address to read from
+	 * @param    Item the i-th item to read
 	 * @return   the data chunk read from FRAM
 	 */
-	SensorChunk ReadData(uint32_t Location);
+	SensorChunk ReadData(uint16_t Item);
 
 private:
 	bool Write(std::byte Data, uint32_t Location);
 	std::byte Read(uint16_t Location);
-
-	float ReadF16(uint32_t Location);
-	float ReadF32(uint32_t Location);
 
 	// The last addr that will be used
 	const uint32_t m_MaxAddr;
@@ -71,7 +62,7 @@ private:
 	const uint32_t m_MinAddr;
 
 	// max addr is uint16_t, attempt to write past max addr will fail, prevents overflow
-	uint32_t m_FramCursor;
+	uint32_t m_FramWriteCursor;
 
 	Adafruit_FRAM_I2C m_FRAM;
 };
