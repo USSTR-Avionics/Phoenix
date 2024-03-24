@@ -11,8 +11,6 @@ enum FlightState : uint8_t;
 // |----------------------|-----------|-----------|
 // |      data            |   size    | data type |
 // |----------------------|-----------|-----------|
-// | timestamp            | 04 bytes  | u32       |
-// | rocket state         | 01 byte   | u8        |
 // | acceleration x axis  | 02 bytes  | float16   |
 // | acceleration y axis  | 02 bytes  | float16   |
 // | acceleration z axis  | 02 bytes  | float16   |
@@ -20,8 +18,10 @@ enum FlightState : uint8_t;
 // | gyroscope y axis     | 02 bytes  | float16   |
 // | gyroscope z axis     | 02 bytes  | float16   |
 // | relative altitude    | 02 bytes  | float16   |
-// | pressure             | 04 bytes  | float32   |
+// | pressure (barometer) | 04 bytes  | float32   |
 // | thermocouple temp    | 02 bytes  | float16   |
+// | timestamp            | 04 bytes  | uint32_t  |
+// | rocket state         | 01 byte   | uint8_t   |
 // |----------------------|-----------|-----------|
 // | total                | 25 bytes  |           |
 // |----------------------|-----------|-----------|
@@ -38,10 +38,11 @@ struct SensorData
         float z;
     } m_Gyro{};
 
-    // bmp280
-    float m_RelativeAltitude{};
-    // bmp280, pressure
-    float m_BarometerVal{};
+	struct BMP280
+	{
+		float RelativeAltitude;
+		float Barometer;
+	} m_Bmp{};
 
     // MAX31855
     float m_Temperature{};
@@ -50,11 +51,34 @@ struct SensorData
 
     FlightState m_State {};
 
-    std::array<std::byte, 25> GetBytes() const;
-    std::array<std::byte, 41> GetBytesCompressed() const;
+	static constexpr uint32_t m_Size{41};
+	static constexpr uint32_t m_CompressedSize{25};
+
+    [[nodiscard]] std::array<std::byte, m_Size> GetBytes() const;
+    [[nodiscard]] std::array<std::byte, m_CompressedSize> GetBytesCompressed() const;
+};
+
+struct SensorChunk : SensorData
+{
+	bool m_SuccessfulRead{false};
+	/**
+	 * Create SensorChunk from bytes
+	 * @param Data ptr to 41 bytes of data
+	 * @return populated SensorChunk
+	 */
+	static SensorChunk DecodeBytes(const std::byte Data[]);
+
+	/**
+	 * Create SensorChunk from compressed bytes
+	 * @param Data ptr to 25 bytes of data
+	 * @return populated SensorChunk
+	 */
+	static SensorChunk DecodeBytesCompressed(const std::byte Data[]);
 
 
-
+private:
+	static float ReadF16(const std::byte* Location);
+	static float ReadF32(const std::byte* Location);
 };
 
 #endif //FLIGHT_COMPUTER_DATASTRUCTURES_H
