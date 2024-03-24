@@ -21,9 +21,9 @@
 // | total                | 25 bytes  |           |
 // |----------------------|-----------|-----------|
 
-std::array<std::byte, 25> SensorData::GetBytesCompressed() const
+std::array<std::byte, SensorData::m_CompressedSize> SensorData::GetBytesCompressed() const
 {
-	std::array<std::byte, 25> Data{};
+	std::array<std::byte, m_CompressedSize> Data{};
 	const std::byte* BytePtr;
 	uint32_t Cursor{0};
 
@@ -184,9 +184,9 @@ SensorChunk SensorChunk::DecodeBytesCompressed(const std::byte* Data)
 // | total                | 41 bytes  |           |
 // |----------------------|-----------|-----------|
 
-std::array<std::byte, 41> SensorData::GetBytes() const
+std::array<std::byte, SensorData::m_Size> SensorData::GetBytes() const
 {
-	std::array<std::byte, 41> Data{};
+	std::array<std::byte, m_Size> Data{};
 	const std::byte* BytePtr;
 	uint32_t Cursor{0};
 

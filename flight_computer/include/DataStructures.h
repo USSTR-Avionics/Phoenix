@@ -51,8 +51,11 @@ struct SensorData
 
     FlightState m_State {};
 
-    [[nodiscard]] std::array<std::byte, 41> GetBytes() const;
-    [[nodiscard]] std::array<std::byte, 25> GetBytesCompressed() const;
+	static constexpr uint32_t m_Size{41};
+	static constexpr uint32_t m_CompressedSize{25};
+
+    [[nodiscard]] std::array<std::byte, m_Size> GetBytes() const;
+    [[nodiscard]] std::array<std::byte, m_CompressedSize> GetBytesCompressed() const;
 };
 
 struct SensorChunk : SensorData
