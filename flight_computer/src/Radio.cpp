@@ -25,7 +25,7 @@ bool Radio::UDP_Send(const SensorData& Data, uint16_t Timeout)
 SensorChunk Radio::UDP_Receive()
 {
 	// message available
-	if(!m_Radio.available()) { return {.m_SuccessfulRead = false}; }
+	if(!m_Radio.available()) { return {{}, false}; }
 
 	// get message
 	union
@@ -38,7 +38,7 @@ SensorChunk Radio::UDP_Receive()
 	m_Radio.recv(Buffer.uint_Buffer, &BufferLength);
 
 	// is message exactly 41 bytes long
-	if(BufferLength != SensorData::m_Size) { return {.m_SuccessfulRead = false}; }
+	if(BufferLength != SensorData::m_Size) { return {{}, false}; }
 
 	return SensorChunk::DecodeBytes(Buffer.ByteBuffer);
 }

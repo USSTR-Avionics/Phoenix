@@ -84,8 +84,8 @@ std::array<std::byte, SensorData::m_CompressedSize> SensorData::GetBytesCompress
 	}
 
 	// Thermocouple, 4
-	BytePtr = reinterpret_cast<const std::byte*>(&m_Temperature);
-	for(int i = 0; i < 4; i++, Cursor++)
+	BytePtr = reinterpret_cast<const std::byte*>(fp16_ieee_from_fp32_value(m_Temperature));
+	for(int i = 0; i < 2; i++, Cursor++)
 	{
 		Data[Cursor] = BytePtr[i];
 	}
@@ -124,7 +124,7 @@ std::array<std::byte, SensorData::m_CompressedSize> SensorData::GetBytesCompress
 // |----------------------|-----------|-----------|
 SensorChunk SensorChunk::DecodeBytesCompressed(const std::byte* Data)
 {
-	if(Data == nullptr) { return {.m_SuccessfulRead = false}; }
+	if(Data == nullptr) { return {{}, false}; }
 
 	return
 	{
@@ -245,7 +245,7 @@ std::array<std::byte, SensorData::m_Size> SensorData::GetBytes() const
 // |----------------------|-----------|-----------|
 SensorChunk SensorChunk::DecodeBytes(const std::byte* Data)
 {
-	if(Data == nullptr) { return {.m_SuccessfulRead = false}; }
+	if(Data == nullptr) { return {{}, false}; }
 
 	return
 	{

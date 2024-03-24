@@ -159,8 +159,8 @@ void Sensor::ReadAcceleration(){
 void Sensor::ReadBarometer(){
 
     //m_SD.m_Temperature = m_Bmp.readTemperature();
-    m_SD.m_BarometerVal = m_Bmp.readPressure();
-    m_SD.m_RelativeAltitude = m_Bmp.readAltitude(1013.25); /* Adjusted to local forecast! */
+    m_SD.m_Bmp.Barometer = m_Bmp.readPressure();
+    m_SD.m_Bmp.RelativeAltitude = m_Bmp.readAltitude(1013.25); /* Adjusted to local forecast! */
 
     //Adafruit_BMP280 bmp(BMP_CS); // hardware SPI
     //Adafruit_BMP280 bmp(BMP_CS, BMP_MOSI, BMP_MISO,  BMP_SCK);

@@ -74,7 +74,7 @@ bool FRAM::StoreData(SensorData SD)
 SensorChunk FRAM::ReadData(uint16_t Item)
 {
 	// check if valid location
-	if(static_cast<uint32_t>((Item + 1) * 25) > m_MaxAddr) { return {.m_SuccessfulRead = false}; }
+	if(static_cast<uint32_t>((Item + 1) * 25) > m_MaxAddr) { return {{}, false}; }
 
 	uint32_t Location{static_cast<uint32_t>(Item * 25)};
 	std::byte Buffer[25];
