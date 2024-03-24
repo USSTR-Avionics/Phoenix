@@ -219,7 +219,7 @@ void Sensor::ReadThermocouple(){
     //delay(1000);
 }
 
-void Sensor::ReadSensorData()
+void Sensor::RecordSensorData()
 {
     Serial.println("Test");
     ReadAcceleration();
@@ -228,8 +228,25 @@ void Sensor::ReadSensorData()
 
     ReadThermocouple();
 
+    m_CurrentTime = millis();
+    // must add, millis() can overflow
+    if(m_PrevTime + 5000 <= m_CurrentTime)
+    {
+        m_SD.m_TimeStamp = m_CurrentTime;
+        m_PrevTime = m_CurrentTime;
+    }
+
+    // ?????
     delay(500);
 }
 
+SensorData& Sensor::SetFlightState(FlightState State)
+{
+    m_SD.m_State = State;
+    return m_SD;
+}
+
 SensorData Sensor::GetData() { return m_SD; }
+
+
 }

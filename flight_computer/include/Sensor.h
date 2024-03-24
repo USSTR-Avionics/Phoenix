@@ -53,7 +53,9 @@ public:
 
 	void ReadThermocouple();
 
-	void ReadSensorData();
+	void RecordSensorData();
+
+    SensorData& SetFlightState(FlightState State);
 
 	SensorData GetData();
 
@@ -70,6 +72,8 @@ private:
 
 	// I2C
 	Adafruit_BMP280 m_Bmp;
+
+    uint32_t m_PrevTime{}, m_CurrentTime{};
 
 	const uint8_t m_KxAccelPin;
 
