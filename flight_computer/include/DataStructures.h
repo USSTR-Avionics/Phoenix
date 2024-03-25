@@ -1,6 +1,10 @@
 #ifndef FLIGHT_COMPUTER_DATASTRUCTURES_H
 #define FLIGHT_COMPUTER_DATASTRUCTURES_H
 
+// MUST BE INCLUDED IN THIS ORDER, or code won't compile
+// Have `const uint8_t SPI_READ` variable in this file
+#include <BMI088.h>
+// Have `#define SPI_READ` in this file
 #include <SparkFun_KX13X.h>
 #include <array>
 
@@ -54,7 +58,15 @@ struct SensorData
 	static constexpr uint32_t m_Size{41};
 	static constexpr uint32_t m_CompressedSize{25};
 
+	/**
+	 * Get struct in byte representation
+	 * @return array of bytes
+	 */
     [[nodiscard]] std::array<std::byte, m_Size> GetBytes() const;
+	/**
+	 * Get struct in compressed byte representation
+	 * @return array of compressed bytes
+	 */
     [[nodiscard]] std::array<std::byte, m_CompressedSize> GetBytesCompressed() const;
 };
 
@@ -70,7 +82,7 @@ struct SensorChunk : SensorData
 
 	/**
 	 * Create SensorChunk from compressed bytes
-	 * @param Data ptr to 25 bytes of data
+	 * @param Data ptr to 25 bytes of compressed data
 	 * @return populated SensorChunk
 	 */
 	static SensorChunk DecodeBytesCompressed(const std::byte Data[]);
