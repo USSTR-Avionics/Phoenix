@@ -4,9 +4,7 @@
 
 FlightState GroundIdle::Run(const SensorData& SD, FlightStateMemPool& MemPool)
 {
-    digitalWrite(19, HIGH);
-    delay(2000);
-    digitalWrite(19, LOW);
+    
     if(true)
     {
         // transition to new state, will break SM if you create random obj
