@@ -16,7 +16,7 @@
 
 namespace RA
 {
-class Sensor
+class Sensor_t
 {
 public:
 	/**
@@ -25,10 +25,10 @@ public:
 	 * @param BmiPin Accel addr, Gyo addr
 	 * @param KxAccelPin KxAccelPin
 	 */
-	Sensor(std::array<int8_t, 3> ThermocouplePin, std::array<uint8_t, 2> BmiPin, uint8_t KxAccelPin) :
-		m_Thermocouple(Adafruit_MAX31855(ThermocouplePin[0], ThermocouplePin[1], ThermocouplePin[2])),
-		m_Bmi(Bmi088(Wire, BmiPin[0], BmiPin[1])),
-		m_KxAccelPin(KxAccelPin){};
+	Sensor_t(std::array<int8_t, 3> ThermocouplePin, std::array<uint8_t, 2> BmiPin, uint8_t KxAccelPin) :
+		m_Thermocouple{ThermocouplePin[0], ThermocouplePin[1], ThermocouplePin[2]},
+		m_Bmi{Wire, BmiPin[0], BmiPin[1]},
+		m_KxAccelPin{KxAccelPin}{};
 
 	/**
 	 * Computes weighted average of 2 values
@@ -53,9 +53,7 @@ public:
 
 	void ReadThermocouple();
 
-	void RecordSensorData();
-
-    SensorData& SetFlightState(FlightState State);
+	SensorData&  RecordSensorData(FlightState CurrentState);
 
 	SensorData GetData();
 

@@ -1,13 +1,13 @@
-#include "FRAM.h"
+#include "FRAM_t.h"
 
 #include <bit>
 
 /**
- * Is the FRAM ready
+ * Is the FRAM_t ready
  * @param I2C_Addr the I^2C address to use
  * @return true if ready
  */
-bool FRAM::Init(uint8_t I2C_Addr)
+bool FRAM_t::Init(uint8_t I2C_Addr)
 {
 	return m_FRAM.begin(I2C_Addr);
 }
@@ -35,7 +35,7 @@ bool FRAM::Init(uint8_t I2C_Addr)
  * @param    SD struct of SensorData to store
  * @return   success or failure
  */
-bool FRAM::StoreData(SensorData SD)
+bool FRAM_t::StoreData(SensorData SD)
 {
 	uint32_t Cursor{m_FramWriteCursor};
 
@@ -49,7 +49,7 @@ bool FRAM::StoreData(SensorData SD)
 }
 
 /**
- * @brief Reads SensorData chunck from FRAM
+ * @brief Reads SensorData chunck from FRAM_t
  * 	// compressed data chunk format
 	// |----------------------|-----------|-----------|
 	// |      data            |   size    | data type |
@@ -69,9 +69,9 @@ bool FRAM::StoreData(SensorData SD)
 	// | total                | 25 bytes  |           |
 	// |----------------------|-----------|-----------|
  * @param    Location the address to read from
- * @return   the data chunk read from FRAM
+ * @return   the data chunk read from FRAM_t
  */
-SensorChunk FRAM::ReadData(uint16_t Item)
+SensorChunk FRAM_t::ReadData(uint16_t Item)
 {
 	// check if valid location
 	if(static_cast<uint32_t>((Item + 1) * 25) > m_MaxAddr) { return {{}, false}; }
@@ -89,11 +89,11 @@ SensorChunk FRAM::ReadData(uint16_t Item)
 }
 
 /**
- * @brief    direct lib API wrapper for writing to FRAM
+ * @brief    direct lib API wrapper for writing to FRAM_t
  * @param    Data    the data to write
  * @param    Location   the address to write to
  */
-bool FRAM::Write(std::byte Data, uint32_t Location)
+bool FRAM_t::Write(std::byte Data, uint32_t Location)
 {
 	if(Location > m_MaxAddr) { return false; }
 
@@ -101,11 +101,11 @@ bool FRAM::Write(std::byte Data, uint32_t Location)
 }
 
 /**
- * @brief    direct lib API wrapper for reading from FRAM
+ * @brief    direct lib API wrapper for reading from FRAM_t
  * @param    Location the address to read from
- * @return   the data read from FRAM
+ * @return   the data read from FRAM_t
  */
-std::byte FRAM::Read(uint16_t Location)
+std::byte FRAM_t::Read(uint16_t Location)
 {
 	return static_cast<std::byte>(m_FRAM.read(Location));
 }

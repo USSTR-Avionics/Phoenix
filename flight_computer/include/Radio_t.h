@@ -5,10 +5,15 @@
 
 #include "DataStructures.h"
 
-class Radio
+class Radio_t
 {
 public:
-	explicit Radio(uint8_t CS, uint8_t Int);
+	/**
+	 * Create RF95 radio
+	 * @param CS cs pin, slave pin
+	 * @param Int interrupt pin
+	 */
+	explicit Radio_t(uint8_t CS, uint8_t Interrupt);
 
 	/**
 	 * Send string message

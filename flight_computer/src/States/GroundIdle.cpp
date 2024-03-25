@@ -2,7 +2,7 @@
 
 #include <Arduino.h>
 
-FlightState GroundIdle::Run(const SensorData& SD, FlightStateMemPool& MemPool)
+FlightState GroundIdle::Run(FlightStateMemPool& MemPool)
 {
     
     if(true)

@@ -1,11 +1,15 @@
 #include "States.h"
+#include "Global.h"
 
-FlightState InFlight::Run(const SensorData& SD, FlightStateMemPool& MemPool)
+FlightState InFlight::Run(FlightStateMemPool& MemPool)
 {
-    if(SD.m_AccelerometerData.zData < -9.81f)
+    if(RA::Global::Sensor.RecordSensorData(GetState()).m_AccelerometerData.zData < -9.81f)
 	{
 		return MemPool.emplace<MainChute>().GetState();
     }
+
+	RA::Global::FRam.StoreData(RA::Global::Sensor.GetData());
+
     // digitalWrite(19, HIGH);
     // delay(2000);
     // digitalWrite(19, LOW);

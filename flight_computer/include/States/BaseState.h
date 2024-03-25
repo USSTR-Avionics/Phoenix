@@ -25,7 +25,7 @@ struct BaseState
      * Performs task
      * @return the current state
      */
-    virtual FlightState Run(const SensorData&, FlightStateMemPool&) = 0;
+    virtual FlightState Run(FlightStateMemPool&) = 0;
 
 	/**
 	 * Finds the State of the current State

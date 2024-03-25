@@ -1,30 +1,23 @@
-#include "StateMachine.h"
+#include "StateMachine_t.h"
 
-StateMachine::StateMachine(RA::Sensor&& Sensor, FRAM&& Fram) : m_Sensor{Sensor}, m_Fram{Fram}
+StateMachine_t::StateMachine_t()
 {
 	m_MemPool.emplace<Unarmed>();
 }
 
-FlightState StateMachine::Run()
+FlightState StateMachine_t::Run()
 {
-    // if record data
-    if(GetState() == FlightState::eInFlight || GetState() == FlightState::eMainChute)
-    {
-        m_Sensor.RecordSensorData();
-
-        m_Fram.StoreData(m_Sensor.SetFlightState(GetState()));
-    }
 	return std::visit
 			(
                 [&](auto&& CurrentState)
                 {
-                    return CurrentState.Run(m_Sensor.GetData(), m_MemPool);
+                    return CurrentState.Run(m_MemPool);
                 },
                 m_MemPool
 			);
 }
 
-FlightState StateMachine::GetState() const
+FlightState StateMachine_t::GetState() const
 {
 	return std::visit
 			(

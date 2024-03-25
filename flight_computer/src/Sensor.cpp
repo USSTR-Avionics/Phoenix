@@ -1,8 +1,8 @@
-#include "Sensor.h"
+#include "Sensor_t.h"
 
 namespace RA
 {
-void Sensor::Setup()
+void Sensor_t::Setup()
 {
     Wire.begin();
 
@@ -138,7 +138,7 @@ void Sensor::Setup()
 
 }
 
-void Sensor::ReadAcceleration(){
+void Sensor_t::ReadAcceleration(){
     // Check if data is ready.
     if (m_KxAccel.dataReady())
     {
@@ -156,7 +156,7 @@ void Sensor::ReadAcceleration(){
     //delay(20); // Delay should be 1/ODR (Output Data Rate), default is 1/50ODR
 }
 
-void Sensor::ReadBarometer(){
+void Sensor_t::ReadBarometer(){
 
     //m_SD.m_Temperature = m_Bmp.readTemperature();
     m_SD.m_Bmp.Barometer = m_Bmp.readPressure();
@@ -182,7 +182,7 @@ void Sensor::ReadBarometer(){
 
 }
 
-void Sensor::ReadThermocouple(){
+void Sensor_t::ReadThermocouple(){
 
     // Example creating a thermocouple instance with hardware SPI
     // on a given CS pin.
@@ -219,7 +219,7 @@ void Sensor::ReadThermocouple(){
     //delay(1000);
 }
 
-void Sensor::RecordSensorData()
+SensorData& Sensor_t::RecordSensorData(FlightState CurrentState)
 {
     Serial.println("Test");
     ReadAcceleration();
@@ -227,6 +227,8 @@ void Sensor::RecordSensorData()
     ReadBarometer();
 
     ReadThermocouple();
+
+	m_SD.m_State = CurrentState;
 
     m_CurrentTime = millis();
     // must add, millis() can overflow
@@ -238,15 +240,10 @@ void Sensor::RecordSensorData()
 
     // ?????
     delay(500);
-}
 
-SensorData& Sensor::SetFlightState(FlightState State)
-{
-    m_SD.m_State = State;
-    return m_SD;
+	return m_SD;
 }
-
-SensorData Sensor::GetData() { return m_SD; }
+SensorData Sensor_t::GetData() { return m_SD; }
 
 
 }
