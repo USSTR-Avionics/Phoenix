@@ -39,7 +39,7 @@ std::array<std::byte, SensorData::m_CompressedSize> SensorData::GetBytesCompress
 		for(const auto& i : AccelXYZ)
 		{
 			BytePtr = reinterpret_cast<const std::byte*>(&i);
-			for(int j = 0; j < 2; j++, Cursor++)
+            for(uint8_t j = 0; j < sizeof(uint16_t); j++, Cursor++)
 			{
 				Data[Cursor] = BytePtr[j];
 			}
@@ -58,7 +58,7 @@ std::array<std::byte, SensorData::m_CompressedSize> SensorData::GetBytesCompress
 		for(const auto& i : GyroXYZ)
 		{
 			BytePtr = reinterpret_cast<const std::byte*>(&i);
-			for(int j = 0; j < 2; j++, Cursor++)
+            for(uint8_t j = 0; j < sizeof(uint16_t); j++, Cursor++)
 			{
 				Data[Cursor] = BytePtr[j];
 			}
@@ -70,14 +70,14 @@ std::array<std::byte, SensorData::m_CompressedSize> SensorData::GetBytesCompress
 		// relative altitude, 2
 		const auto RelativeAltitude{fp16_ieee_from_fp32_value(m_Bmp.RelativeAltitude)};
 		BytePtr = reinterpret_cast<const std::byte*>(&RelativeAltitude);
-		for(int i = 0; i < 2; i++, Cursor++)
+        for(uint8_t i = 0; i < sizeof(uint16_t); i++, Cursor++)
 		{
 			Data[Cursor] = BytePtr[i];
 		}
 
 		// pressure, 4
 		BytePtr = reinterpret_cast<const std::byte*>(&m_Bmp.Barometer);
-		for(int i = 0; i < 4; i++, Cursor++)
+        for(uint8_t i = 0; i < sizeof(float); i++, Cursor++)
 		{
 			Data[Cursor] = BytePtr[i];
 		}
@@ -85,14 +85,14 @@ std::array<std::byte, SensorData::m_CompressedSize> SensorData::GetBytesCompress
 
 	// Thermocouple, 4
 	BytePtr = reinterpret_cast<const std::byte*>(fp16_ieee_from_fp32_value(m_Temperature));
-	for(int i = 0; i < 2; i++, Cursor++)
+    for(uint8_t i = 0; i < sizeof(uint16_t); i++, Cursor++)
 	{
 		Data[Cursor] = BytePtr[i];
 	}
 
 	// Time Stamp, 4
 	BytePtr = reinterpret_cast<const std::byte*>(&m_TimeStamp);
-	for(int i = 0; i < 4; Cursor++, i++)
+    for(uint8_t i = 0; i < sizeof(uint32_t); i++, Cursor++)
 	{
 		Data[Cursor] = BytePtr[i];
 	}
@@ -122,7 +122,7 @@ std::array<std::byte, SensorData::m_CompressedSize> SensorData::GetBytesCompress
 // |----------------------|-----------|-----------|
 // | total                | 25 bytes  |           |
 // |----------------------|-----------|-----------|
-SensorChunk SensorChunk::DecodeBytesCompressed(const std::byte* Data)
+SensorChunk SensorChunk::DecodeBytesCompressed(const std::byte Data[25])
 {
 	if(Data == nullptr) { return {{}, false}; }
 
@@ -243,7 +243,7 @@ std::array<std::byte, SensorData::m_Size> SensorData::GetBytes() const
 // |----------------------|-----------|-----------|
 // | total                | 41 bytes  |           |
 // |----------------------|-----------|-----------|
-SensorChunk SensorChunk::DecodeBytes(const std::byte* Data)
+SensorChunk SensorChunk::DecodeBytes(const std::byte Data[41])
 {
 	if(Data == nullptr) { return {{}, false}; }
 
@@ -285,15 +285,16 @@ SensorChunk SensorChunk::DecodeBytes(const std::byte* Data)
 	};
 }
 
-float SensorChunk::ReadF16(const std::byte* Location)
+float SensorChunk::ReadF16(const std::byte Location[2])
 {
-	std::byte Buffer[2]{Location[0], Location[1]};
-	return fp16_ieee_to_fp32_value(std::bit_cast<uint16_t>(Buffer));
+	return fp16_ieee_to_fp32_value(static_cast<uint16_t>((Location[0] << 8) | Location[1]));
 }
 
-float SensorChunk::ReadF32(const std::byte* Location)
+// assuming float is 4 bytes
+float SensorChunk::ReadF32(const std::byte Location[4])
 {
-	std::byte Buffer[4]{Location[0], Location[1], Location[2], Location[3]};
-	return std::bit_cast<float>(Buffer);
+    float Value;
+    memcpy(&Value, Location, 4);
+	return Value;
 }
 

@@ -78,14 +78,14 @@ struct SensorChunk : SensorData
 	 * @param Data ptr to 41 bytes of data
 	 * @return populated SensorChunk
 	 */
-	static SensorChunk DecodeBytes(const std::byte Data[]);
+	static SensorChunk DecodeBytes(const std::byte Data[41]);
 
 	/**
 	 * Create SensorChunk from compressed bytes
 	 * @param Data ptr to 25 bytes of compressed data
 	 * @return populated SensorChunk
 	 */
-	static SensorChunk DecodeBytesCompressed(const std::byte Data[]);
+	static SensorChunk DecodeBytesCompressed(const std::byte Data[25]);
 
 
 private:

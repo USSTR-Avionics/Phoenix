@@ -19,7 +19,11 @@ bool Radio_t::UDP_Send(const SensorData& Data, uint16_t Timeout)
 
 	const auto& Bytes{Data.GetBytes()};
 
-	return m_Radio.send(reinterpret_cast<const uint8_t*>(Bytes.cbegin()), Bytes.size());
+    // reinterpret_cast<uint8_t*>(Bytes.data()) is UB
+    uint8_t Message[SensorData::m_Size];
+	return m_Radio.send(static_cast<const uint8_t *>(memcpy(Message, Bytes.data(), Bytes.size())),
+                        Bytes.size()
+                        );
 }
 
 SensorChunk Radio_t::UDP_Receive()
@@ -28,17 +32,14 @@ SensorChunk Radio_t::UDP_Receive()
 	if(!m_Radio.available()) { return {{}, false}; }
 
 	// get message
-	union
-	{
-		uint8_t uint_Buffer[SensorData::m_Size];
-		std::byte ByteBuffer[SensorData::m_Size];
-	} Buffer{};
-	uint8_t BufferLength{SensorData::m_Size};
+	uint8_t Buffer[SensorData::m_Size];
+	uint8_t BufferLength;
 
-	m_Radio.recv(Buffer.uint_Buffer, &BufferLength);
+	m_Radio.recv(Buffer, &BufferLength);
 
 	// is message exactly 41 bytes long
 	if(BufferLength != SensorData::m_Size) { return {{}, false}; }
 
-	return SensorChunk::DecodeBytes(Buffer.ByteBuffer);
+    // char, unsigned char, std::byte are allowed under strict aliasing rules
+	return SensorChunk::DecodeBytes(reinterpret_cast<const std::byte*>(Buffer));
 }
