@@ -8,13 +8,14 @@ FlightState MainChute::Run(FlightStateMemPool& MemPool)
     digitalWrite(18, LOW);
 
 	// TODO Change the if condition
-    if(RA::Global::Sensor.RecordSensorData(GetState()).m_State)
+    if(RA::Global::IO::Sensor.RecordSensorData(GetState()).m_State)
     {
         // transition to new state, will break SM if you create random obj
 	    return MemPool.emplace<Unarmed>().GetState();
     }
 
-	RA::Global::FRam.StoreData(RA::Global::Sensor.GetData());
+	// collect data
+	RA::Global::IO::FRam.StoreData(RA::Global::IO::Sensor.GetData());
 
 	return GetState();
 }

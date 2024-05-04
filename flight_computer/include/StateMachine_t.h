@@ -1,6 +1,4 @@
 #pragma once
-#include <Arduino.h>
-
 #include "States.h"
 #include "Sensor_t.h"
 #include "FRAM_t.h"

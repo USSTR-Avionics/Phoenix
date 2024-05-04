@@ -1,15 +1,18 @@
 #include "Global.h"
 
+#include "StateMachine_t.h"
+#include <Watchdog_t4.h>
 
-namespace RA::Global
+namespace RA::Global::IO
 {
-	// RA::Sensor_t RA::Global::Sensor_t{};
+	// RA::Sensor_t RA::Global::IO::Sensor_t{};
 	RA::Sensor_t Sensor{{18, 18, 18}, {18, 18}, 18};
 	FRAM_t FRam{0, 0};
 	Radio_t Radio_t{0, 0};
-	StateMachine_t StateMachine;
-	WDT_T4<WDT2> WatchDog;
 }
+
+StateMachine_t StateMachine;
+WDT_T4<WDT2> WatchDog;
 
 void WatchDogInterrupt()
 {
@@ -40,10 +43,10 @@ void setup()
     // {
     //     Serial.println("BaseState machine could not allocate memory pool");
     // }
-    RA::Global::Sensor.Setup();
+    RA::Global::IO::Sensor.Setup();
 
 	// CHANGE THIS NUMBER
-	if(!RA::Global::FRam.Init(0x50))
+	if(!RA::Global::IO::FRam.Init(0x50))
 	{
 		Serial.println("Failed to init FRam at addr");
 	}

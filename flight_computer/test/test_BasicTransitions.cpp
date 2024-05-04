@@ -1,5 +1,7 @@
-#include <unity.h>
 #include "StateMachine_t.h"
+#include "DataStructures.h"
+#include "unity.h"
+
 
 void setUp(void)
 {
@@ -13,19 +15,19 @@ void tearDown(void)
 
 void CycleStates()
 {
-	StateMachine_t SM{};
+	StateMachine_t SM;
 	SensorData SD{};
-	SD.m_BarometerVal = 3.5;
+	SD.m_Bmp.Barometer = 3.5f;
 
-	TEST_ASSERT_FLOAT_WITHIN(0.1, 3.5, SD.m_BarometerVal);
+	TEST_ASSERT_FLOAT_WITHIN(0.1, 3.5, SD.m_Bmp.Barometer);
 	// inital state
-	// TEST_ASSERT_EQUAL_UINT8(FlightState::eUnarmed, SM.GetState());
+	TEST_ASSERT_EQUAL_UINT8(FlightState::eUnarmed, SM.GetState());
 
 	// switched state
 	// TEST_ASSERT_EQUAL_UINT8(FlightState::eGroundIdle, SM.Run(SD));
 }
 
-int main(int argc, char **argv)
+int main()
 {
 	UNITY_BEGIN();
 	RUN_TEST(CycleStates);

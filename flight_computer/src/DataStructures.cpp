@@ -24,81 +24,56 @@
 std::array<std::byte, SensorData::m_CompressedSize> SensorData::GetBytesCompressed() const
 {
 	std::array<std::byte, m_CompressedSize> Data{};
-	const std::byte* BytePtr;
-	uint32_t Cursor{0};
+	std::byte* Cursor{Data.data()};
 
-	// Accel, 2 x 3
+	// Accel, 2 x 3, // Gyro, 2 x 3
 	{
-		const uint16_t AccelXYZ[]
+		const uint16_t AccelXYZ_GyroXYZ[]
 		{
+			// Accel
 			fp16_ieee_from_fp32_value(m_AccelerometerData.xData),
 			fp16_ieee_from_fp32_value(m_AccelerometerData.yData),
-			fp16_ieee_from_fp32_value(m_AccelerometerData.zData)
-		};
+			fp16_ieee_from_fp32_value(m_AccelerometerData.zData),
 
-		for(const auto& i : AccelXYZ)
-		{
-			BytePtr = reinterpret_cast<const std::byte*>(&i);
-            for(uint8_t j = 0; j < sizeof(uint16_t); j++, Cursor++)
-			{
-				Data[Cursor] = BytePtr[j];
-			}
-		}
-	}
-
-	// Gyro, 2 x 3
-	{
-		const uint16_t GyroXYZ[]
-		{
+			// Gyro
 			fp16_ieee_from_fp32_value(m_Gyro.x),
 			fp16_ieee_from_fp32_value(m_Gyro.y),
 			fp16_ieee_from_fp32_value(m_Gyro.z)
 		};
 
-		for(const auto& i : GyroXYZ)
+		for(const auto& i : AccelXYZ_GyroXYZ)
 		{
-			BytePtr = reinterpret_cast<const std::byte*>(&i);
-            for(uint8_t j = 0; j < sizeof(uint16_t); j++, Cursor++)
-			{
-				Data[Cursor] = BytePtr[j];
-			}
+			memcpy(static_cast<void*>(Cursor), &i, 2);
+			Cursor += 2;
 		}
 	}
 
-	// BMP280, 6
+	// BMP280, 2 + 4
 	{
 		// relative altitude, 2
-		const auto RelativeAltitude{fp16_ieee_from_fp32_value(m_Bmp.RelativeAltitude)};
-		BytePtr = reinterpret_cast<const std::byte*>(&RelativeAltitude);
-        for(uint8_t i = 0; i < sizeof(uint16_t); i++, Cursor++)
-		{
-			Data[Cursor] = BytePtr[i];
-		}
+		const auto& RelativeAltitude{fp16_ieee_from_fp32_value(m_Bmp.RelativeAltitude)};
+		memcpy(static_cast<void*>(Cursor), &RelativeAltitude, 2);
+		Cursor += 2;
 
 		// pressure, 4
-		BytePtr = reinterpret_cast<const std::byte*>(&m_Bmp.Barometer);
-        for(uint8_t i = 0; i < sizeof(float); i++, Cursor++)
-		{
-			Data[Cursor] = BytePtr[i];
-		}
+		memcpy(static_cast<void*>(Cursor), &m_Bmp.Barometer, 4);
+		Cursor += 4;
 	}
 
-	// Thermocouple, 4
-	BytePtr = reinterpret_cast<const std::byte*>(fp16_ieee_from_fp32_value(m_Temperature));
-    for(uint8_t i = 0; i < sizeof(uint16_t); i++, Cursor++)
+	// Thermocouple, 2
 	{
-		Data[Cursor] = BytePtr[i];
+		const auto& Temperature {fp16_ieee_from_fp32_value(m_Temperature)};
+		memcpy(static_cast<void*>(Cursor), &Temperature, 2);
+		Cursor += 2;
 	}
+
 
 	// Time Stamp, 4
-	BytePtr = reinterpret_cast<const std::byte*>(&m_TimeStamp);
-    for(uint8_t i = 0; i < sizeof(uint32_t); i++, Cursor++)
-	{
-		Data[Cursor] = BytePtr[i];
-	}
+	memcpy(static_cast<void*>(Cursor), &m_TimeStamp, 4);
+	Cursor += 4;
 
 	// Rocket State, 1
-	Data[Cursor] = static_cast<std::byte>(m_State);
+	*Cursor = static_cast<std::byte>(m_State);
 
 	return Data;
 }
@@ -187,8 +162,7 @@ SensorChunk SensorChunk::DecodeBytesCompressed(const std::byte Data[25])
 std::array<std::byte, SensorData::m_Size> SensorData::GetBytes() const
 {
 	std::array<std::byte, m_Size> Data{};
-	const std::byte* BytePtr;
-	uint32_t Cursor{0};
+	std::byte* Cursor{Data.data()};
 
 	const float Values[]
 	{
@@ -205,22 +179,16 @@ std::array<std::byte, SensorData::m_Size> SensorData::GetBytes() const
 
 	for(const float& i : Values)
 	{
-		BytePtr = reinterpret_cast<const std::byte*>(&i);
-		for(uint8_t j = 0; j < 4; Cursor++, j++)
-		{
-			Data[Cursor] = BytePtr[j];
-		}
+		memcpy(static_cast<void*>(Cursor), &i, 4);
+		Cursor += 4;
 	}
 
 	// Time Stamp
-	BytePtr = reinterpret_cast<const std::byte*>(&m_TimeStamp);
-	for(int i = 0; i < 4; Cursor++, i++)
-	{
-		Data[Cursor] = BytePtr[i];
-	}
+	memcpy(static_cast<void*>(Cursor), &m_TimeStamp, 4);
+	Cursor += 4;
 
 	// Rocket State
-	Data[Cursor] = static_cast<std::byte>(m_State);
+	*Cursor = static_cast<std::byte>(m_State);
 
 	return Data;
 }

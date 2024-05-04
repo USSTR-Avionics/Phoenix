@@ -182,7 +182,8 @@ void Sensor_t::ReadBarometer(){
 
 }
 
-void Sensor_t::ReadThermocouple(){
+void Sensor_t::ReadThermocouple()
+{
 
     // Example creating a thermocouple instance with hardware SPI
     // on a given CS pin.
@@ -221,6 +222,10 @@ void Sensor_t::ReadThermocouple(){
 
 SensorData& Sensor_t::RecordSensorData(FlightState CurrentState)
 {
+#ifdef NativeTest
+	return m_SD;
+#endif // NativeTest
+
     Serial.println("Test");
     ReadAcceleration();
 
