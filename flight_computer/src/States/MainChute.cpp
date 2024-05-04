@@ -3,15 +3,16 @@
 
 FlightState MainChute::Run(FlightStateMemPool& MemPool)
 {
+	auto& NewVal{ RA::Global::IO::Sensor.RecordSensorData(GetState()) };
+
     //if height is less than accepted minimum height activate chute
-    if(SD.m_RelativeAltitude < AcceptedMainChuteHeight)
+    if(NewVal.m_Bmp.RelativeAltitude < AcceptedMainChuteHeight)
     {
         // TODO: send signal to activate main chute
     }
 
-	auto& NewVal = RA::Global::IO::Sensor.RecordSensorData(GetState());
 	// TODO Change the if condition
-    if(NewVal - PrevBarVal < 0.1f)
+    if(NewVal.m_Bmp.Barometer - PrevBarVal < 0.1f)
     {
         // transition to new state, will break SM if you create random obj
 	    return MemPool.emplace<Unarmed>().GetState();

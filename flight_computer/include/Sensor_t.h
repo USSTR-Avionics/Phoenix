@@ -1,7 +1,5 @@
 #pragma once
 
-#ifndef NativeTest
-
 #include <Wire.h>
 #include <SPI.h>
 #include <Arduino.h>
@@ -10,8 +8,6 @@
 //#include <SparkFun_Qwiic_KX13X.h>
 #include <Adafruit_BMP280.h>
 #include <Adafruit_MAX31855.h>
-
-#endif // NativeTest
 
 #include <array>
 #include <algorithm>
@@ -23,7 +19,6 @@ namespace RA
 class Sensor_t
 {
 public:
-#ifndef NativeTest
 	/**
 	 * Construct sensors
 	 * @param ThermocouplePin SCLK, CS, MISO
@@ -34,10 +29,8 @@ public:
 		m_Thermocouple{ThermocouplePin[0], ThermocouplePin[1], ThermocouplePin[2]},
 		m_Bmi{Wire, BmiPin[0], BmiPin[1]},
 		m_KxAccelPin{KxAccelPin}{};
-#endif // NativeTest
-#ifdef NativeTest
+
 	Sensor_t(std::array<int8_t, 3> ThermocouplePin, std::array<uint8_t, 2> BmiPin, uint8_t KxAccelPin) : m_KxAccelPin{0} {}
-#endif // NativeTest
 
 	/**
 	 * Computes weighted average of 2 values
@@ -74,12 +67,8 @@ public:
 
 	SensorData GetData();
 
-#ifdef NativeTest
 	void SetSensorData(const SensorData& SD) { m_SD = SD; }
-#endif // NativeTest
-
 private:
-#ifndef NativeTest
 	Adafruit_MAX31855 m_Thermocouple;
 	Bmi088 m_Bmi;
 	//QwDevKX134 m_KxAccel;
@@ -89,7 +78,6 @@ private:
 
 	// I2C
 	Adafruit_BMP280 m_Bmp;
-#endif // NativeTest
 
 	SensorData m_SD;
 

@@ -3,15 +3,16 @@
 
 FlightState InFlight::Run(FlightStateMemPool& MemPool)
 {
-    if(RA::Global::IO::Sensor.RecordSensorData(GetState()).m_AccelerometerData.zData < -9.81f)
+	auto& NewVal{RA::Global::IO::Sensor.RecordSensorData(GetState())};
+    if(prevHeight - NewVal.m_Bmp.RelativeAltitude < 0.f)
 	{
         //Deploy drougue chute
 		return MemPool.emplace<MainChute>().GetState();
     }
 
-	prevHeight = RA::Global::IO::Sensor.GetData();
+	prevHeight = NewVal.m_Bmp.RelativeAltitude;
 	// collect data
-	RA::Global::IO::FRam.StoreData(prevHeight);
+	RA::Global::IO::FRam.StoreData(NewVal);
 
     // digitalWrite(19, HIGH);
     // delay(2000);

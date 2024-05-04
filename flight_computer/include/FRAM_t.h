@@ -4,9 +4,7 @@
 #include "fp16.h"
 #include "Sensor_t.h"
 
-#ifndef NativeTest
 #include <Adafruit_FRAM_I2C.h>
-#endif // NativeTest
 
 // compressed data chunk format
 // |----------------------|-----------|-----------|
@@ -65,9 +63,9 @@ private:
 
 	// max addr is uint16_t, attempt to write past max addr will fail, prevents overflow
 	uint32_t m_FramWriteCursor;
-#ifndef NativeTest
+
 	Adafruit_FRAM_I2C m_FRAM;
-#endif // NativeTest
+
 };
 
-#endif // SENSOR_FRAM_H
+#endif

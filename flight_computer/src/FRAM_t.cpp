@@ -9,9 +9,7 @@
  */
 bool FRAM_t::Init(uint8_t I2C_Addr)
 {
-#ifndef NativeTest
 	return m_FRAM.begin(I2C_Addr);
-#endif // NativeTest
 	return true;
 }
 
