@@ -2,7 +2,7 @@
 
 #include <Arduino.h>
 
-FlightState GroundIdle::Run(const SensorData& SD, FlightStateMemPool& MemPool)
+FlightState GroundIdle::Run(FlightStateMemPool& MemPool)
 {
     //TODO: change acceleration axis and value to be respective to sensor
     if(SD.m_AccelerometerData.zData > 2.0f)

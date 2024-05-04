@@ -1,5 +1,5 @@
 #include <unity.h>
-#include "StateMachine.h"
+#include "StateMachine_t.h"
 
 void setUp(void)
 {
@@ -13,7 +13,7 @@ void tearDown(void)
 
 void CycleStates()
 {
-	StateMachine SM{};
+	StateMachine_t SM{};
 	SensorData SD{};
 	SD.m_BarometerVal = 3.5;
 

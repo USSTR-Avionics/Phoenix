@@ -1,6 +1,7 @@
 #include "States.h"
+#include "Global.h"
 
-FlightState MainChute::Run(const SensorData& SD, FlightStateMemPool& MemPool)
+FlightState MainChute::Run(FlightStateMemPool& MemPool)
 {
     //if height is less than accepted minimum height activate chute
     if(SD.m_RelativeAltitude < AcceptedMainChuteHeight)

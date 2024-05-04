@@ -8,7 +8,7 @@ public:
 	//preveous height value, used to check if moving downwards
 	float prevHeight;
     // main
-    FlightState Run(const SensorData&, FlightStateMemPool&) override;
+    FlightState Run(FlightStateMemPool&) override;
 
 	/**
 	 * Finds the State of the current State

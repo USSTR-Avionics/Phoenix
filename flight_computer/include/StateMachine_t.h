@@ -2,29 +2,31 @@
 #include <Arduino.h>
 
 #include "States.h"
+#include "Sensor_t.h"
+#include "FRAM_t.h"
 
 /**
  * Manages States
  */
-class StateMachine
+class StateMachine_t
 {
 public:
 	/**
 	 * Initialize and enter into Unarmed state
 	 */
-	explicit StateMachine();
+	explicit StateMachine_t();
 
 	/**
 	 * Performs state action
 	 * @return The current state
 	 */
-	FlightState Run(const SensorData&);
+	FlightState Run();
 
 	FlightState GetState() const;
 
-	StateMachine(StateMachine&) = delete;
+	StateMachine_t(StateMachine_t&) = delete;
 
-	StateMachine& operator =(StateMachine&) = delete;
+	StateMachine_t& operator =(StateMachine_t&) = delete;
 
 private:
 	FlightStateMemPool m_MemPool{};

@@ -1,6 +1,7 @@
 #include "States.h"
+#include "Global.h"
 
-FlightState InFlight::Run(const SensorData& SD, FlightStateMemPool& MemPool)
+FlightState InFlight::Run(FlightStateMemPool& MemPool)
 {
     //apogee check ( if moving downwards, apogee is hit)
     if(prevHeight - SD.m_RelativeAltitude < 0)

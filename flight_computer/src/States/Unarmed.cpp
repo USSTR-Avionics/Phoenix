@@ -2,7 +2,7 @@
 
 #include <Arduino.h>
 
-FlightState Unarmed::Run(const SensorData& SD, FlightStateMemPool& MemPool)
+FlightState Unarmed::Run(FlightStateMemPool& MemPool)
 {
     //swichs states if recieved arming signal
     //TODO: be able to recieve arming signal

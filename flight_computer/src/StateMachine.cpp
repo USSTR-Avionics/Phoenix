@@ -1,30 +1,30 @@
-#include "StateMachine.h"
+#include "StateMachine_t.h"
 
-StateMachine::StateMachine()
+StateMachine_t::StateMachine_t()
 {
 	m_MemPool.emplace<Unarmed>();
 }
 
-FlightState StateMachine::Run(const SensorData& SD)
+FlightState StateMachine_t::Run()
 {
 	return std::visit
 			(
-					[&](auto&& CurrentState)
-					{
-						return CurrentState.Run(SD, m_MemPool);
-					},
-					m_MemPool
+                [&](auto&& CurrentState)
+                {
+                    return CurrentState.Run(m_MemPool);
+                },
+                m_MemPool
 			);
 }
 
-FlightState StateMachine::GetState() const
+FlightState StateMachine_t::GetState() const
 {
 	return std::visit
 			(
-					[&](const auto& CurrentState)
-					{
-						return CurrentState.GetState();
-					},
-					m_MemPool
+                [&](const auto& CurrentState)
+                {
+                    return CurrentState.GetState();
+                },
+                m_MemPool
 			);
 }
