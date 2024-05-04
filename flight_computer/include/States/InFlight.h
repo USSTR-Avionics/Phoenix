@@ -5,6 +5,8 @@
 class InFlight : BaseState
 {
 public:
+	//preveous height value, used to check if moving downwards
+	float prevHeight;
     // main
     FlightState Run(FlightStateMemPool&) override;
 
