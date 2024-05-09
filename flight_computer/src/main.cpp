@@ -51,40 +51,16 @@ void setup()
 		Serial.println("Failed to init FRam at addr");
 	}
 
-
-    SensorData SD{};
-
-    SD.m_Gyro.x = 1.2f;
-
     //auto tim = millis();
-    for(int i = 0; i < 1290; i++)
-    {
-        if(!FRam.StoreData(SD, i)){
-            Serial.println("Failed to store");
-        }
-    }
-    for(int i = 1200; i < 1290; i++)
-    {
-        Serial.println(FRam.ReadData(i*25).m_TimeStamp);
-        Serial.println(FRam.ReadData(i*25).m_SuccessfulRead);
-    }
-
 }
 
 void loop()
 {
+	StateMachine.Run();
 	// WatchDog.feed();
-    Sensor.ReadSensorData();
-
-    //used to ensure the data
-    FlightState CurrentState{StateMachine.Run(Sensor.GetData())};
 
     //determines whether to log data
-    if(CurrentState != FlightState::eInFlight && CurrentState != FlightState::eMainChute)
-    {
-        //dont log data
-        return;
-    }
+
     //everything after this point should be to log data
 
 	/*

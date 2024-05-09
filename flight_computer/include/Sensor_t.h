@@ -30,8 +30,6 @@ public:
 		m_Bmi{Wire, BmiPin[0], BmiPin[1]},
 		m_KxAccelPin{KxAccelPin}{};
 
-	Sensor_t(std::array<int8_t, 3> ThermocouplePin, std::array<uint8_t, 2> BmiPin, uint8_t KxAccelPin) : m_KxAccelPin{0} {}
-
 	/**
 	 * Computes weighted average of 2 values
 	 * @tparam T the type of data

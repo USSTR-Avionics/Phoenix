@@ -1,6 +1,5 @@
 #include "States.h"
 
-#include <Arduino.h>
 
 FlightState Unarmed::Run(FlightStateMemPool& MemPool)
 {

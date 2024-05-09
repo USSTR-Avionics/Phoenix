@@ -1,6 +1,7 @@
 .idea/
 .pio/
 .vs/
+.vcx*
 .vscode/
 .cache/
 compile_commands.json
