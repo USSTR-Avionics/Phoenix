@@ -17,6 +17,9 @@ public:
 	FlightState GetState() const override;
 
 	~Unarmed() override = default;
+
+private:
+	bool Arm = false;
 };
 
 #endif //FLIGHT_COMPUTER_UNARMED_H

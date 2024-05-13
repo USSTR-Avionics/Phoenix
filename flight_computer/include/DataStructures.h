@@ -1,25 +1,14 @@
 #ifndef FLIGHT_COMPUTER_DATASTRUCTURES_H
 #define FLIGHT_COMPUTER_DATASTRUCTURES_H
 
-#ifndef NativeTest
 // MUST BE INCLUDED IN THIS ORDER, or code won't compile
 // Have `const uint8_t SPI_READ` variable in this file
 #include <BMI088.h>
 // Have `#define SPI_READ` in this file
 #include <SparkFun_KX13X.h>
-#endif // NativeTest
 
 #include <array>
-
-#ifdef NativeTest
-struct outputData
-{
-	float xData;
-	float yData;
-	float zData;
-};
 #include <cstdint>
-#endif // NativeTest
 
 // BaseState
 enum FlightState : uint8_t;

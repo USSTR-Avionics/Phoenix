@@ -1,11 +1,11 @@
-#include "StateMachine_t.h"
+#include "StateMachine.h"
 
-StateMachine_t::StateMachine_t()
+StateMachine::StateMachine()
 {
 	m_MemPool.emplace<Unarmed>();
 }
 
-FlightState StateMachine_t::Run()
+FlightState StateMachine::Run()
 {
 	return std::visit
 			(
@@ -17,7 +17,7 @@ FlightState StateMachine_t::Run()
 			);
 }
 
-FlightState StateMachine_t::GetState() const
+FlightState StateMachine::GetState() const
 {
 	return std::visit
 			(

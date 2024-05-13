@@ -103,7 +103,7 @@ SensorChunk SensorChunk::DecodeBytesCompressed(const std::byte Data[25])
 
 	return
 	{
-		// Sensor_t chunk
+		// Sensors chunk
 		{
 			.m_AccelerometerData =
 			{
@@ -217,7 +217,7 @@ SensorChunk SensorChunk::DecodeBytes(const std::byte Data[41])
 
 	return
 	{
-		// Sensor_t chunk
+		// Sensors chunk
 		{
 			.m_AccelerometerData =
 			{

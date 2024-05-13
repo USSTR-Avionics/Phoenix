@@ -2,7 +2,7 @@
 #define SENSOR_FRAM_H
 
 #include "fp16.h"
-#include "Sensor_t.h"
+#include "Sensors.h"
 
 #include <Adafruit_FRAM_I2C.h>
 
@@ -25,10 +25,10 @@
 // | total                | 25 bytes  |           |
 // |----------------------|-----------|-----------|
 
-class FRAM_t
+class FRAM
 {
 public:
-	FRAM_t(uint32_t MinAddr, uint32_t MaxAddr)
+	FRAM(uint32_t MinAddr, uint32_t MaxAddr)
 	: m_MaxAddr{MaxAddr}, m_MinAddr{MinAddr}, m_FramWriteCursor{MinAddr}{};
 
 	/**
@@ -39,16 +39,16 @@ public:
 	bool Init(uint8_t I2C_Addr);
 
 	/**
-	 * @brief    stores sensor info to FRAM_t
+	 * @brief    stores sensor info to FRAM
 	 * @param    SD struct of SensorData to store
 	 * @return   success or failure
 	 */
 	bool StoreData(SensorData SC);
 
 	/**
-	 * @brief    Reads SensorData chunk from FRAM_t
+	 * @brief    Reads SensorData chunk from FRAM
 	 * @param    Item the i-th item to read
-	 * @return   the data chunk read from FRAM_t
+	 * @return   the data chunk read from FRAM
 	 */
 	SensorChunk ReadData(uint16_t Item);
 

@@ -1,17 +1,17 @@
 #include "Global.h"
 
-#include "StateMachine_t.h"
+#include "StateMachine.h"
 #include <Watchdog_t4.h>
 
 namespace RA::Global::IO
 {
-	// RA::Sensor_t RA::Global::IO::Sensor_t{};
-	RA::Sensor_t Sensor{{18, 18, 18}, {18, 18}, 18};
-	FRAM_t FRam{0, 0};
-	Radio_t Radio_t{0, 0};
+	// RA::Sensors RA::Global::IO::Sensors{};
+	RA::Sensors Sensor{{18, 18, 18}, {18, 18}, 18};
+	FRAM FRam{0, 0};
+	RA::Radio Radio{0, 0};
 }
 
-StateMachine_t StateMachine;
+StateMachine StateMachine;
 WDT_T4<WDT2> WatchDog;
 
 void WatchDogInterrupt()
@@ -38,8 +38,8 @@ void setup()
     Serial.begin(9600);
     while (!Serial) delay(100);   // wait for native usb
 
-    // check StateMachine_t
-    // if (!StateMachine_t.Ready())
+    // check StateMachine
+    // if (!StateMachine.Ready())
     // {
     //     Serial.println("BaseState machine could not allocate memory pool");
     // }
@@ -68,7 +68,7 @@ void loop()
 	// must add, millis() can overflow
 	if(PrevTime + 5000 <= CurrentTime)
 	{
-		FRam.StoreData(Sensor_t.GetData(), CurrentTime);
+		FRam.StoreData(Sensors.GetData(), CurrentTime);
 		PrevTime = CurrentTime;
 	}
 	*/
@@ -76,5 +76,5 @@ void loop()
 //#ifdef TEENSY_OPT_DEBUG
     //Serial.println("DebugMacroWorks");
 //#endif
-	//StateMachine_t.Run(Sensor_t);
+	//StateMachine.Run(Sensors);
 }

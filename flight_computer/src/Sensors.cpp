@@ -1,8 +1,8 @@
-#include "Sensor_t.h"
+#include "Sensors.h"
 
 namespace RA
 {
-void Sensor_t::Setup()
+void Sensors::Setup()
 {
     Wire.begin();
 
@@ -138,7 +138,7 @@ void Sensor_t::Setup()
 
 }
 
-void Sensor_t::ReadAcceleration(){
+void Sensors::ReadAcceleration(){
     // Check if data is ready.
     if (m_KxAccel.dataReady())
     {
@@ -156,7 +156,7 @@ void Sensor_t::ReadAcceleration(){
     //delay(20); // Delay should be 1/ODR (Output Data Rate), default is 1/50ODR
 }
 
-void Sensor_t::ReadBarometer(){
+void Sensors::ReadBarometer(){
 
     //m_SD.m_Temperature = m_Bmp.readTemperature();
     m_SD.m_Bmp.Barometer = m_Bmp.readPressure();
@@ -182,7 +182,7 @@ void Sensor_t::ReadBarometer(){
 
 }
 
-void Sensor_t::ReadThermocouple()
+void Sensors::ReadThermocouple()
 {
 
     // Example creating a thermocouple instance with hardware SPI
@@ -220,7 +220,7 @@ void Sensor_t::ReadThermocouple()
     //delay(1000);
 }
 
-SensorData& Sensor_t::RecordSensorData(FlightState CurrentState)
+SensorData& Sensors::RecordSensorData(FlightState CurrentState)
 {
 #ifdef NativeTest
 	return m_SD;
@@ -248,7 +248,7 @@ SensorData& Sensor_t::RecordSensorData(FlightState CurrentState)
 
 	return m_SD;
 }
-SensorData Sensor_t::GetData() { return m_SD; }
+SensorData Sensors::GetData() { return m_SD; }
 
 
 }

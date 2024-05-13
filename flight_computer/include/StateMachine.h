@@ -1,18 +1,18 @@
 #pragma once
 #include "States.h"
-#include "Sensor_t.h"
-#include "FRAM_t.h"
+#include "Sensors.h"
+#include "FRAM.h"
 
 /**
  * Manages States
  */
-class StateMachine_t
+class StateMachine
 {
 public:
 	/**
 	 * Initialize and enter into Unarmed state
 	 */
-	explicit StateMachine_t();
+	explicit StateMachine();
 
 	/**
 	 * Performs state action
@@ -22,9 +22,9 @@ public:
 
 	FlightState GetState() const;
 
-	StateMachine_t(StateMachine_t&) = delete;
+	StateMachine(StateMachine&) = delete;
 
-	StateMachine_t& operator =(StateMachine_t&) = delete;
+	StateMachine& operator =(StateMachine&) = delete;
 
 private:
 	FlightStateMemPool m_MemPool{};

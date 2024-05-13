@@ -16,7 +16,7 @@
 
 namespace RA
 {
-class Sensor_t
+class Sensors
 {
 public:
 	/**
@@ -25,7 +25,7 @@ public:
 	 * @param BmiPin Accel addr, Gyo addr
 	 * @param KxAccelPin KxAccelPin
 	 */
-	Sensor_t(std::array<int8_t, 3> ThermocouplePin, std::array<uint8_t, 2> BmiPin, uint8_t KxAccelPin) :
+	Sensors(std::array<int8_t, 3> ThermocouplePin, std::array<uint8_t, 2> BmiPin, uint8_t KxAccelPin) :
 		m_Thermocouple{ThermocouplePin[0], ThermocouplePin[1], ThermocouplePin[2]},
 		m_Bmi{Wire, BmiPin[0], BmiPin[1]},
 		m_KxAccelPin{KxAccelPin}{};
