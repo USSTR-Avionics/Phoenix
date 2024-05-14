@@ -255,7 +255,9 @@ SensorChunk SensorChunk::DecodeBytes(const std::byte Data[41])
 
 float SensorChunk::ReadF16(const std::byte Location[2])
 {
-	return fp16_ieee_to_fp32_value(static_cast<uint16_t>((Location[0] << 8) | Location[1]));
+	uint16_t Value;
+	memcpy(&Value, Location, 2);
+	return fp16_ieee_to_fp32_value(Value);
 }
 
 // assuming float is 4 bytes

@@ -7,6 +7,7 @@
 
 #include <algorithm>
 #include <cstdint>
+#include "States.h"
 
 namespace UA
 {
@@ -27,5 +28,26 @@ size_t constexpr MaxSizeof()
 { return std::max({sizeof(T)...}); }
 
 // =============================================================
+}
+
+std::string to_string(FlightState S)
+{
+	switch (S)
+	{
+		case FlightState::eUnarmed:
+			return "Unarmed";
+
+		case FlightState::eGroundIdle:
+			return "GroundIdle";
+
+		case FlightState::eInFlight:
+			return "Inflight";
+
+		case FlightState::eMainChute:
+			return "MainChute";
+
+		default:
+			return "Invalid flight state";
+	}
 }
 #endif //FLIGHT_COMPUTER_FUNCTIONS_H

@@ -46,7 +46,7 @@ public:
 	bool StoreData(SensorData SC);
 
 	/**
-	 * @brief    Reads SensorData chunk from FRAM
+	 * @brief    Reads SensorData chunk from FRAM, relative to the previous point
 	 * @param    Item the i-th item to read
 	 * @return   the data chunk read from FRAM
 	 */

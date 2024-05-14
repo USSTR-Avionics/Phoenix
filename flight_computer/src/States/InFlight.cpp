@@ -4,13 +4,18 @@
 FlightState InFlight::Run(FlightStateMemPool& MemPool)
 {
 	auto& NewVal{RA::Global::IO::Sensor.RecordSensorData(GetState())};
-    if(prevHeight - NewVal.m_Bmp.RelativeAltitude < 0.f)
+
+	// apogee
+    if(abs(NewVal.m_Bmp.RelativeAltitude - PrevAltitude) < 0.1f)
 	{
         //Deploy drougue chute
+
+
 		return MemPool.emplace<MainChute>().GetState();
     }
 
-	prevHeight = NewVal.m_Bmp.RelativeAltitude;
+	PrevAltitude = NewVal.m_Bmp.RelativeAltitude;
+
 	// collect data
 	RA::Global::IO::FRam.StoreData(NewVal);
 

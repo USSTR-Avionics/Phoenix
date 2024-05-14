@@ -12,11 +12,13 @@ FlightState MainChute::Run(FlightStateMemPool& MemPool)
     }
 
 	// TODO Change the if condition
-    if(NewVal.m_Bmp.Barometer - PrevBarVal < 0.1f)
+    if(abs(NewVal.m_Bmp.Barometer - PrevBarVal) < 0.1f)
     {
         // transition to new state, will break SM if you create random obj
 	    return MemPool.emplace<Unarmed>().GetState();
     }
+
+	PrevBarVal = NewVal.m_Temperature;
 
 	// collect data
 	RA::Global::IO::FRam.StoreData(RA::Global::IO::Sensor.GetData());

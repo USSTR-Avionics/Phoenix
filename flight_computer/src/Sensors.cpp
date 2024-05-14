@@ -142,7 +142,12 @@ void Sensors::ReadAcceleration(){
     // Check if data is ready.
     if (m_KxAccel.dataReady())
     {
-        m_KxAccel.getAccelData(&m_SD.m_AccelerometerData);
+		outputData NewData;
+        m_KxAccel.getAccelData(&NewData);
+
+	    m_SD.m_AccelerometerData.xData = Average(NewData.xData, m_SD.m_AccelerometerData.xData, 0.4);
+	    m_SD.m_AccelerometerData.yData = Average(NewData.yData, m_SD.m_AccelerometerData.yData, 0.4);
+	    m_SD.m_AccelerometerData.zData = Average(NewData.zData, m_SD.m_AccelerometerData.zData, 0.4);
 #ifdef TEENSY_OPT_DEBUG
         Serial.print("X: ");
         Serial.print(m_SD.m_AccelerometerData.xData, 4);
@@ -159,8 +164,8 @@ void Sensors::ReadAcceleration(){
 void Sensors::ReadBarometer(){
 
     //m_SD.m_Temperature = m_Bmp.readTemperature();
-    m_SD.m_Bmp.Barometer = m_Bmp.readPressure();
-    m_SD.m_Bmp.RelativeAltitude = m_Bmp.readAltitude(1013.25); /* Adjusted to local forecast! */
+    m_SD.m_Bmp.Barometer = Average(m_Bmp.readPressure(), m_SD.m_Bmp.Barometer, 0.4);
+    m_SD.m_Bmp.RelativeAltitude = Average(m_Bmp.readAltitude(1013.25), m_SD.m_Bmp.RelativeAltitude, 0.4); /* Adjusted to local forecast! */
 
     //Adafruit_BMP280 bmp(BMP_CS); // hardware SPI
     //Adafruit_BMP280 bmp(BMP_CS, BMP_MOSI, BMP_MISO,  BMP_SCK);
@@ -213,7 +218,7 @@ void Sensors::ReadThermocouple()
         Serial.print("C = ");
         Serial.println(c);
     }
-    m_SD.m_Temperature = c;
+    m_SD.m_Temperature = Average(static_cast<float>(c), m_SD.m_Temperature, 0.4);
     //Serial.print("F = ");
     //Serial.println(thermocouple.readFahrenheit());
 
@@ -222,11 +227,6 @@ void Sensors::ReadThermocouple()
 
 SensorData& Sensors::RecordSensorData(FlightState CurrentState)
 {
-#ifdef NativeTest
-	return m_SD;
-#endif // NativeTest
-
-    Serial.println("Test");
     ReadAcceleration();
 
     ReadBarometer();
@@ -243,7 +243,7 @@ SensorData& Sensors::RecordSensorData(FlightState CurrentState)
         m_PrevTime = m_CurrentTime;
     }
 
-    // ?????
+    // sensor polling rate limit
     delay(500);
 
 	return m_SD;

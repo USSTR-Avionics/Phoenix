@@ -3,6 +3,8 @@
 #include "StateMachine.h"
 #include <Watchdog_t4.h>
 
+#include "Utils/Functions.h"
+
 namespace RA::Global::IO
 {
 	// RA::Sensors RA::Global::IO::Sensors{};
@@ -16,23 +18,27 @@ WDT_T4<WDT2> WatchDog;
 
 void WatchDogInterrupt()
 {
-	// WatchDog.feed();
+	Serial.println("WatchDog bit you!!");
+	StateMachine.GoState<InFlight>();
+	WatchDog.feed();
 }
 
 void setup()
 {
-
     pinMode(20, OUTPUT);
     pinMode(19, OUTPUT);
     pinMode(18, OUTPUT);
 
     // watch dog
-  /*  WatchDog.begin({
-                           .trigger = 10.0,
-                           .timeout = 20.0,
-                           .pin = 13,
-                           .callback = WatchDogInterrupt
-                   });*/
+    WatchDog.begin(
+{
+			// jump to callback
+           .trigger = 10.0,
+		   // board shutdown
+           .timeout = 20.0,
+           .pin = 13,
+           .callback = WatchDogInterrupt
+       });
     // ==============
 
     Serial.begin(9600);
@@ -56,22 +62,8 @@ void setup()
 
 void loop()
 {
-	StateMachine.Run();
-	// WatchDog.feed();
-
-    //determines whether to log data
-
-    //everything after this point should be to log data
-
-	/*
-	CurrentTime = millis();
-	// must add, millis() can overflow
-	if(PrevTime + 5000 <= CurrentTime)
-	{
-		FRam.StoreData(Sensors.GetData(), CurrentTime);
-		PrevTime = CurrentTime;
-	}
-	*/
+	Serial.println(to_string(StateMachine.Run()).c_str());
+	WatchDog.feed();
 
 //#ifdef TEENSY_OPT_DEBUG
     //Serial.println("DebugMacroWorks");

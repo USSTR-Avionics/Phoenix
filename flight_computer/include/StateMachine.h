@@ -22,6 +22,12 @@ public:
 
 	FlightState GetState() const;
 
+	template<typename State>
+	void GoState()
+	{
+		m_MemPool.emplace<State>();
+	}
+
 	StateMachine(StateMachine&) = delete;
 
 	StateMachine& operator =(StateMachine&) = delete;

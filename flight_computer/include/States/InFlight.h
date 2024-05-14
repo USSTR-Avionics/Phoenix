@@ -1,12 +1,13 @@
 #ifndef FLIGHT_COMPUTER_INFLIGHT_H
 #define FLIGHT_COMPUTER_INFLIGHT_H
 #include "BaseState.h"
+#include <limits>
 
 class InFlight : BaseState
 {
 public:
-	//preveous height value, used to check if moving downwards
-	float prevHeight;
+	float PrevAltitude{std::numeric_limits<float>::max()};
+
     // main
     FlightState Run(FlightStateMemPool&) override;
 
