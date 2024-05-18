@@ -1,0 +1,914 @@
+[
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\FrameworkArduino\\AudioStream.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\AudioStream.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\AudioStream.cpp",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\AudioStream.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\FrameworkArduino\\CrashReport.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\CrashReport.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\CrashReport.cpp",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\CrashReport.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\FrameworkArduino\\DMAChannel.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\DMAChannel.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\DMAChannel.cpp",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\DMAChannel.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\FrameworkArduino\\EventResponder.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\EventResponder.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\EventResponder.cpp",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\EventResponder.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\FrameworkArduino\\HardwareSerial.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\HardwareSerial.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\HardwareSerial.cpp",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\HardwareSerial.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\FrameworkArduino\\HardwareSerial1.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\HardwareSerial1.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\HardwareSerial1.cpp",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\HardwareSerial1.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\FrameworkArduino\\HardwareSerial2.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\HardwareSerial2.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\HardwareSerial2.cpp",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\HardwareSerial2.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\FrameworkArduino\\HardwareSerial3.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\HardwareSerial3.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\HardwareSerial3.cpp",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\HardwareSerial3.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\FrameworkArduino\\HardwareSerial4.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\HardwareSerial4.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\HardwareSerial4.cpp",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\HardwareSerial4.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\FrameworkArduino\\HardwareSerial5.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\HardwareSerial5.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\HardwareSerial5.cpp",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\HardwareSerial5.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\FrameworkArduino\\HardwareSerial6.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\HardwareSerial6.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\HardwareSerial6.cpp",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\HardwareSerial6.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\FrameworkArduino\\HardwareSerial7.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\HardwareSerial7.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\HardwareSerial7.cpp",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\HardwareSerial7.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\FrameworkArduino\\HardwareSerial8.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\HardwareSerial8.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\HardwareSerial8.cpp",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\HardwareSerial8.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\FrameworkArduino\\IPAddress.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\IPAddress.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\IPAddress.cpp",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\IPAddress.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\FrameworkArduino\\IntervalTimer.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\IntervalTimer.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\IntervalTimer.cpp",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\IntervalTimer.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\FrameworkArduino\\Print.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\Print.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\Print.cpp",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\Print.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\FrameworkArduino\\Stream.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\Stream.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\Stream.cpp",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\Stream.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\FrameworkArduino\\Time.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\Time.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\Time.cpp",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\Time.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\FrameworkArduino\\Tone.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\Tone.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\Tone.cpp",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\Tone.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\FrameworkArduino\\WMath.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\WMath.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\WMath.cpp",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\WMath.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\FrameworkArduino\\WString.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\WString.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\WString.cpp",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\WString.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\analog.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\analog.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\analog.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\analog.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\bootdata.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\bootdata.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\bootdata.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\bootdata.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\clockspeed.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\clockspeed.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\clockspeed.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\clockspeed.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\debugprintf.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\debugprintf.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\debugprintf.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\debugprintf.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\delay.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\delay.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\delay.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\delay.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\digital.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\digital.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\digital.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\digital.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\eeprom.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\eeprom.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\eeprom.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\eeprom.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\extmem.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\extmem.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\extmem.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\extmem.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\fuse.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\fuse.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\fuse.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\fuse.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\interrupt.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\interrupt.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\interrupt.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\interrupt.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\keylayouts.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\keylayouts.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\keylayouts.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\keylayouts.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\libc.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\libc.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\libc.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\libc.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\FrameworkArduino\\main.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\main.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\main.cpp",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\main.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -x assembler-with-cpp -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 -c -o .pio\\build\\teensy41\\FrameworkArduino\\memcpy-armv7m.S.o C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\memcpy-armv7m.S",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\memcpy-armv7m.S",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\memcpy-armv7m.S.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16 -x assembler-with-cpp -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 -c -o .pio\\build\\teensy41\\FrameworkArduino\\memset.S.o C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\memset.S",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\memset.S",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\memset.S.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\FrameworkArduino\\new.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\new.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\new.cpp",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\new.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\nonstd.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\nonstd.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\nonstd.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\nonstd.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\pwm.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\pwm.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\pwm.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\pwm.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\rtc.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\rtc.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\rtc.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\rtc.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\FrameworkArduino\\serialEvent.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\serialEvent.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\serialEvent.cpp",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\serialEvent.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\FrameworkArduino\\serialEvent1.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\serialEvent1.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\serialEvent1.cpp",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\serialEvent1.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\FrameworkArduino\\serialEvent2.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\serialEvent2.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\serialEvent2.cpp",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\serialEvent2.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\FrameworkArduino\\serialEvent3.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\serialEvent3.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\serialEvent3.cpp",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\serialEvent3.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\FrameworkArduino\\serialEvent4.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\serialEvent4.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\serialEvent4.cpp",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\serialEvent4.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\FrameworkArduino\\serialEvent5.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\serialEvent5.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\serialEvent5.cpp",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\serialEvent5.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\FrameworkArduino\\serialEvent6.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\serialEvent6.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\serialEvent6.cpp",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\serialEvent6.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\FrameworkArduino\\serialEvent7.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\serialEvent7.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\serialEvent7.cpp",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\serialEvent7.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\FrameworkArduino\\serialEvent8.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\serialEvent8.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\serialEvent8.cpp",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\serialEvent8.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\FrameworkArduino\\serialEventUSB1.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\serialEventUSB1.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\serialEventUSB1.cpp",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\serialEventUSB1.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\FrameworkArduino\\serialEventUSB2.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\serialEventUSB2.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\serialEventUSB2.cpp",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\serialEventUSB2.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\sm_alloc_valid.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\sm_alloc_valid.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\sm_alloc_valid.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\sm_alloc_valid.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\sm_calloc.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\sm_calloc.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\sm_calloc.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\sm_calloc.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\sm_free.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\sm_free.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\sm_free.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\sm_free.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\sm_hash.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\sm_hash.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\sm_hash.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\sm_hash.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\sm_malloc.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\sm_malloc.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\sm_malloc.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\sm_malloc.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\sm_malloc_stats.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\sm_malloc_stats.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\sm_malloc_stats.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\sm_malloc_stats.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\sm_pool.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\sm_pool.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\sm_pool.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\sm_pool.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\sm_realloc.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\sm_realloc.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\sm_realloc.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\sm_realloc.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\sm_realloc_i.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\sm_realloc_i.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\sm_realloc_i.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\sm_realloc_i.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\sm_realloc_move.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\sm_realloc_move.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\sm_realloc_move.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\sm_realloc_move.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\sm_szalloc.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\sm_szalloc.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\sm_szalloc.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\sm_szalloc.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\sm_util.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\sm_util.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\sm_util.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\sm_util.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\sm_zalloc.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\sm_zalloc.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\sm_zalloc.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\sm_zalloc.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\startup.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\startup.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\startup.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\startup.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\tempmon.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\tempmon.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\tempmon.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\tempmon.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\usb.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\usb.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\usb.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\usb.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\FrameworkArduino\\usb_audio.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\usb_audio.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\usb_audio.cpp",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\usb_audio.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\usb_desc.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\usb_desc.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\usb_desc.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\usb_desc.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\FrameworkArduino\\usb_flightsim.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\usb_flightsim.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\usb_flightsim.cpp",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\usb_flightsim.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\FrameworkArduino\\usb_inst.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\usb_inst.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\usb_inst.cpp",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\usb_inst.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\usb_joystick.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\usb_joystick.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\usb_joystick.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\usb_joystick.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\usb_keyboard.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\usb_keyboard.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\usb_keyboard.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\usb_keyboard.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\usb_midi.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\usb_midi.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\usb_midi.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\usb_midi.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\usb_mouse.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\usb_mouse.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\usb_mouse.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\usb_mouse.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\usb_mtp.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\usb_mtp.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\usb_mtp.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\usb_mtp.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\usb_rawhid.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\usb_rawhid.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\usb_rawhid.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\usb_rawhid.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\usb_seremu.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\usb_seremu.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\usb_seremu.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\usb_seremu.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\usb_serial.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\usb_serial.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\usb_serial.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\usb_serial.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\usb_serial2.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\usb_serial2.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\usb_serial2.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\usb_serial2.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\usb_serial3.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\usb_serial3.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\usb_serial3.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\usb_serial3.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-gcc.exe -o .pio\\build\\teensy41\\FrameworkArduino\\usb_touch.c.o -c -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\usb_touch.c",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\usb_touch.c",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\usb_touch.c.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\FrameworkArduino\\yield.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\yield.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4\\yield.cpp",
+        "output": ".pio\\build\\teensy41\\FrameworkArduino\\yield.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\lib38b\\SPI\\SPI.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\libraries\\SPI -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\libraries\\SPI\\SPI.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\libraries\\SPI\\SPI.cpp",
+        "output": ".pio\\build\\teensy41\\lib38b\\SPI\\SPI.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o \".pio\\build\\teensy41\\libae7\\Adafruit MAX31855 library\\Adafruit_MAX31855.cpp.o\" -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH \"-I.pio\\libdeps\\teensy41\\Adafruit MAX31855 library\" -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\libraries\\SPI -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 \".pio\\libdeps\\teensy41\\Adafruit MAX31855 library\\Adafruit_MAX31855.cpp\"",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\Adafruit MAX31855 library\\Adafruit_MAX31855.cpp",
+        "output": ".pio\\build\\teensy41\\libae7\\Adafruit MAX31855 library\\Adafruit_MAX31855.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\libe24\\Crypto\\AES128.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\Crypto\\AES128.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\Crypto\\AES128.cpp",
+        "output": ".pio\\build\\teensy41\\libe24\\Crypto\\AES128.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\libe24\\Crypto\\AES192.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\Crypto\\AES192.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\Crypto\\AES192.cpp",
+        "output": ".pio\\build\\teensy41\\libe24\\Crypto\\AES192.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\libe24\\Crypto\\AES256.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\Crypto\\AES256.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\Crypto\\AES256.cpp",
+        "output": ".pio\\build\\teensy41\\libe24\\Crypto\\AES256.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\libe24\\Crypto\\AESCommon.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\Crypto\\AESCommon.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\Crypto\\AESCommon.cpp",
+        "output": ".pio\\build\\teensy41\\libe24\\Crypto\\AESCommon.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\libe24\\Crypto\\AESEsp32.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\Crypto\\AESEsp32.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\Crypto\\AESEsp32.cpp",
+        "output": ".pio\\build\\teensy41\\libe24\\Crypto\\AESEsp32.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\libe24\\Crypto\\AuthenticatedCipher.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\Crypto\\AuthenticatedCipher.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\Crypto\\AuthenticatedCipher.cpp",
+        "output": ".pio\\build\\teensy41\\libe24\\Crypto\\AuthenticatedCipher.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\libe24\\Crypto\\BLAKE2b.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\Crypto\\BLAKE2b.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\Crypto\\BLAKE2b.cpp",
+        "output": ".pio\\build\\teensy41\\libe24\\Crypto\\BLAKE2b.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\libe24\\Crypto\\BLAKE2s.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\Crypto\\BLAKE2s.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\Crypto\\BLAKE2s.cpp",
+        "output": ".pio\\build\\teensy41\\libe24\\Crypto\\BLAKE2s.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\libe24\\Crypto\\BigNumberUtil.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\Crypto\\BigNumberUtil.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\Crypto\\BigNumberUtil.cpp",
+        "output": ".pio\\build\\teensy41\\libe24\\Crypto\\BigNumberUtil.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\libe24\\Crypto\\BlockCipher.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\Crypto\\BlockCipher.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\Crypto\\BlockCipher.cpp",
+        "output": ".pio\\build\\teensy41\\libe24\\Crypto\\BlockCipher.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\libe24\\Crypto\\CTR.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\Crypto\\CTR.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\Crypto\\CTR.cpp",
+        "output": ".pio\\build\\teensy41\\libe24\\Crypto\\CTR.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\libe24\\Crypto\\ChaCha.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\Crypto\\ChaCha.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\Crypto\\ChaCha.cpp",
+        "output": ".pio\\build\\teensy41\\libe24\\Crypto\\ChaCha.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\libe24\\Crypto\\ChaChaPoly.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\Crypto\\ChaChaPoly.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\Crypto\\ChaChaPoly.cpp",
+        "output": ".pio\\build\\teensy41\\libe24\\Crypto\\ChaChaPoly.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\libe24\\Crypto\\Cipher.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\Crypto\\Cipher.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\Crypto\\Cipher.cpp",
+        "output": ".pio\\build\\teensy41\\libe24\\Crypto\\Cipher.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\libe24\\Crypto\\Crypto.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\Crypto\\Crypto.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\Crypto\\Crypto.cpp",
+        "output": ".pio\\build\\teensy41\\libe24\\Crypto\\Crypto.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\libe24\\Crypto\\Curve25519.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\Crypto\\Curve25519.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\Crypto\\Curve25519.cpp",
+        "output": ".pio\\build\\teensy41\\libe24\\Crypto\\Curve25519.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\libe24\\Crypto\\EAX.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\Crypto\\EAX.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\Crypto\\EAX.cpp",
+        "output": ".pio\\build\\teensy41\\libe24\\Crypto\\EAX.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\libe24\\Crypto\\Ed25519.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\Crypto\\Ed25519.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\Crypto\\Ed25519.cpp",
+        "output": ".pio\\build\\teensy41\\libe24\\Crypto\\Ed25519.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\libe24\\Crypto\\GCM.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\Crypto\\GCM.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\Crypto\\GCM.cpp",
+        "output": ".pio\\build\\teensy41\\libe24\\Crypto\\GCM.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\libe24\\Crypto\\GF128.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\Crypto\\GF128.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\Crypto\\GF128.cpp",
+        "output": ".pio\\build\\teensy41\\libe24\\Crypto\\GF128.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\libe24\\Crypto\\GHASH.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\Crypto\\GHASH.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\Crypto\\GHASH.cpp",
+        "output": ".pio\\build\\teensy41\\libe24\\Crypto\\GHASH.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\libe24\\Crypto\\HKDF.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\Crypto\\HKDF.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\Crypto\\HKDF.cpp",
+        "output": ".pio\\build\\teensy41\\libe24\\Crypto\\HKDF.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\libe24\\Crypto\\Hash.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\Crypto\\Hash.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\Crypto\\Hash.cpp",
+        "output": ".pio\\build\\teensy41\\libe24\\Crypto\\Hash.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\libe24\\Crypto\\KeccakCore.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\Crypto\\KeccakCore.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\Crypto\\KeccakCore.cpp",
+        "output": ".pio\\build\\teensy41\\libe24\\Crypto\\KeccakCore.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\libe24\\Crypto\\NoiseSource.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\Crypto\\NoiseSource.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\Crypto\\NoiseSource.cpp",
+        "output": ".pio\\build\\teensy41\\libe24\\Crypto\\NoiseSource.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\libe24\\Crypto\\OMAC.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\Crypto\\OMAC.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\Crypto\\OMAC.cpp",
+        "output": ".pio\\build\\teensy41\\libe24\\Crypto\\OMAC.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\libe24\\Crypto\\P521.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\Crypto\\P521.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\Crypto\\P521.cpp",
+        "output": ".pio\\build\\teensy41\\libe24\\Crypto\\P521.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\libe24\\Crypto\\Poly1305.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\Crypto\\Poly1305.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\Crypto\\Poly1305.cpp",
+        "output": ".pio\\build\\teensy41\\libe24\\Crypto\\Poly1305.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\libe24\\Crypto\\RNG.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\Crypto\\RNG.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\Crypto\\RNG.cpp",
+        "output": ".pio\\build\\teensy41\\libe24\\Crypto\\RNG.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\libe24\\Crypto\\SHA224.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\Crypto\\SHA224.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\Crypto\\SHA224.cpp",
+        "output": ".pio\\build\\teensy41\\libe24\\Crypto\\SHA224.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\libe24\\Crypto\\SHA256.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\Crypto\\SHA256.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\Crypto\\SHA256.cpp",
+        "output": ".pio\\build\\teensy41\\libe24\\Crypto\\SHA256.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\libe24\\Crypto\\SHA3.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\Crypto\\SHA3.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\Crypto\\SHA3.cpp",
+        "output": ".pio\\build\\teensy41\\libe24\\Crypto\\SHA3.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\libe24\\Crypto\\SHA384.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\Crypto\\SHA384.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\Crypto\\SHA384.cpp",
+        "output": ".pio\\build\\teensy41\\libe24\\Crypto\\SHA384.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\libe24\\Crypto\\SHA512.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\Crypto\\SHA512.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\Crypto\\SHA512.cpp",
+        "output": ".pio\\build\\teensy41\\libe24\\Crypto\\SHA512.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\libe24\\Crypto\\SHAKE.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\Crypto\\SHAKE.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\Crypto\\SHAKE.cpp",
+        "output": ".pio\\build\\teensy41\\libe24\\Crypto\\SHAKE.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\libe24\\Crypto\\XOF.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\Crypto\\XOF.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\Crypto\\XOF.cpp",
+        "output": ".pio\\build\\teensy41\\libe24\\Crypto\\XOF.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\libe24\\Crypto\\XTS.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\Crypto\\XTS.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\Crypto\\XTS.cpp",
+        "output": ".pio\\build\\teensy41\\libe24\\Crypto\\XTS.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\lib017\\RadioHead\\RHCRC.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\RadioHead -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\libraries\\SPI -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\RadioHead\\RHCRC.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\RadioHead\\RHCRC.cpp",
+        "output": ".pio\\build\\teensy41\\lib017\\RadioHead\\RHCRC.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\lib017\\RadioHead\\RHDatagram.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\RadioHead -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\libraries\\SPI -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\RadioHead\\RHDatagram.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\RadioHead\\RHDatagram.cpp",
+        "output": ".pio\\build\\teensy41\\lib017\\RadioHead\\RHDatagram.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\lib017\\RadioHead\\RHEncryptedDriver.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\RadioHead -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\libraries\\SPI -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\RadioHead\\RHEncryptedDriver.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\RadioHead\\RHEncryptedDriver.cpp",
+        "output": ".pio\\build\\teensy41\\lib017\\RadioHead\\RHEncryptedDriver.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\lib017\\RadioHead\\RHGenericDriver.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\RadioHead -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\libraries\\SPI -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\RadioHead\\RHGenericDriver.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\RadioHead\\RHGenericDriver.cpp",
+        "output": ".pio\\build\\teensy41\\lib017\\RadioHead\\RHGenericDriver.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\lib017\\RadioHead\\RHGenericSPI.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\RadioHead -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\libraries\\SPI -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\RadioHead\\RHGenericSPI.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\RadioHead\\RHGenericSPI.cpp",
+        "output": ".pio\\build\\teensy41\\lib017\\RadioHead\\RHGenericSPI.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\lib017\\RadioHead\\RHHardwareSPI.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\RadioHead -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\libraries\\SPI -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\RadioHead\\RHHardwareSPI.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\RadioHead\\RHHardwareSPI.cpp",
+        "output": ".pio\\build\\teensy41\\lib017\\RadioHead\\RHHardwareSPI.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\lib017\\RadioHead\\RHMesh.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\RadioHead -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\libraries\\SPI -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\RadioHead\\RHMesh.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\RadioHead\\RHMesh.cpp",
+        "output": ".pio\\build\\teensy41\\lib017\\RadioHead\\RHMesh.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\lib017\\RadioHead\\RHNRFSPIDriver.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\RadioHead -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\libraries\\SPI -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\RadioHead\\RHNRFSPIDriver.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\RadioHead\\RHNRFSPIDriver.cpp",
+        "output": ".pio\\build\\teensy41\\lib017\\RadioHead\\RHNRFSPIDriver.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\lib017\\RadioHead\\RHReliableDatagram.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\RadioHead -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\libraries\\SPI -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\RadioHead\\RHReliableDatagram.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\RadioHead\\RHReliableDatagram.cpp",
+        "output": ".pio\\build\\teensy41\\lib017\\RadioHead\\RHReliableDatagram.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\lib017\\RadioHead\\RHRouter.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\RadioHead -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\libraries\\SPI -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\RadioHead\\RHRouter.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\RadioHead\\RHRouter.cpp",
+        "output": ".pio\\build\\teensy41\\lib017\\RadioHead\\RHRouter.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\lib017\\RadioHead\\RHSPIDriver.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\RadioHead -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\libraries\\SPI -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\RadioHead\\RHSPIDriver.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\RadioHead\\RHSPIDriver.cpp",
+        "output": ".pio\\build\\teensy41\\lib017\\RadioHead\\RHSPIDriver.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\lib017\\RadioHead\\RHSoftwareSPI.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\RadioHead -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\libraries\\SPI -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\RadioHead\\RHSoftwareSPI.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\RadioHead\\RHSoftwareSPI.cpp",
+        "output": ".pio\\build\\teensy41\\lib017\\RadioHead\\RHSoftwareSPI.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\lib017\\RadioHead\\RH_ABZ.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\RadioHead -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\libraries\\SPI -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\RadioHead\\RH_ABZ.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\RadioHead\\RH_ABZ.cpp",
+        "output": ".pio\\build\\teensy41\\lib017\\RadioHead\\RH_ABZ.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\lib017\\RadioHead\\RH_ASK.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\RadioHead -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\libraries\\SPI -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\RadioHead\\RH_ASK.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\RadioHead\\RH_ASK.cpp",
+        "output": ".pio\\build\\teensy41\\lib017\\RadioHead\\RH_ASK.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\lib017\\RadioHead\\RH_CC110.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\RadioHead -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\libraries\\SPI -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\RadioHead\\RH_CC110.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\RadioHead\\RH_CC110.cpp",
+        "output": ".pio\\build\\teensy41\\lib017\\RadioHead\\RH_CC110.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\lib017\\RadioHead\\RH_E32.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\RadioHead -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\libraries\\SPI -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\RadioHead\\RH_E32.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\RadioHead\\RH_E32.cpp",
+        "output": ".pio\\build\\teensy41\\lib017\\RadioHead\\RH_E32.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\lib017\\RadioHead\\RH_LoRaFileOps.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\RadioHead -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\libraries\\SPI -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\RadioHead\\RH_LoRaFileOps.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\RadioHead\\RH_LoRaFileOps.cpp",
+        "output": ".pio\\build\\teensy41\\lib017\\RadioHead\\RH_LoRaFileOps.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\lib017\\RadioHead\\RH_MRF89.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\RadioHead -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\libraries\\SPI -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\RadioHead\\RH_MRF89.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\RadioHead\\RH_MRF89.cpp",
+        "output": ".pio\\build\\teensy41\\lib017\\RadioHead\\RH_MRF89.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\lib017\\RadioHead\\RH_NRF24.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\RadioHead -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\libraries\\SPI -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\RadioHead\\RH_NRF24.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\RadioHead\\RH_NRF24.cpp",
+        "output": ".pio\\build\\teensy41\\lib017\\RadioHead\\RH_NRF24.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\lib017\\RadioHead\\RH_NRF51.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\RadioHead -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\libraries\\SPI -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\RadioHead\\RH_NRF51.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\RadioHead\\RH_NRF51.cpp",
+        "output": ".pio\\build\\teensy41\\lib017\\RadioHead\\RH_NRF51.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\lib017\\RadioHead\\RH_NRF905.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\RadioHead -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\libraries\\SPI -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\RadioHead\\RH_NRF905.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\RadioHead\\RH_NRF905.cpp",
+        "output": ".pio\\build\\teensy41\\lib017\\RadioHead\\RH_NRF905.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\lib017\\RadioHead\\RH_RF22.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\RadioHead -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\libraries\\SPI -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\RadioHead\\RH_RF22.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\RadioHead\\RH_RF22.cpp",
+        "output": ".pio\\build\\teensy41\\lib017\\RadioHead\\RH_RF22.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\lib017\\RadioHead\\RH_RF24.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\RadioHead -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\libraries\\SPI -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\RadioHead\\RH_RF24.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\RadioHead\\RH_RF24.cpp",
+        "output": ".pio\\build\\teensy41\\lib017\\RadioHead\\RH_RF24.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\lib017\\RadioHead\\RH_RF69.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\RadioHead -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\libraries\\SPI -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\RadioHead\\RH_RF69.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\RadioHead\\RH_RF69.cpp",
+        "output": ".pio\\build\\teensy41\\lib017\\RadioHead\\RH_RF69.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\lib017\\RadioHead\\RH_RF95.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\RadioHead -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\libraries\\SPI -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\RadioHead\\RH_RF95.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\RadioHead\\RH_RF95.cpp",
+        "output": ".pio\\build\\teensy41\\lib017\\RadioHead\\RH_RF95.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\lib017\\RadioHead\\RH_Serial.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\RadioHead -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\libraries\\SPI -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\RadioHead\\RH_Serial.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\RadioHead\\RH_Serial.cpp",
+        "output": ".pio\\build\\teensy41\\lib017\\RadioHead\\RH_Serial.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\lib017\\RadioHead\\RH_TCP.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -I.pio\\libdeps\\teensy41\\RadioHead -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\libraries\\SPI -I.pio\\libdeps\\teensy41\\Crypto -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 .pio\\libdeps\\teensy41\\RadioHead\\RH_TCP.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": ".pio\\libdeps\\teensy41\\RadioHead\\RH_TCP.cpp",
+        "output": ".pio\\build\\teensy41\\lib017\\RadioHead\\RH_TCP.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\src\\DataStructures.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -std=gnu++20 -isystem S:\\Dev\\Projects\\Phoenix\\ground_station\\src -isystem S:\\Dev\\Projects\\Phoenix\\ground_station\\.pio\\libdeps\\teensy41\\RadioHead -isystem S:\\Dev\\Projects\\Phoenix\\ground_station\\.pio\\libdeps\\teensy41\\Crypto -isystem \"S:\\Dev\\Projects\\Phoenix\\ground_station\\.pio\\libdeps\\teensy41\\Adafruit MAX31855 library\" -isystem C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\libraries\\SPI -isystem C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -Werror -Wno-error=unused-parameter -Wall -Wextra -Wpedantic -Wshadow -Wdouble-promotion -Wundef -ffunction-sections -fdata-sections -fno-exceptions -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -Iinclude -Isrc -I.pio\\libdeps\\teensy41\\RadioHead -I.pio\\libdeps\\teensy41\\Crypto \"-I.pio\\libdeps\\teensy41\\Adafruit MAX31855 library\" -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\libraries\\SPI -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 src\\DataStructures.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "src\\DataStructures.cpp",
+        "output": ".pio\\build\\teensy41\\src\\DataStructures.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\src\\Radio.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -std=gnu++20 -isystem S:\\Dev\\Projects\\Phoenix\\ground_station\\src -isystem S:\\Dev\\Projects\\Phoenix\\ground_station\\.pio\\libdeps\\teensy41\\RadioHead -isystem S:\\Dev\\Projects\\Phoenix\\ground_station\\.pio\\libdeps\\teensy41\\Crypto -isystem \"S:\\Dev\\Projects\\Phoenix\\ground_station\\.pio\\libdeps\\teensy41\\Adafruit MAX31855 library\" -isystem C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\libraries\\SPI -isystem C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -Werror -Wno-error=unused-parameter -Wall -Wextra -Wpedantic -Wshadow -Wdouble-promotion -Wundef -ffunction-sections -fdata-sections -fno-exceptions -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -Iinclude -Isrc -I.pio\\libdeps\\teensy41\\RadioHead -I.pio\\libdeps\\teensy41\\Crypto \"-I.pio\\libdeps\\teensy41\\Adafruit MAX31855 library\" -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\libraries\\SPI -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 src\\Radio.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "src\\Radio.cpp",
+        "output": ".pio\\build\\teensy41\\src\\Radio.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\TDKua\\.platformio\\packages\\toolchain-gccarmnoneeabi-teensy\\bin\\arm-none-eabi-g++.exe -o .pio\\build\\teensy41\\src\\main.cpp.o -c -fno-exceptions -felide-constructors -fno-rtti -std=gnu++17 -Wno-error=narrowing -fpermissive -fno-threadsafe-statics -std=gnu++20 -isystem S:\\Dev\\Projects\\Phoenix\\ground_station\\src -isystem S:\\Dev\\Projects\\Phoenix\\ground_station\\.pio\\libdeps\\teensy41\\RadioHead -isystem S:\\Dev\\Projects\\Phoenix\\ground_station\\.pio\\libdeps\\teensy41\\Crypto -isystem \"S:\\Dev\\Projects\\Phoenix\\ground_station\\.pio\\libdeps\\teensy41\\Adafruit MAX31855 library\" -isystem C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\libraries\\SPI -isystem C:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 -Os -Wall -ffunction-sections -fdata-sections -mthumb -mcpu=cortex-m7 -nostdlib -mfloat-abi=hard -mfpu=fpv5-d16 -O2 -Werror -Wno-error=unused-parameter -Wall -Wextra -Wpedantic -Wshadow -Wdouble-promotion -Wundef -ffunction-sections -fdata-sections -fno-exceptions -DPLATFORMIO=60115 -D__IMXRT1062__ -DARDUINO_TEENSY41 -DUSB_SERIAL -DARDUINO=10805 -DTEENSYDUINO=159 -DCORE_TEENSY -DF_CPU=600000000 -DLAYOUT_US_ENGLISH -Iinclude -Isrc -I.pio\\libdeps\\teensy41\\RadioHead -I.pio\\libdeps\\teensy41\\Crypto \"-I.pio\\libdeps\\teensy41\\Adafruit MAX31855 library\" -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\libraries\\SPI -IC:\\Users\\TDKua\\.platformio\\packages\\framework-arduinoteensy\\cores\\teensy4 src\\main.cpp",
+        "directory": "S:\\Dev\\Projects\\Phoenix\\ground_station",
+        "file": "src\\main.cpp",
+        "output": ".pio\\build\\teensy41\\src\\main.cpp.o"
+    }
+]

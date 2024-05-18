@@ -148,13 +148,13 @@ void Function()
 ```
 - Pass by reference when it makes sense
 ```
-// copy of a is being made (copy elision exists, but...)
+// copy of a is being made
 void Function1(int a){}
 
 // gets the reference of a, but if you modify a, it will modify it everywhere
 void Function2(int& a){}
 
-// const makes it unmodifiable, but no copy
+// const makes it unmodifiable, but no copy(in most cases)
 void Function3(const int& a){}
 ```
 ### Classes
