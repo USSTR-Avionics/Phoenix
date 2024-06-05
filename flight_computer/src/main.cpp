@@ -57,6 +57,25 @@ void setup()
 		Serial.println("Failed to init FRam at addr");
 	}
 
+    SensorData d = SensorData();
+
+    for (size_t i = 0; i < 10; i++)
+    {
+        d.m_AccelerometerData.xData = 1*i;
+        d.m_AccelerometerData.xData = 2*i;
+        d.m_AccelerometerData.xData = 3*i;
+
+        d.m_TimeStamp = i;
+
+        RA::Global::IO::Radio.UDP_Send(d,1);
+    }
+    for (size_t i = 0; i < 10; i++)
+    {
+        RA::Global::IO::Radio.UDP_Send("Hello World! "+i,1);
+    }
+    
+
+
     //auto tim = millis();
 }
 
