@@ -12,8 +12,8 @@ bool Radio::UDP_Send(std::string Data, uint16_t Timeout)
 {
     if(m_Max_message_length < Data.size() || !m_Radio.waitPacketSent(Timeout)) { return false; }
 
-	// prepend '1' for str type
-	Data = '1' + Data;
+	// prepend '2' for str type
+	Data = '2' + Data;
 
     return m_Radio.send(reinterpret_cast<const uint8_t*>(Data.data()), Data.size());
 }

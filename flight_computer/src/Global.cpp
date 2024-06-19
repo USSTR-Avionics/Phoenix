@@ -1,9 +1,4 @@
-#ifndef FLIGHT_COMPUTER_GLOBAL_H
-#define FLIGHT_COMPUTER_GLOBAL_H
-
-#include "FRAM.h"
-#include "Sensors.h"
-#include "Radio.h"
+#include "Global.h"
 
 namespace RA::Global::IO
 {
@@ -14,8 +9,11 @@ namespace RA::Global::IO
  * @param BmiPin Accel addr, Gyo addr
  * @param KxAccelPin KxAccelPin
  */
-extern RA::Sensors Sensor;
-extern FRAM FRam;
-extern RA::Radio Radio;
+RA::Sensors Sensor {
+    {18, 4, 19},
+    {18, 18},
+    18
+};
+FRAM FRam {1, 32000};
+RA::Radio Radio {0, 0};
 } // namespace RA::Global::IO
-#endif // FLIGHT_COMPUTER_GLOBAL_H
