@@ -6,6 +6,24 @@
 
 #include "Utils/Functions.h"
 
+namespace RA::Global::IO
+{
+// RA::Sensors RA::Global::IO::Sensors{};
+/**
+ * Construct sensors
+ * @param ThermocouplePin SCLK, CS, MISO
+ * @param BmiPin Accel addr, Gyo addr
+ * @param KxAccelPin KxAccelPin
+ */
+RA::Sensors Sensor {
+    {18, 4, 19},
+    {18, 18},
+    18
+};
+FRAM FRam {1, 32000};
+RA::Radio* Radio;
+} // namespace RA::Global::IO
+
 StateMachine StateMachine;
 /* WDT_T4<WDT2> WatchDog; */
 
@@ -21,6 +39,9 @@ void setup()
     pinMode(20, OUTPUT);
     pinMode(19, OUTPUT);
     pinMode(18, OUTPUT);
+
+    // Radio must be created here, or board crashes
+    RA::Global::IO::Radio = new RA::Radio {0, 0};
 
     // watch dog
     // WatchDog.begin({// jump to callback

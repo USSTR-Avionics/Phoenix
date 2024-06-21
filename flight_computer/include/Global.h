@@ -16,6 +16,6 @@ namespace RA::Global::IO
  */
 extern RA::Sensors Sensor;
 extern FRAM FRam;
-extern RA::Radio Radio;
+extern RA::Radio* Radio;
 } // namespace RA::Global::IO
 #endif // FLIGHT_COMPUTER_GLOBAL_H
