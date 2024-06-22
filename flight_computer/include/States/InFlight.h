@@ -1,12 +1,11 @@
 #ifndef FLIGHT_COMPUTER_INFLIGHT_H
 #define FLIGHT_COMPUTER_INFLIGHT_H
 #include "BaseState.h"
-#include <limits>
 
 class InFlight : BaseState
 {
 public:
-	float PrevAltitude{std::numeric_limits<float>::max()};
+	float PrevAltitude{0};
 
     // main
     FlightState Run(FlightStateMemPool&) override;

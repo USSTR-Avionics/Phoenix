@@ -3,10 +3,18 @@
 
 FlightState InFlight::Run(FlightStateMemPool& MemPool)
 {
+    // TODO : recauluate this entire thing
+    /*
+    * don't know which way the rocket will be falling(x,y,z?) (gyroscope?)
+    * don't know when appogee
+    * maybe get velocity with gyroscope and trig
+    * velocity calc might be imprcise because polling rate differs(not polling fast enough for acctuate calc)
+    */
 	auto& NewVal{RA::Global::IO::Sensor.RecordSensorData(GetState())};
-
+   Serial.print("prev altitude before");
+    Serial.println(PrevAltitude);
 	// apogee
-    if(abs(NewVal.m_Bmp.RelativeAltitude - PrevAltitude) < 0.1f)
+    if(NewVal.m_Bmp.RelativeAltitude - PrevAltitude < 0.0f)
 	{
         //Deploy drougue chute
 
@@ -15,6 +23,8 @@ FlightState InFlight::Run(FlightStateMemPool& MemPool)
     }
 
 	PrevAltitude = NewVal.m_Bmp.RelativeAltitude;
+    Serial.print("prev altitude after");
+    Serial.println(PrevAltitude);
 
 	// collect data
 	RA::Global::IO::FRam.StoreData(NewVal);

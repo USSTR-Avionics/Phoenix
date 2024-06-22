@@ -145,9 +145,9 @@ void Sensors::ReadAcceleration(){
 		outputData NewData;
         m_KxAccel.getAccelData(&NewData);
 
-	    m_SD.m_AccelerometerData.xData = Average(NewData.xData, m_SD.m_AccelerometerData.xData, 0.4);
-	    m_SD.m_AccelerometerData.yData = Average(NewData.yData, m_SD.m_AccelerometerData.yData, 0.4);
-	    m_SD.m_AccelerometerData.zData = Average(NewData.zData, m_SD.m_AccelerometerData.zData, 0.4);
+	    m_SD.m_AccelerometerData.xData = Average(NewData.xData * 9.8f, m_SD.m_AccelerometerData.xData, 0.4);
+	    m_SD.m_AccelerometerData.yData = Average(NewData.yData * 9.8f, m_SD.m_AccelerometerData.yData, 0.4);
+	    m_SD.m_AccelerometerData.zData = Average(NewData.zData * 9.8f, m_SD.m_AccelerometerData.zData, 0.4);
 #ifdef TEENSY_OPT_DEBUG
         Serial.print("X: ");
         Serial.print(m_SD.m_AccelerometerData.xData, 4);
@@ -245,6 +245,17 @@ SensorData& Sensors::RecordSensorData(FlightState CurrentState)
 
     // sensor polling rate limit
     delay(500);
+
+    Serial.println(m_SD.m_AccelerometerData.xData);
+    Serial.println(m_SD.m_AccelerometerData.yData);
+    Serial.println(m_SD.m_AccelerometerData.zData);
+
+    Serial.print("Barometer ");
+    Serial.println(m_SD.m_Bmp.Barometer);
+
+    Serial.print("Altitude ");
+    Serial.println(m_SD.m_Bmp.RelativeAltitude);
+
 
 	return m_SD;
 }
